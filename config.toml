@@ -3,10 +3,10 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 
 [Params]
-# your name to display by the copyright sign
-# default: undefined
-AuthorName = "Ahmed "
-Theme = "vs"
+	# your name to display by the copyright sign
+	# default: undefined
+	AuthorName = "Ahmed "
+	Theme = "vs"
 
 # tagline to show beneath homepage h1
 # default: undefined
@@ -28,7 +28,6 @@ TwitterUsername = "damiencaselli"
 
 pygmentsStyle = "friendly" # "default" # friendly
 pygmentsuseclasses =    true
-Theme = "default"
 
 uglyURLs =	true
 
