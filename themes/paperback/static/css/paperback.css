@@ -7,7 +7,6 @@
 html {
   color: #303030;
   font-family: Merriweather, Lora, Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-  background-color: #f5f5f0;
   font-size: 1.1rem;
   line-height: 2.5rem;
   font-weight: 300; 
@@ -15,6 +14,8 @@ html {
 
 body {
   line-height: 1.6;
+  background-color: #f5f5f0;
+  
 }
 
 hr {
@@ -90,7 +91,7 @@ pre {
 kbd, code {
   padding: .125rem .25rem 0;
   margin: 0;
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
 }
 
 article, section {
@@ -158,7 +159,8 @@ footer, .site-nav {
   }
 
 .container {
-  max-width: 34rem;
+   max-width: 50rem; 
+  /* width:  */
   width: 100%;
   margin: 0 auto;
 }
@@ -175,3 +177,7 @@ footer, .site-nav {
     text-rendering: optimizeLegibility!important;
     -webkit-font-smoothing: antialiased!important;
 }
+/* 
+.highlight pre {
+  color: white;
+} */

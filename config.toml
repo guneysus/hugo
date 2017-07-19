@@ -6,6 +6,7 @@ title = "My New Hugo Site"
 # your name to display by the copyright sign
 # default: undefined
 AuthorName = "Ahmed "
+Theme = "vs"
 
 # tagline to show beneath homepage h1
 # default: undefined
@@ -24,3 +25,12 @@ GithubUsername = "damiencaselli"
 
 # default: undefined
 TwitterUsername = "damiencaselli"
+
+pygmentsStyle = "friendly" # "default" # friendly
+pygmentsuseclasses =    true
+Theme = "default"
+
+uglyURLs =	true
+
+
+
