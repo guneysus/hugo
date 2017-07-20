@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
+
   {{ partial "head.html" . }}
 
   <body>
@@ -12,7 +13,7 @@
 
         {{ range first (index .Site.Params "HomepagePosts" | default 3) (where .Data.Pages "Type" "post") }}
         <article>
-          {{ .Render "list-item-expanded" }}
+              {{ .Render "list-item-expanded" }}
         </article>
         {{ end }}
       </section>
@@ -24,7 +25,6 @@
     </div>
 
   {{ partial "highlight" . }}
-
 
   </body>
 </html>

@@ -22,7 +22,7 @@ class Foo(Bar):
 ```
 
 
-{{< highlight html "linenos=inline,hl_lines=2 3" >}}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,14 +35,12 @@ class Foo(Bar):
     <script src="http://code.jquery.com/jquery.js"></script>
   </body>
 
-    <p>
-    123456789-123456789-123456789-123456789-123456789-123456789-123456789-123456789-
-    123456789-123456789-123456789-123456789-123456789-123456789-123456789-12
-    </p>
+<p>
+                                                                            80|       90|      100|      110|
+</p>
 
 </html>
-
-{{< /highlight >}}
+```
 
 Earum ratione officiis totam soluta mollitia temporibus, alias, quis quibusdam sed et, illo distinctio illum fuga laborum unde perferendis quam vero deleniti natus sequi. Commodi fuga recusandae nostrum beatae, consequatur.
 

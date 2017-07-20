@@ -3,33 +3,22 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 
 [Params]
-	# your name to display by the copyright sign
-	# default: undefined
-	AuthorName = "Ahmed "
-	Theme = "vs"
-
-# tagline to show beneath homepage h1
-# default: undefined
+AuthorName = "Ahmed "
+Description = "Tesla's Awesome Hugo Site"
+author = "Nikola Tesla"
 Tagline = "Hello, world!"
 
-# number of posts to show on index
-# default: 10
 HomepagePosts = 3
 
-# if set to true, social links will be displayed in the footer
-# default: undefined
 SocialLinks = true
 
-# default: undefined
-GithubUsername = "damiencaselli"
+GithubUsername = "guneysus"
 
-# default: undefined
-TwitterUsername = "damiencaselli"
+HighLightTheme = "github"
 
-pygmentsStyle = "friendly" # "default" # friendly
-pygmentsuseclasses =    true
+UglyURLs =	true
 
-uglyURLs =	true
-
-
+[Author]
+name = "Damien Caselli"
+homepage = "http://dcsl.li"
 
