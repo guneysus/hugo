@@ -1,9 +1,8 @@
 ---
-title: "Good To Great | Ahmed Şeref GÜNEYSU ŞĞÜÇIİ"
 date: 2017-07-18T13:15:19+03:00
 draft: false
+title: Good To Great | Ahmed Şeref GÜNEYSU ŞĞÜÇIİ
 ---
-
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores perspiciatis ullam quibusdam autem voluptate quam ipsam, est tempora! Eaque labore incidunt sequi veniam, perspiciatis maxime nam repudiandae quo nostrum dolor!
 
