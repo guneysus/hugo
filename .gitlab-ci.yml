@@ -2,7 +2,7 @@ image: publysher/hugo
 
 pages:
   script:
-  - hugo
+  - hugo --theme=paperback
   artifacts:
     paths:
     - public
