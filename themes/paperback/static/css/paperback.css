@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Crete+Round|Fira+Mono|Lora|Merriweather:300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Lora|Merriweather:300,300i,400,400i,700,700i,900,900i');
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif|PT+Serif');
+
+
+html {
+font-family: 'Merriweather', serif;
+ /* font-weight: 100;  */
+/* font-size: 110%; */
+  line-height: 2rem;
+
+}
+
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -6,14 +18,13 @@
 
 html {
   color: #303030;
-  font-family: Merriweather, Lora, Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  /* font-family: Merriweather, Lora, Cambria, Cochin, Georgia, Times, Times New Roman, serif; */
   font-size: 1.1rem;
-  line-height: 2.5rem;
+  /* line-height: 2.5rem; */
   font-weight: 300; 
 }
 
 body {
-  line-height: 1.6;
   background-color: #f5f5f0;
   
 }
@@ -87,6 +98,7 @@ pre {
   font-size: 82%;
   max-width: 100%;
   margin: 0 0 1rem;
+  line-height: 1.2rem;
 }
 
 kbd, code {
@@ -178,7 +190,6 @@ footer, .site-nav {
     text-rendering: optimizeLegibility!important;
     -webkit-font-smoothing: antialiased!important;
 }
-/* 
-.highlight pre {
-  color: white;
-} */
+
+
+
