@@ -2,22 +2,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="{{ .Site.Params.AuthorName }}">
-  {{ .Hugo.Generator }}
-  {{ partial "title" . }}
+  <meta name="author" content="{{ .Site.Params.AuthorName }}"> {{ .Hugo.Generator }} {{ partial "title" . }}
   <meta name="description" content="{{ .Description }}">
   <link rel="canonical" href="{{ .Permalink }}">
-    
+
 
   <!-- RSS -->
   {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" /> 
-  {{ end }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }}
 
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:500|Muli:400,800|Rasa" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.HighLightTheme }}.min.css" />
-
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/paperback.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.HighLightTheme }}.min.css" /> -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/paperback.css">
 </head>

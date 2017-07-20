@@ -1,15 +1,10 @@
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 <div>
-  {{ if .Truncated }}
-    {{ .Summary }}
+  {{ if .Truncated }} {{ .Summary }}
 
-    <footer>
-      <a href="{{ .Permalink }}">Read more</a>
-    </footer>
-  {{ else }}
-    {{ .Content }}
-  {{ end }}
-
-        <hr>
+  <footer>
+    <a href="{{ .Permalink }}">Read more</a>
+  </footer>
+  <hr> {{ else }} {{ .Content }} {{ end }}
 
 </div>

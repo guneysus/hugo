@@ -3,9 +3,8 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 
 [Params]
-AuthorName = "Ahmed "
 Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
-author = "Nikola Tesla"
+Author = "Ahmed Şeref GÜNEYSU"
 Tagline = "Hello, world!"
 
 HomepagePosts = 3
@@ -13,12 +12,9 @@ HomepagePosts = 3
 SocialLinks = true
 
 GithubUsername = "guneysus"
+LinkedinUserName = "guneysu"
+TumblrUserName = "guneysu"
 
 HighLightTheme = "github"
 
-UglyURLs =	true
-
-[Author]
-name = "Damien Caselli"
-homepage = "http://dcsl.li"
-
+UglyURLs =	false
