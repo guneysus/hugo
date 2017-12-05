@@ -1,7 +1,7 @@
 ---
 date: 2017-07-18T13:15:19+03:00
-draft: false
-title: Good To Great | Ahmed Şeref GÜNEYSU ŞĞÜÇIİ
+draft: false 
+title: Example Content
 ---
 
 Earum ratione officiis totam soluta mollitia temporibus, alias, quis quibusdam sed et, illo distinctio illum fuga laborum unde perferendis quam vero deleniti natus sequi. Commodi fuga recusandae nostrum beatae, consequatur.

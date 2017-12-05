@@ -1,15 +1,15 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Ahmed Şeref Güneysu"
 
 [Params]
 Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
 Author = "Ahmed Şeref GÜNEYSU"
 Tagline = "Hello, world!"
 
-HomepagePosts = 3
+HomepagePosts = 5
 
-SocialLinks = true
+SocialLinks = false
 
 GithubUsername = "guneysus"
 LinkedinUserName = "guneysu"
