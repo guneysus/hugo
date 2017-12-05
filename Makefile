@@ -1,10 +1,9 @@
 default: develop
 
+DEVELOP := hugo --watch --theme=guneysu serve
+
 develop:
-	@hugo serve --watch --theme=paperback
+	$(DEVELOP)
 
-publish:
-	@hugo --theme=paperback
-
-.PHONY: default develop publish
+.PHONY: default develop 
 
