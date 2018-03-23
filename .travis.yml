@@ -22,17 +22,17 @@ before_deploy:
   # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 deploy:
-  # - provider: surge
-  #   on: master
-  #   skip_cleanup: true
-  #   project: ./public/
-  #   domain: ahmedseref.surge.sh
+  - provider: surge
+    on: master
+    skip_cleanup: true
+    project: ./public/
+    domain: ahmedseref.surge.sh
 
-  # - provider: releases
-  #   on: master
-  #   skip_cleanup: true
-  #   api_key: $GITHUB_TOKEN
-  #   file: public.tar.gz
+  - provider: releases
+    on: master
+    skip_cleanup: true
+    api_key: $GITHUB_TOKEN
+    file: public.tar.gz
 
   - provider: s3
     on: master
@@ -42,3 +42,4 @@ deploy:
     bucket: asguneysu
     region: eu-east-1
     acl: public_read
+    upload-dir: public
