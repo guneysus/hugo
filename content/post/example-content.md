@@ -1,6 +1,6 @@
 ---
 date: 2017-07-18T13:15:19+03:00
-draft: false 
+draft: true 
 title: Example Content
 ---
 
@@ -44,7 +44,7 @@ class Foo(Bar):
   </body>
 
 <p>
-                                                                            80|       90|      100|      110|
+                                                                            80|       90|      100|
 </p>
 
 </html>

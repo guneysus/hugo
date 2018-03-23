@@ -9,11 +9,11 @@ Tagline = "Hello, world!"
 
 HomepagePosts = 5
 
-SocialLinks = false
+SocialLinks = true
 
 GithubUsername = "guneysus"
 LinkedinUserName = "guneysu"
-TumblrUserName = "guneysu"
+# TumblrUserName = "guneysu"
 
 HighLightTheme = "github"
 

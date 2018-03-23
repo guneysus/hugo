@@ -10,7 +10,7 @@
     {{ if isset .Site.Params "twitterusername" -}}
     <a href="https://twitter.com/{{ .Site.Params.TwitterUsername }}" class="icon-social-twitter"></a>
     {{- end }}
-|
+
     {{ if isset .Site.Params "linkedinusername" -}}
     <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedinusername }}" class="icon-social-linkedin"></a>
     {{- end }}
@@ -23,7 +23,7 @@
     <a href="https://{{ .Site.Params.tumblrusername }}.tumblr.com/" class="icon-social-tumblr"></a>
     {{- end }}
 
-    | <span class="owner">{{.Date.Year}} {{ .Site.Params.Author }}</span>
+    <!-- <span class="owner">{{ now.Year }} {{ .Site.Params.Author }} </span> -->
 
   {{- end }}
 
