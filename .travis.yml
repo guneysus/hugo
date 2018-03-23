@@ -39,4 +39,6 @@ deploy:
     skip_cleanup: true
     access_key_id: "$S3_KEY"
     secret_access_key: "$S3_SECRET"
-    bucket: "asguneysu"    
+    bucket: "asguneysu"
+    region: "eu-central-1"
+    # acl: public_read
