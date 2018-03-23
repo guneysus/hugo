@@ -40,6 +40,6 @@ deploy:
     access_key_id: $S3_KEY
     secret_access_key: $S3_SECRET
     bucket: asguneysu
-    region: eu-east-1
+    region: eu-central-1
     acl: public_read
     upload-dir: public
