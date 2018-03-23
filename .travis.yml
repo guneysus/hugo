@@ -20,7 +20,8 @@ before_deploy:
   # - git config --local user.name "$GITHUB_NAME"
   # - git config --local user.email "$GITHUB_EMAIL"
   # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-
+  - cd public 
+  
 deploy:
   - provider: surge
     on: master
@@ -41,5 +42,4 @@ deploy:
     secret_access_key: $S3_SECRET
     bucket: asguneysu
     region: eu-central-1
-    acl: public_read
-    upload-dir: public
+    acl: public-read
