@@ -33,3 +33,10 @@ deploy:
     skip_cleanup: true
     api_key: $GITHUB_TOKEN
     file: public.tar.gz
+
+  - provider: s3
+    on: master
+    skip_cleanup: true
+    access_key_id: "$S3_KEY"
+    secret_access_key: "$S3_SECRET"
+    bucket: "asguneysu"    
