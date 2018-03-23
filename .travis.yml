@@ -40,5 +40,5 @@ deploy:
     access_key_id: $S3_KEY
     secret_access_key: $S3_SECRET
     bucket: asguneysu
-    region: eu-central-1
+    region: eu-east-1
     acl: public_read
