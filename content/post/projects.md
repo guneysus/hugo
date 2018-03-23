@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 date: 2017-12-05T22:09:54+03:00
-draft: false
+draft: true
 ---
 
 
