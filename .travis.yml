@@ -7,9 +7,9 @@ before_install:
 script:
   - echo "OK"
 
-branches:
-  only:
-  - master
+# branches:
+#   only:
+#   - master
 
 notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
