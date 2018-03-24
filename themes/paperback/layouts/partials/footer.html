@@ -1,4 +1,7 @@
 <footer class="site-footer">
-  <pre>{{ .Hugo.BuildDate }}</pre>
-
+  <span class="owner">©{{ now.Year }} {{ .Site.Params.authorname }}</span>
+  
+  {{ partial "analytics.html" . }}
+  
+  <!-- {{ .Hugo.BuildDate }} -->
 </footer>

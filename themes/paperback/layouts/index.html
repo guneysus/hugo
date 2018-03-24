@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
+  {{ partial "head.html" . }}
 
-{{ partial "head.html" . }}
+  <body>
+    <div class="container">
 
-<body>
+      {{ partial "header.html" . }}
 
-  <div class="container">
+      <section>
 
+        {{ range first (index .Site.Params "homepageposts" | default 3) (where .Data.Pages "Type" "post") }}
+        <article>
+          {{ .Render "list-item-expanded" }}
+        </article>
+        {{ end }}
 
-    {{ partial "header.html" . }}
+      </section>
 
+      {{ partial "nav.html" . }}
 
-    <section>
+      {{ partial "footer.html" . }}
 
-      {{ range first (index .Site.Params "HomepagePosts" | default 3) (where .Data.Pages "Type" "post") }}
-      <article>
-        {{ .Render "list-item-expanded" }}
-      </article>
-      {{ end }}
-    </section>
-
-    {{ partial "nav.html" . }} {{ partial "footer.html" . }}
-
-  </div>
+    </div>
 
   {{ partial "highlight" . }}
-
-
-
-
-</body>
-
+  </body>
 </html>
