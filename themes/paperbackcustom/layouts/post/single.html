@@ -7,17 +7,21 @@
   <div class="container">
 
     {{ partial "header.html" . }}
-
+    
     <article>
       {{ .Content }}
     </article>
 
     {{ partial "nav.html" . }} {{ partial "footer.html" . }}
 
+    
   </div>
 
-  {{ partial "highlight" . }}
+
 
 </body>
+
+{{ partial "highlight" . }}
+
 
 </html>

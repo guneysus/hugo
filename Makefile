@@ -1,14 +1,12 @@
 default: develop
 
+
 DEVELOP := hugo \
-			--watch \
-			--baseURL=127.0.0.1 serve \
+			--watch serve \
+			--destination /tmp/blog_dev \
 			--buildDrafts \
-			--buildExpired \
 			--buildFuture \
-			--enableGitInfo \
-			--i18n-warnings \
-			--destination /tmp/blog_dev
+			--baseURL=127.0.0.1		
 
 develop:
 	$(DEVELOP)
