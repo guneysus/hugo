@@ -5,7 +5,8 @@ before_install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
 
 script:
-  - echo "OK"
+  # - echo "OK"
+  - hugo
 
 branches:
   only:
@@ -15,12 +16,12 @@ branches:
 notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
     
-before_deploy:
-  - hugo
-  - tar caf public.tar.gz public/
-  - git config --local user.name "$GITHUB_NAME"
-  - git config --local user.email "$GITHUB_EMAIL"
-  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+# before_deploy:
+#   - hugo
+#   - tar caf public.tar.gz public/
+#   - git config --local user.name "$GITHUB_NAME"
+#   - git config --local user.email "$GITHUB_EMAIL"
+#   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
   
 deploy:
   - provider: surge
@@ -29,11 +30,11 @@ deploy:
     project: ./public/
     domain: ahmedseref.surge.sh
 
-  - provider: releases
-    on: master
-    skip_cleanup: true
-    api_key: $GITHUB_TOKEN
-    file: public.tar.gz
+  # - provider: releases
+  #   on: master
+  #   skip_cleanup: true
+  #   api_key: $GITHUB_TOKEN
+  #   file: public.tar.gz
 
   - provider: s3
     on: master
