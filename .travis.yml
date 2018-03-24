@@ -39,7 +39,7 @@ deploy:
     skip_cleanup: true
     access_key_id: $S3_KEY
     secret_access_key: $S3_SECRET
-    bucket: asguneysu
-    region: eu-central-1
+    bucket: $S3_BUCKET
+    region: $S3_REGION
     acl: public-read
     local_dir: public
