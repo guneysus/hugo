@@ -72,7 +72,7 @@ Yazılarınızı yazarken taslak aşamasından olan yazılarınızı da görmek
 isteyebilirsiniz.
 
 Bunu Hugo'ya belirtmemiz gerekiyor. `Makefile` kullanmayı seviyorum. `make`
-dediğinizde `http://127.0.0.1:1313` adresindeki web sunucusuyla sitenizin
+dediğinizde http://127.0.0.1:1313 adresindeki web sunucusuyla sitenizin
 önizlemesini görebilirsiniz.
 
 ```Makefile
