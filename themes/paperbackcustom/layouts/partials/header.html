@@ -3,7 +3,10 @@
   <a href="{{ .Site.BaseURL }}" class="title is-5 box"> {{ .Site.Params.Description }} </a>
   <hr>
     
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }} <span>{{ partial "i18nlist" . }}</span></h1>
+
+  
+
 
   {{ if ne .IsNode true }}
   <time datetime="{{ .Date }}">{{ dateFormat "2006/01/02" .Date }}</time>
@@ -12,8 +15,5 @@
   {{ if and .IsHome (isset .Site.Params "Tagline") }}
   <p>{{ .Site.Params.Tagline }}</p>
   {{ end }}
-
-
-
 
 </header>
