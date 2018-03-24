@@ -15,7 +15,7 @@ notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
     
 before_deploy:
-  - hugo --theme=guneysu
+  - hugo
   - tar caf public.tar.gz public/
   - git config --local user.name "$GITHUB_NAME"
   - git config --local user.email "$GITHUB_EMAIL"
@@ -23,7 +23,7 @@ before_deploy:
   
 deploy:
   - provider: surge
-    on: master
+    on: develop
     skip_cleanup: true
     project: ./public/
     domain: ahmedseref.surge.sh

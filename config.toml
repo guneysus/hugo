@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Ahmed Şeref Güneysu"
+theme = "paperbackcustom"
 
 [Params]
 Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
