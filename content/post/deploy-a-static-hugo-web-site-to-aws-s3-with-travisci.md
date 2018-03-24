@@ -1,15 +1,15 @@
 ---
 
-title: "Deploy a Static Hugo Web Site to AWS S3 With TravisCI"
+title: "Statik Bir Hugo Web Sitesini AWS S3 üzerine TravisCI ile Yayınlamak"
 date: 2018-03-24T20:12:05+03:00
-draft: true
+draft: false
 
 description: 
 tags: []
 
 categories:
 
-slug: 
+slug: statik-bir-hugo-web-sitesini-aws-s3-uzerine-travisci-ile-yayinlamak
 keywords: []
 publishDate: 2018-03-24T20:12:05+03:00
 taxonomies: []
@@ -148,28 +148,18 @@ TravisCI ile Hugo web sitemizi derleyip, S3 üzerine yayınlayabiliriz.
 
 Öncelikle reponun ana dizinine `.travis.yml` adında bir dosya eklememiz gerekiyor.
 
-
-
-{{< highlight yaml "linenos=table,hl_lines=1,linenostart=1" >}}
+{{< highlight yaml "linenos=table,hl_lines=,linenostart=1" >}}
 sudo: required
 dist: trusty
 
 before_install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
 
 script:
-  - hugo --theme=paperback
-
-branches:
-  only:
-  - master
-  - develop
-
-before_deploy:
-  - hugo --theme=paperback
+    - hugo --theme=paperback
 
 deploy:
-  - provider: s3
+    provider: s3
     on: master
     skip_cleanup: true
     access_key_id: $S3_KEY
@@ -179,3 +169,58 @@ deploy:
     acl: public-read
     local_dir: public
 {{< / highlight >}}
+
+
+Yirmi satırdan az bir konfigürasyon dosyası ile sitemizi yayınlayabiliyoruz.
+
+
+İlk beş satırda hugonun kurulumunu yapıyoruz.
+
+{{< highlight yaml "linenos=table,hl_lines=,linenostart=1" >}}
+sudo: required
+dist: trusty
+
+before_install:
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
+
+{{< / highlight >}}
+
+Hugonun `public` dizini altına `paperback` dizini altına web sitemizi oluşturmasını
+sağlıyoruz. Temayı buradan vermek zorunda değilsiniz. `config.toml` dosyanızda
+`theme = "paperback"` ile temayı tanımlayıp `hugo` komutunu parametresiz çalıştırmanız
+yeterli.
+
+
+{{< highlight yaml "linenos=table,hl_lines=,linenostart=7" >}}
+script:
+    - hugo --theme=paperback
+{{< / highlight >}}
+
+
+Bu satırları tek tek açıklayalım.
+
+{{< highlight yaml "linenos=table,hl_lines=,linenostart=10" >}}
+deploy:
+    provider: s3
+    on: master
+    skip_cleanup: true
+    access_key_id: $S3_KEY
+    secret_access_key: $S3_SECRET
+    bucket: $S3_BUCKET
+    region: $S3_REGION
+    acl: public-read
+    local_dir: public
+{{< / highlight >}}
+
+satır 12, sadece master branch için deployement yapılacağını bildiriyor.
+Başka ifadeyle `develop` üzerinden derleme tetiği verdiğinizde bu kısım
+dikkate alınmayacaktır.
+
+satır 14-17, başlarında _$_ olan ifadeler, bu ifadelerin TravisCI üzerinden
+tanımlanan _Environment Variable_ olduğunu bildiriyor.
+
+satır 18, yüklenecek yeni dosyaların herkes tarafından görülebilmesi için S3
+üzerine yüklenen dosyaların izinleri _anonim_ olarak ayarlanıyor.
+
+satır 19, oluşturulan dosyaların hangi klasörde olduğunu ve deployement'ın bu
+klasörden yapılmasını gerektiğini bildiriyor.
