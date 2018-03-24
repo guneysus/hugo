@@ -6,6 +6,8 @@ It focuses on improving reading experience with high contrast colors and no fanc
 
 It also uses [Highlight.js](https://highlightjs.org/) for the syntaxic coloration of code snippets.
 
+Demo is available [here](https://damiencaselli.github.io/paperback-demo/).
+
 ## Installation
 
 Please refer to the [Hugo documentation](http://gohugo.io/themes/installing/).
@@ -15,6 +17,8 @@ Please refer to the [Hugo documentation](http://gohugo.io/themes/installing/).
 A few parameters can be adjusted in the site config:
 
 ```toml
+# googleAnalytics = "UA-123-45"
+
 [params]
 
 # your name to display by the copyright sign
@@ -29,15 +33,14 @@ Tagline = "Hello, world!"
 # default: 10
 HomepagePosts = 3
 
-# if set to true, social links will be displayed in the footer
-# default: undefined
-SocialLinks = true
-
 # default: undefined
 GithubUsername = "damiencaselli"
 
 # default: undefined
 TwitterUsername = "damiencaselli"
+
+# default: undefined
+LinkedInUsername = "damiencaselli"
 ```
 
 ### Code highlighting

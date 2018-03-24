@@ -1,6 +1,20 @@
+
 baseURL = "/"
 languageCode = "en-us"
-title = "Ahmed Şeref Güneysu"
+# title = "Ahmed Şeref Güneysu"
+theme = "paperbackcustom"
+
+
+pygmentsCodeFencesGuessSyntax = true
+pygmentsStyle = "bw"
+pygmentsUseClasses = true
+newContentEditor = "code-insiders"
+pygmentsCodeFences = true
+
+paginate = 10
+
+DefaultContentLanguage = "tr"
+
 
 [Params]
 Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
@@ -16,5 +30,13 @@ LinkedinUserName = "guneysu"
 # TumblrUserName = "guneysu"
 
 HighLightTheme = "github"
+PygmentsTheme = "bw"
 
-UglyURLs =	false
+
+
+[languages]
+[languages.en]
+weight = 1
+
+[languages.tr]
+weight = 1

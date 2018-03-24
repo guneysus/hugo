@@ -1,11 +1,14 @@
 default: develop
 
-DEVELOP := hugo --watch --theme=guneysu --baseURL=127.0.0.1 serve
+
+DEVELOP := hugo \
+			--watch serve \
+			--destination /tmp/blog_dev \
+			--buildDrafts \
+			--buildFuture \
+			--baseURL=127.0.0.1		
 
 develop:
 	$(DEVELOP)
 
-
-build: 
-	@hugo --theme=guneysu
-.PHONY: default develop build
+.PHONY: default develop

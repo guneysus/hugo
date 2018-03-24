@@ -4,13 +4,19 @@
 {{ partial "head.html" . }}
 
 <body>
+
   <div class="container">
 
     {{ partial "header.html" . }}
 
-    <article>
-      {{ .Content }}
-    </article>
+    <section>
+
+      {{ range first (index .Site.Params "HomepagePosts" | default 3) (where .Data.Pages "Type" "post") }}
+      <article>
+        {{ .Render "list-item-expanded" }}
+      </article>
+      {{ end }}
+    </section>
 
     {{ partial "nav.html" . }} {{ partial "footer.html" . }}
 
