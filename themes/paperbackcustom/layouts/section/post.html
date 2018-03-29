@@ -10,7 +10,7 @@
 
       <article>
 
-        {{ range (where .Data.Pages "Type" "post").GroupByDate "2006/01" -}}
+        {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
         <section>
           <h2>{{ .Key }}</h2>
 
