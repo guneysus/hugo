@@ -11,32 +11,54 @@ pygmentsUseClasses = true
 newContentEditor = "code-insiders"
 pygmentsCodeFences = true
 
+preserveTaxonomyNames = true
+rssLimit = 10
 paginate = 10
 
 DefaultContentLanguage = "tr"
+disableLiveReload = false
 
+Title = "/home/asguneysu"
 
 [Params]
-Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
-Author = "Ahmed Şeref GÜNEYSU"
-Tagline = "Hello, world!"
+    Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
+    AuthorName = "Ahmed Şeref GÜNEYSU"
+    Tagline = "Hello, world!"
 
-HomepagePosts = 5
+    HomepagePosts = 5
 
-SocialLinks = true
+    SocialLinks = true
 
-GithubUsername = "guneysus"
-LinkedinUserName = "guneysu"
-# TumblrUserName = "guneysu"
+    GithubUsername = "guneysus"
+    LinkedinUserName = "guneysu"
+    # TumblrUserName = "guneysu"
 
-HighLightTheme = "github"
-PygmentsTheme = "bw"
+    HighLightTheme = "github"
+    PygmentsTheme = "bw"
 
 
 
 [languages]
 [languages.en]
-weight = 1
+    weight = 1
 
 [languages.tr]
-weight = 1
+    weight = 1
+
+[taxonomies]
+    category = "categories"  
+    tag = "tags"
+
+[permalinks]
+    post = "/:slug/"
+    page = "/:slug/"
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = -120
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories"
+    weight = -130

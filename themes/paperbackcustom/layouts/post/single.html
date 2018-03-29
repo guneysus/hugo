@@ -9,7 +9,24 @@
     {{ partial "header.html" . }}
     
     <article>
-      {{ .Content }}
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+
+      <ul class="article-taxonomy">
+        {{ if .Params.categories }}            
+        <hr>
+        <li>
+          <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+        </li>
+        {{ end }}
+      
+        {{ if .Params.tags }}
+        <li>
+          <i class="fa fa-tags"></i>{{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+        </li>
+        {{ end }}
+              
     </article>
 
     {{ partial "nav.html" . }} {{ partial "footer.html" . }}

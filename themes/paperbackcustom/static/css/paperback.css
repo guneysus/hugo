@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:700|Fira+Mono|Merriweather:300,300i,400,400i,700,700i');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css'); */
+
+/* BUNDLE THESE  */
+/* @import url('./natrium.css'); */
 
 html {
   font-family: 'Merriweather', Cambria, Cochin, Georgia, Times, Times New Roman, serif;
@@ -192,3 +195,121 @@ footer, .site-nav {
 /* workarounds */
 
 /* LineTable */ .chroma .lntable {  overflow-x: hidden!important; display: block; }
+
+
+
+/* START NATRIUM */
+
+.article-taxonomy {
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Lato', sans-serif;
+  color: #404040;
+  font-size: 14px;
+  text-align: left;
+}
+
+.article-taxonomy hr {
+  width: 200px;
+  margin: 5px 0 10px;
+  height: 1px;
+  border: none;
+  background: #e8e8e8;
+}
+
+.article-taxonomy a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 300ms;
+}
+
+.article-taxonomy a:hover,
+.article-taxonomy a:active {
+  color: #ccc;
+}
+
+
+.fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.fa-rss::before {
+  content: "\f09e";
+}
+
+.fa-chevron-up::before {
+  content: "\f077";
+}
+
+.fa-github::before {
+  content: "\f09b";
+}
+
+.fa-tags::before {
+  content: "\f02c";
+  float: left;
+  padding: 0px 10px 50px 0;
+}
+
+.fa-category::before {
+  content: "\f07c";
+  float: left;
+  padding: 0 10px 0px 0;
+}
+
+
+.list,
+.category,
+.tag-cloud {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+.list-title,
+.category-title,
+.tag-cloud-title {
+  font-size: 32px;
+  margin-top: 60px;
+  padding-bottom: 10px;
+}
+
+.list-item {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.list-item-date {
+  display: block;
+  padding: 4px 0;
+  font-family: 'Lato', sans-serif;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.list-item a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 3px 0;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  transition: border-color 300ms;
+}
+
+.list-item a:hover {
+  border-color: #222;
+}
+
+/* END NATRIUM */
