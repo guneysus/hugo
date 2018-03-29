@@ -4,15 +4,15 @@ title: "Statik Bir Hugo Web Sitesini AWS S3 üzerine TravisCI ile Yayınlamak"
 date: 2018-03-24T20:12:05+03:00
 draft: false
 
-description: 
-tags: []
+description: 'Bu yazımda Hugo ile oluşturulmuş bir web sitesini, CI/CD aracı olan TravisCI ile AWS S3 üzerine yayınlayacağız.'
 
-categories:
+tags: ['Aws S3', 'TravisCI', 'Continuous Integration']
+categories: ['Blogging']
+taxonomies: []
 
 slug: statik-bir-hugo-web-sitesini-aws-s3-uzerine-travisci-ile-yayinlamak
 keywords: []
 publishDate: 2018-03-24T20:12:05+03:00
-taxonomies: []
 weight: 0
 
 ---
@@ -30,6 +30,10 @@ gördüğüm en büyük sorunlar:
 
 Sunucu taraflı olanların canlı sistem olmaları, bakıma ve izlenmeye ihtiyaç
 duymaları, kaynak tüketmeleri, güvenlik açıkları, veri tabanı bağımlılıkları…
+
+Şu anda aklıma gelen taslakları, yazılım geliştirirken karşılaştığım "pis kokan"
+kod parçalarını markdown ile rahatça yazabildiğim Heroku üzerinde çalışan bir Django
+uygulaması mevcut.
 
 İşi profesyonel bloggerlık olmayan ve bakmakla yükümlü olduğu diğer "canlı"
 web uygulamaları olan bizler için statik web sitelerini çok daha sevimli bulanlardanım.
@@ -72,7 +76,7 @@ Yazılarınızı yazarken taslak aşamasından olan yazılarınızı da görmek
 isteyebilirsiniz.
 
 Bunu Hugo'ya belirtmemiz gerekiyor. `Makefile` kullanmayı seviyorum. `make`
-dediğinizde `http://127.0.0.1:1313` adresindeki web sunucusuyla sitenizin
+dediğinizde http://127.0.0.1:1313 adresindeki web sunucusuyla sitenizin
 önizlemesini görebilirsiniz.
 
 ```Makefile
@@ -189,7 +193,6 @@ Hugonun `public` dizini altına `paperback` dizini altına web sitemizi oluştur
 sağlıyoruz. Temayı buradan vermek zorunda değilsiniz. `config.toml` dosyanızda
 `theme = "paperback"` ile temayı tanımlayıp `hugo` komutunu parametresiz çalıştırmanız
 yeterli.
-
 
 {{< highlight yaml "linenos=table,hl_lines=,linenostart=7" >}}
 script:
