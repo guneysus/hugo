@@ -15,8 +15,8 @@
   
 </main>
 
-{{ partial "footer.html" . }} -->
-
+{{ partial "footer.html" . }}
+ -->
 
 
 <!DOCTYPE html>
@@ -25,25 +25,24 @@
   {{ partial "head.html" . }}
 
   <body>
-    <div class="container">
-        {{ partial "header.html" . }}      
-      <main class="content" role="main">
+      <main class="content">
 
-        <div class="list">
-          <!-- <h2 class="list-title">{{ .Title }}</h2> -->
-          {{ range .Paginator.Pages }}
-           
-          {{ partial "list-item.html" . }}
-      
-          {{ end }}
-         </div>
-       
-         {{ partial "pagination.html" . }}
+          <div class="category">
+            <h2 class="category-title">{{ i18n "categories" }}</h2>
+            {{ $data := .Data }}
+            {{ range $key, $value := .Data.Terms.Alphabetical }}
+            <ul class="category-item">
+              <li>
+                <a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
+                <span class="category-item-count">
+                  <sup>({{ $value.Count }})</sup>
+               </span>
+              </li>
+            </ul>   
+            {{ end }}
+          </div>
         
-      </main>
-    </div>    
+        </main>
+            
   </body>
-
-
-    
 </html>
