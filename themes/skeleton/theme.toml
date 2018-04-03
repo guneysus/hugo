@@ -1,0 +1,37 @@
+name = "Paperback Custom"
+license = "MIT"
+licenselink = "https://github.com/damiencaselli/paperback/blob/master/LICENSE.md"
+description = "Minimalist theme for Hugo."
+homepage = "https://github.com/damiencaselli/paperback"
+tags = ["minimalist", "reading", "sepia", "blog"]
+features = ["blog"]
+min_version = 0.15
+
+[author]
+name = "Damien Caselli"
+homepage = "http://dcsl.li"
+
+
+[params]
+	# your name to display by the copyright sign
+	# default: undefined
+	AuthorName = "Ahmed "
+
+	# tagline to show beneath homepage h1
+	# default: undefined
+	Tagline = "Hello, world!"
+
+	# number of posts to show on index
+	# default: 10
+	HomepagePosts = 3
+
+	# if set to true, social links will be displayed in the footer
+	# default: undefined
+	SocialLinks = true
+
+	# default: undefined
+	GithubUsername = "damiencaselli"
+
+	# default: undefined
+	TwitterUsername = "damiencaselli"
+
