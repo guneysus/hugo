@@ -2,7 +2,8 @@
 baseURL = "/"
 languageCode = "en-us"
 # title = "Ahmed Şeref Güneysu"
-theme = "paperbackcustom"
+theme = "skeleton"
+# theme = "paperbackcustom"
 
 
 pygmentsCodeFencesGuessSyntax = true

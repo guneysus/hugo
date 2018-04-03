@@ -15,7 +15,10 @@
     "mini-css-extract-plugin": "^0.4.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
+    "webpack-cli": "^2.0.13",
+    "clean-webpack-plugin": "^0.1.19"    
   },
-  "dependencies": {}
+  "dependencies": {
+    "optimize-css-assets-webpack-plugin": "^4.0.0"
+  }
 }

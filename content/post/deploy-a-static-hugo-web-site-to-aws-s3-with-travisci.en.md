@@ -7,7 +7,7 @@ draft: true
 description: 
 tags: []
 
-categories:
+categories: ['Blogging']
 
 slug: 
 keywords: []
