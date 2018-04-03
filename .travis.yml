@@ -7,10 +7,10 @@ before_install:
 script:
   - hugo
 
-branches:
-  only:
-  - master
-  - develop
+# branches:
+#   only:
+#   - master
+#   - develop
 
 notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
