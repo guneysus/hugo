@@ -1,4 +1,4 @@
-name = "Paperback Custom"
+name = "Paperback"
 license = "MIT"
 licenselink = "https://github.com/damiencaselli/paperback/blob/master/LICENSE.md"
 description = "Minimalist theme for Hugo."
