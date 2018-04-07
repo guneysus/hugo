@@ -2,9 +2,9 @@
 
 title: "Örneklerle Refactoring - 1"
 date: 2018-04-07T22:43:54+03:00
-draft: true
+draft: false
 
-description: 
+description: ASP.Net Core ViewComponent refactor ediyoruz.
 tags: ["ASP.Net Core"]
 
 categories: ["Clean Coding", "Refactoring"]
