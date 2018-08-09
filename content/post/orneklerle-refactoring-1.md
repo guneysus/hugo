@@ -59,18 +59,14 @@ burada da geçerli. Veriyi çekeceğimiz kısmı component dışına taşıyaca�
 ```csharp
 public class DynamicMenuViewComponent : ViewComponent
 {
-    private readonly IMissionControlContext _mcContext;
 
-    public DynamicMenuViewComponent(IMissionControlContext mcContext)
+    public DynamicMenuViewComponent()
     {
-        _mcContext = mcContext;
     }
 
     public IViewComponentResult Invoke()
     {
-        var clientKeys = new [] { Startup.Configuration ["Identity:ClientKey"] };
-        IEnumerable<Menu> menus = _mcContext.MenuContext.GetMenu(clientKeys);
-        Menu model = menus.FirstOrDefault();
+        Menu model = new Menu();
         return View(model);
     }
 }
@@ -107,18 +103,13 @@ Menü verimizi çektiğimiz kısmı, implemente ettiğimiz class'a taşıyoruz.
 ```csharp
 public class MenuApi : IMenuApi
 {
-    private readonly IMissionControlContext _mcContext;
-
-    public MenuApi(IMissionControlContext mcContext)
+    public MenuApi()
     {
-        _mcContext = mcContext;
     }
 
     Menu IMenuApi.GetUserMenu()
     {
-        var clientKeys = new [] { Startup.Configuration ["Identity:ClientKey"] };
-        IEnumerable<Menu> menus = _mcContext.MenuContext.GetMenu(clientKeys);
-        Menu model = menus.FirstOrDefault();
+        Menu model = new Menu();
 
         return model;
     }
