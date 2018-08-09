@@ -180,7 +180,7 @@ public IViewComponentResult Invoke(bool isAdmin = false, Guid? userId = null)
 
     if (isAdmin) {}
 
-    if (Guid.HasValue && Guid.Value != Guid.Empty) {}
+    if (userId.HasValue && userId.Value != Guid.Empty) {}
 
 ```
 
