@@ -219,6 +219,7 @@ We prepare a simple JSON object at line 107, for the lambda by substituting the 
 
 {{< / highlight >}}
 
+---
 
 ## Final
 
@@ -242,6 +243,7 @@ aws cloudformation deploy \
 --template-file template.yml
 ```
 
+---
 
 ## Conclusion
 
