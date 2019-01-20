@@ -4,6 +4,8 @@ PREVIEW := hugo \
 			--watch serve \
 			--disableFastRender \
 			--baseURL=127.0.0.1
+
+
 DEVELOP := hugo \
 			--watch serve \
 			--buildDrafts \
