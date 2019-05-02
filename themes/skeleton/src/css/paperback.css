@@ -248,11 +248,12 @@ footer, .site-nav {
   content: "\f09b";
 }
 
-.fa-tags::before {
+/* .fa-tags::before {
   content: "\f02c";
   float: left;
   padding: 0px 10px 50px 0;
 }
+*/
 
 .fa-category::before {
   content: "\f07c";
