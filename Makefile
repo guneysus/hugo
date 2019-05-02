@@ -1,5 +1,10 @@
 default: develop
 
+PREVIEW := hugo \
+			--watch serve \
+			--disableFastRender \
+			--baseURL=127.0.0.1
+
 
 DEVELOP := hugo \
 			--watch serve \
@@ -8,7 +13,11 @@ DEVELOP := hugo \
 			--disableFastRender \
 			--baseURL=127.0.0.1
 
+
 develop:
 	$(DEVELOP)
 
-.PHONY: default develop
+preview:
+	$(PREVIEW)
+
+.PHONY: default develop preview
