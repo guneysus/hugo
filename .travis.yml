@@ -12,7 +12,8 @@ before_install:
   - cd themes/skeleton
   - yarn install
   - yarn build
-
+  - cd ../../
+  
 script:
   - hugo
 
