@@ -1,0 +1,14 @@
+<h2 class="article-title">
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+</h2>
+
+<div class="article-content article-content__red">
+  {{ if .Truncated }} {{ .Summary }}
+
+  <footer class="article-footer">
+    <a href="{{ .Permalink }}">Read more</a>
+  </footer>
+
+  <hr> {{ else }} {{ .Content }} {{ end }}
+
+</div>
