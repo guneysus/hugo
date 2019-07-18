@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body>
+  <div class="container">
+
+    {{ partial "header.html" . }}
+    
+    <article>
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+
+      <ul class="article-taxonomy">
+        {{ if .Params.categories }}            
+        <hr>
+        <li>
+          <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+        </li>
+        {{ end }}
+      
+        {{ if .Params.tags }}
+        <li>
+          {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
+        </li>
+        {{ end }}
+              
+    </article>
+
+    {{ partial "nav.html" . }} {{ partial "footer.html" . }}
+
+    
+  </div>
+
+
+
+</body>
+
+
+
+</html>
