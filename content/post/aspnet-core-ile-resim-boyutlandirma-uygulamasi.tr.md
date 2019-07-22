@@ -5,6 +5,11 @@ date: 2019-01-20T20:23:00+03:00
 draft: false
 
 description: Aspnet Core, ImageSharp kullanarak restful standartlara uymaya çalışarak bir API geliştirip, nodejs ile bu API'yi Docker ile test edeceğiz.
+summary:	Bu yazımda ImageSharp ile basit bir resim boyutlandırma uygulamasını nasıl yazıp geliştirdiğimden bahsedeceğim. Uygulamamızın ön yüzü olmayacak, API olarak çalışacak. Docker ile paketleyeğiz. Ve bence en önemlisi uygulamamızın özelliklerini HTTP istekleriyle test etmeye yarayan nodejs supertest ile test edeceğiz.
+
+thumb: /static/ASP.NET-Core-Logo_2colors_RGB_bitmap_MEDIUM.png
+thumbAlt: aspnet core image server
+
 tags: 
     - asp.net core
     - nodejs

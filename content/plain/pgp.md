@@ -8,7 +8,7 @@ tags: []
 
 categories:
 
-slug:
+slug: "/slug"
 keywords: []
 publishDate: 2018-04-20T01:09:22+03:00
 taxonomies: []

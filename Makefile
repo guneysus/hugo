@@ -7,11 +7,12 @@ PREVIEW := hugo \
 
 
 DEVELOP := hugo \
+			--theme guneysu-blog \
 			--watch serve \
-			--buildDrafts \
 			--buildFuture \
 			--disableFastRender \
 			--baseURL=127.0.0.1
+			# --buildDrafts \
 
 
 develop:

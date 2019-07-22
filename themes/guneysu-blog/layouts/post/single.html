@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href="/css/pygments/autumn.css" />
+
+  <body class="">
+    <div class="container">
+
+      <section class="mw7 center -debug -debug-grid">
+
+        <article class="pa3 pa5-ns">
+
+          {{ partial "header.html" . }}
+
+          <h1 class="f2-l">{{ .Title }} </h1>
+
+          <div class="article-content f4-l lh-copy tj athelas">
+            {{ .Content }}
+          </div>
+
+          <ul class="article-taxonomy">
+              {{ if .Params.categories }}            
+              <hr>
+              <li>
+                <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+            
+              {{ if .Params.tags }}
+              <li>
+                {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+
+        </article>
+      </section>
+
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>
