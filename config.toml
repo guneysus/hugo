@@ -2,7 +2,8 @@
 baseURL = "/"
 languageCode = "en-us"
 # title = "Ahmed Şeref Güneysu"
-theme = "skeleton"
+# theme = "skeleton"
+theme = "guneysu-blog"
 # theme = "paperbackcustom"
 
 
