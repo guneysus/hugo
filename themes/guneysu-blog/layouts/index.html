@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <body>
+    <div class="container">
+
+      <section class="mw7 center">
+
+      <!-- {{ partial "header.html" . }} -->
+
+        <h2 class="athelas ph3 ph0-l">
+          <!-- {{ .Site.Params.Tagline }} -->
+        <a href="{{ .Site.BaseURL }}" class="title is-5 box"> {{ .Site.Params.Description }} </a>
+        </h2>
+        
+
+        {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
+
+        <article class="pv4 b--black-10 ph3 ph0-l"></article>
+          {{ .Render "summary" }}
+        </article>
+
+        {{ end }}
+      </section>
+
+      <section>
+        <!-- {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
+        <article class="article">
+          {{ .Render "list-item-expanded" }}
+        </article>
+        {{ end }} -->
+      </section>
+
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>
