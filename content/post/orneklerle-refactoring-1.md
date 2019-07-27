@@ -5,6 +5,7 @@ date: 2018-04-07T22:43:54+03:00
 draft: false
 
 description: ASP.Net Core ViewComponent refactor ediyoruz.
+summary: Örnek bir ASP.Net Core ViewComponent'i refactor ediyoruz.
 tags: ["asp.net core"]
 
 categories: ["Clean Coding", "Refactoring"]

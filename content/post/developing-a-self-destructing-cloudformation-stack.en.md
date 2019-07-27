@@ -5,6 +5,8 @@ date: 2018-10-22T22:25:47+03:00
 draft: false
 
 description: 
+summary: We will develop a cloudformation template that will delete itself and resources just after a specified duration of time.
+
 tags: ['aws', 'cloudformation', 'devops']
 
 categories: ['Amazon Web Services', 'Cloud Formation', 'Devops']
