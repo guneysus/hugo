@@ -4,16 +4,23 @@
 
   <body>
     <div class="container">
-      {{ partial "header.html" . }}
 
       <section class="mw7 center">
-        <h2 class="athelas ph3 ph0-l">News</h2>
+
+      {{ partial "header.html" . }}
+
 
         {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
 
-        <article class="pv4 b--black-10 ph3 ph0-l"></article>
-          {{ .Render "summary" }}
+        <article class="pv4 ph3 mv2 mh2 ba b--black-30 br2 bg-washed-blue">
+
+            <div class="article-content">
+                {{ .Render "summary" }}
+            </div>
+    
+          
         </article>
+    
 
         {{ end }}
       </section>
@@ -26,7 +33,7 @@
         {{ end }} -->
       </section>
 
-      {{ partial "nav.html" . }} {{ partial "footer.html" . }}
+      {{ partial "footer.html" . }}
     </div>
   </body>
 </html>

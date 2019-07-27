@@ -2,7 +2,8 @@
 baseURL = "/"
 languageCode = "en-us"
 # title = "Ahmed Şeref Güneysu"
-theme = "skeleton"
+# theme = "skeleton"
+theme = "guneysu-blog"
 # theme = "paperbackcustom"
 
 
@@ -14,7 +15,7 @@ pygmentsCodeFences = true
 
 preserveTaxonomyNames = true
 rssLimit = 10
-paginate = 10
+paginate = 1
 
 DefaultContentLanguage = "tr"
 disableLiveReload = false
@@ -26,7 +27,7 @@ Title = "/home/asguneysu"
     AuthorName = "Ahmed Şeref GÜNEYSU"
     Tagline = "Hello, world!"
 
-    HomepagePosts = 5
+    HomepagePosts = 1
 
     SocialLinks = true
 

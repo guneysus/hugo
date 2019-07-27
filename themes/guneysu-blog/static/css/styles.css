@@ -11,3 +11,15 @@
 .article-content__red {
 }
 
+.article-content p a {
+    color: currentColor;
+    text-decoration-style: dotted;
+    opacity: 1;
+}
+    
+body div.container {
+    padding-bottom: 2.5em;
+}
+
+/* https://tachyons.io tree shaking */
+
