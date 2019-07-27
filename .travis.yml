@@ -2,7 +2,7 @@ sudo: false # required
 dist: trusty
 
 before_install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.38/hugo_0.38_Linux-64bit.deb && sudo dpkg -i hugo_0.38_Linux-64bit.deb
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.deb && sudo dpkg -i hugo_0.55.6_Linux-64bit.deb
   - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
   - sudo apt-get install -y nodejs
   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
