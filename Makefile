@@ -10,9 +10,9 @@ DEVELOP := hugo \
 			--theme guneysu-blog \
 			--watch serve \
 			--buildFuture \
-			--disableFastRender \
+			--buildDrafts \
 			--baseURL=127.0.0.1
-			# --buildDrafts \
+
 
 
 dev:
