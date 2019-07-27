@@ -15,7 +15,7 @@ pygmentsCodeFences = true
 
 preserveTaxonomyNames = true
 rssLimit = 10
-paginate = 10
+paginate = 1
 
 DefaultContentLanguage = "tr"
 disableLiveReload = false
@@ -27,7 +27,7 @@ Title = "/home/asguneysu"
     AuthorName = "Ahmed Şeref GÜNEYSU"
     Tagline = "Hello, world!"
 
-    HomepagePosts = 10
+    HomepagePosts = 1
 
     SocialLinks = true
 
