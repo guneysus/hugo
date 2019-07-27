@@ -12,7 +12,7 @@
 
         {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
 
-        <article class="pv4">
+        <article class="pv4 ph3 mv2 mh2 ba b--black-30 br2 bg-washed-blue">
 
             <div class="article-content">
                 {{ .Render "summary" }}
@@ -20,6 +20,7 @@
     
           
         </article>
+    
 
         {{ end }}
       </section>
