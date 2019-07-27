@@ -2,7 +2,7 @@
   <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
     <h1 class="f3 athelas mt0 lh-title">
       <!-- {{ .Title }} -->
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
     </h1>
     <p class="f5 f4-l lh-copy tj athelas">
       {{ .Summary }}
@@ -21,15 +21,15 @@
     />
 
   {{ else }}
-      <!-- <img
-      src="//placehold.it/640x427"
+      <img
+      src="//placehold.it/640x427/FFFFFF/000000.webp"
       class="db"
       alt="Photo of a dimly lit room with a computer interface terminal."
-    />       -->
+    />      
   {{ end }} 
 
   </div>
 </div>
 
 <!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
-<time class="f6 db gray">{{ .Date.Format "January 02, 2006" }}</time>
+<time class="f6 db gray sans-serif">{{ .Date.Format "January 02, 2006" }}</time>

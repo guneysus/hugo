@@ -1,4 +1,4 @@
-default: develop
+default: 
 
 PREVIEW := hugo \
 			--watch serve \
@@ -15,10 +15,10 @@ DEVELOP := hugo \
 			# --buildDrafts \
 
 
-develop:
+dev:
 	$(DEVELOP)
 
 preview:
 	$(PREVIEW)
 
-.PHONY: default develop preview
+.PHONY: default dev preview
