@@ -3,17 +3,36 @@
   {{ partial "head.html" . }}
   <link rel="stylesheet" href="/css/pygments/autumn.css" />
 
-  <body class="">
+  <body class="body">
     <div class="container">
-      {{ partial "header.html" . }}
 
-      <section class="mw7 center -debug -debug-grid">
-        <article class="pa3 pa5-ns">
-          <h1 class="f2-l">Title</h1>
+      <section class="mw7 center">
+          {{ partial "header.html" . }}
 
-          <div class="article-content f4-l lh-copy tj athelas">
+        <article class="pa3 pa5-ns pv4 b--black-10 ph3 ph0-l">
+
+
+          <h1 class="f2-l f3 athelas mt0 lh-title">{{ .Title }} </h1>
+          
+          <div class="article-content f4-l lh-copy tj athelas measure-wide">
             {{ .Content }}
           </div>
+
+          <!-- <ul class="article-taxonomy">
+              {{ if .Params.categories }}            
+              <hr>
+              <li>
+                <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+            
+              {{ if .Params.tags }}
+              <li>
+                {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+          </ul> -->
+
         </article>
       </section>
 

@@ -4,7 +4,11 @@ title: "AWS Solution Architect Sınavını Geçmek"
 date: 2018-08-09T21:53:08+03:00
 draft: false
 
-description: 
+description:
+summary: AWS Solutions Architect Sınavı Nasıl Geçilir?
+thumb: /static/AWS_Certified_Logo_SAA_1176x600_Color.png
+thumbAlt: AWS_Certified_Logo_SAA_1176x600_Color.png
+
 tags: ['aws', 'certification', 'solution architect']
 
 categories: ['Amazon Web Services']

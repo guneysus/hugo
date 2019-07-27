@@ -5,6 +5,7 @@ date: 2018-03-24T20:12:05+03:00
 draft: false
 
 description: 'Bu yazımda Hugo ile oluşturulmuş bir web sitesini, CI/CD aracı olan TravisCI ile AWS S3 üzerine yayınlayacağız.'
+summary: Sunucu yönetmekle uğraşmayın, Hugo ile blogunuzu hazırlayın, TravisCI ile AWS S3 üzerinde yayınlayın.
 
 tags: ['Aws S3', 'TravisCI', 'Continuous Integration']
 categories: ['Blogging']
