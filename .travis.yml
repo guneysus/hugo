@@ -1,8 +1,7 @@
 sudo: false # required
-dist: trusty
+dist: xenial
 
 before_install:
-  - sudo apt-get update && sudo apt-get install libstdc++6
   - wget https://github.com/gohugoio/hugo/releases/download/v0.56.3/hugo_extended_0.56.3_Linux-64bit.deb
   - sudo dpkg -i hugo_extended_0.56.3_Linux-64bit.deb
   # - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
