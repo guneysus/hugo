@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-
+  
   <body>
     <div class="container">
 
@@ -12,7 +12,7 @@
 
         {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
 
-        <article class="pv4 ph3 mv2 mh2 ba b--black-30 br2 bg-washed-blue">
+        <article class="article-list-item pv4 ph3 mv2 mh2 ba b--black-30 br2 bg-washed-blue">
 
             <div class="article-content">
                 {{ .Render "summary" }}
@@ -36,4 +36,13 @@
       {{ partial "footer.html" . }}
     </div>
   </body>
+
+  
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+        // ... more custom settings?
+    });      
+</script>
+    
 </html>

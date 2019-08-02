@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700&display=swap&subset=latin-ext');
+@import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Code:400&display=swap&subset=latin-ext');
 
 .article {
     height: 10rem;
+}
+
+.article-list-item {
+    // max-height: 300px!important;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
 }
 
 .article-title {
@@ -43,4 +50,8 @@ body div.container {
 
 .lh-comfort {
     line-height: 1.75;
+}
+
+.code,code {
+    font-family: 'Fira Code', monospace;
 }
