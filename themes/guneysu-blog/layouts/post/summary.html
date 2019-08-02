@@ -4,27 +4,29 @@
       <!-- {{ .Title }} -->
       <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
     </h1>
-    <p class="f5 lh-comfort tj libre-baskerville">
+    <p class="lh-comfort tj source-sans-pro f4">
       {{ .Summary }}
     </p>
   </div>
-  <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-30-ns">
-
-    
+  <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-30-ns">    
   {{ if .Params.Thumb }} 
-    
+    <div class="article-thumbnail-img-container h-100 pa0 ma0 bl b--light-gray pl">
     <img
       data-src="{{ .Params.Thumb }}"
       src="/static/placeholder.png"
-      class="db w-100 lazy"
+      class="article-thumbnail-img dtc w-100 lazy v-mid pl2 "
       {{ if .Params.ThumbAlt }} 
         alt="{{ .Params.ThumbAlt }} "
-      {{ end }}
-    />
+      {{ end }}      
+      />
+    </div>
+
+  {{ else }}
+    <div class="h-100 pa0 ma0 bl b--light-gray pl1"></div>
   {{ end }} 
 
   </div>
 </div>
 
 <!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
-<time class="f6 db gray sans-serif">{{ .Date.Format "January 02, 2006" }}</time>
+<time class="source-sans-pro light-silver">{{ .Date.Format "January 02, 2006" }}</time>
