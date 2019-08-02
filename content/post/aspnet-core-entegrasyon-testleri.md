@@ -1,7 +1,7 @@
 ---
 
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
+title: "Aspnet Core Entegrasyon Testleri"
+date: 2019-07-28T02:43:44+03:00
 draft: true
 
 description: 
@@ -12,7 +12,7 @@ categories:
 
 slug: 
 keywords: []
-publishDate: {{ .Date }}
+publishDate: 2019-07-28T02:43:44+03:00
 taxonomies: []
 weight: 0
 
