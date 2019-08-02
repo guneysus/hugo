@@ -10,11 +10,13 @@
   </div>
   <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-30-ns">
 
+    
   {{ if .Params.Thumb }} 
     
     <img
-      src="{{ .Params.Thumb }}"
-      class="db"
+      data-src="{{ .Params.Thumb }}"
+      src="/static/placeholder.png"
+      class="db w-100 lazy"
       {{ if .Params.ThumbAlt }} 
         alt="{{ .Params.ThumbAlt }} "
       {{ end }}
