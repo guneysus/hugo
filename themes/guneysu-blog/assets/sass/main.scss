@@ -1,0 +1,38 @@
+@import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Code:400&display=swap&subset=latin-ext');
+
+.article-content p a {
+    color: currentColor;
+    text-decoration-style: dotted;
+    opacity: 1;
+}
+    
+body div.container {
+    padding-bottom: 2.5em;
+}
+
+/* https://tachyons.io tree shaking */
+
+.libre-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.noto-sans {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.source-sans-pro {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lh-comfort {
+    line-height: 1.75;
+}
+
+.code,code {
+    font-family: 'Fira Code', monospace;
+}
