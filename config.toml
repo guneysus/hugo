@@ -14,8 +14,8 @@ newContentEditor = "code-insiders"
 pygmentsCodeFences = true
 
 preserveTaxonomyNames = true
-rssLimit = 10
-paginate = 1
+# rssLimit = 10
+# paginate = 10
 
 DefaultContentLanguage = "tr"
 disableLiveReload = false
