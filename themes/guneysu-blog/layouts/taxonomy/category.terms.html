@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <body class="body">
+    <div class="container">
+
+      <section class="mw7 center">
+          {{ partial "header.html" . }}
+    <main class="content">
+
+        <a class="link dim black" href="javascript:void(0)">
+            <h2 class="f2 source-sans-pro mt0 lh-title mt2">{{ .Title }}</h2>
+        </a>  
+    
+
+      <div class="category">
+        <h2 class="category-title">{{ i18n "categories" }}</h2>
+        {{ $data := .Data }} {{ range $key, $value := .Data.Terms.Alphabetical }}
+        <ul class="category-item">
+          <li>
+            <a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
+            <span class="category-item-count">
+              <sup>({{ $value.Count }})</sup>
+            </span>
+          </li>
+        </ul>
+        {{ end }}
+      </div>
+
+    </main>
+  </section>
+  
+  {{ partial "footer.html" . }}
+  </div>
+  </body>
+  </html>
+  
+  

@@ -6,9 +6,10 @@ draft: true
 
 description: 
 summary: 
-tags: []
+tags: [
+]
 
-categories:
+categories: ["foo"]
 
 slug: 
 keywords: []

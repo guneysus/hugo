@@ -1,6 +1,9 @@
     <nav class="list-item">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <h1 class="f3 source-sans-pro mt0 lh-title">
+          {{ .Date.Format "2006" }} | <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
+      </h1>
       <span class="list-item-date">
-        {{ .Date.Format "2006-01-02" }}
+        <!-- {{ .Date.Format "2006 | January" }} -->
       </span>
     </nav>
+
