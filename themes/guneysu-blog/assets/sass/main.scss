@@ -1,4 +1,5 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
+
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Code:400&display=swap&subset=latin-ext');
 
 .article-content p a {
@@ -6,7 +7,12 @@
     text-decoration-style: dotted;
     opacity: 1;
 }
-    
+
+.article-tag {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
 body div.container {
     padding-bottom: 2.5em;
 }
@@ -33,6 +39,7 @@ body div.container {
     line-height: 1.75;
 }
 
-.code,code {
+.code,
+code {
     font-family: 'Fira Code', monospace;
 }
