@@ -9,8 +9,6 @@ summary:
 tags: [
 ]
 
-categories: ["foo"]
-
 slug: 
 keywords: []
 publishDate: 2019-07-28T02:47:58+03:00

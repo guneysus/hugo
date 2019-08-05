@@ -1,23 +1,23 @@
 <div class="flex flex-column flex-row-ns">
-  <div class="w-100 w-70-ns pr3-ns order-2 order-1-ns">
-    <h1 class="f2 source-sans-pro mt0 lh-title">
+  <div class="w-100 w-70-ns order-2 order-1-ns pr3-ns">
+    <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro mt0">
       <!-- {{ .Title }} -->
       <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
     </h1>
-    <p class="lh-comfort tj source-sans-pro f4">
+    <p class="f4 lh-comfort tj source-sans-pro">
       {{ .Summary }}
     </p>
 
   
     
   </div>
-  <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-30-ns">    
+  <div class="order-1 order-2-ns w-100 w-30-ns mb4 mb0-ns pl3-ns">    
   {{ if .Params.Thumb }} 
-    <div class="article-thumbnail-img-container h-100 pa0 ma0 bl b--light-gray pl">
+    <div class="article-thumbnail-img-container h-100 bl b--light-gray ma0 pa0 pl2 pr2 debug">
     <img
       data-src="{{ .Params.Thumb }}"
       src="/static/placeholder.png"
-      class="article-thumbnail-img dtc w-100 lazy v-mid pl2 "
+      class="article-thumbnail-img dtc w-100 lazy v-mid pl2"
       {{ if .Params.ThumbAlt }} 
         alt="{{ .Params.ThumbAlt }} "
       {{ end }}      
@@ -25,23 +25,27 @@
     </div>
 
   {{ else }}
-    <div class="h-100 pa0 ma0 bl b--light-gray pl1"></div>
+    <div class="h-100 bl b--light-gray"></div>
   {{ end }} 
   </div>  
 </div>
 
 <!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
-<time class="source-sans-pro light-silver">{{ .Date.Format "January 02, 2006" }}</time>
 
-<div class="article-tags pt3">
+<div class="article-tags ma0 pa0 mb3">
 {{ if .Params.tags }}
   <span>
     <i class=""></i>
     {{ range $index, $tag := .Params.tags }}
     {{ if gt $index 0 }}
     {{ end }}
-      <a class="source-sans-pro dark-gray" href="{{ "tags/" | relURL }}{{ . | urlize }}">#{{ $tag }}</a>
+      # <a class="article-tag source-sans-pro dark-gray" 
+          href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ $tag }}</a>
     {{ end }}
   </span>
   {{ end }}  
+</div>
+
+<div class="article-publish-date source-sans-pro light-silver mb0 pt0 nb3">
+  <time>{{ .Date.Format "January 02, 2006" }}</time>
 </div>

@@ -9,9 +9,7 @@ summary: AWS Solutions Architect Sınavı Nasıl Geçilir?
 thumb: /static/AWS_Certified_Logo_SAA_1176x600_Color.png
 thumbAlt: AWS_Certified_Logo_SAA_1176x600_Color.png
 
-tags: ['aws', 'certification', 'solution architect']
-
-categories: ['Amazon Web Services']
+tags: ['aws', 'certification']
 
 slug: aws-solution-architect-sinavini-gecmek
 keywords: []
