@@ -35,17 +35,16 @@
 <div class="article-tags ma0 pa0 mb3">
 {{ if .Params.tags }}
   <span>
-    <i class=""></i>
     {{ range $index, $tag := .Params.tags }}
     {{ if gt $index 0 }}
     {{ end }}
-      # <a class="article-tag source-sans-pro dark-gray" 
-          href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ $tag }}</a>
+    </i> <a class="article-tag source-sans-pro link dim gray f5 fw1  " 
+          href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-tag"></i> {{ $tag }}</a>
     {{ end }}
   </span>
   {{ end }}  
 </div>
 
-<div class="article-publish-date source-sans-pro light-silver mb0 pt0 nb3">
+<div class="article-publish-date source-sans-pro silver pt0 mb2">
   <time>{{ .Date.Format "January 02, 2006" }}</time>
 </div>
