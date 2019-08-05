@@ -1,6 +1,6 @@
 ---
 
-title: "Aspnet Core İle Resim Boyutlandırma Uygulaması"
+title: "ASP.Net Core İle Resim Boyutlandırma Uygulaması"
 date: 2019-01-20T20:23:00+03:00
 draft: false
 
@@ -11,18 +11,14 @@ thumb: /static/ASP.NET-Core-Logo_2colors_RGB_bitmap_MEDIUM.png
 thumbAlt: aspnet core image server
 
 tags: 
-    - asp.net core
+    - test driven
+    - e2e testing
+    - aspnet core
+    - docker
     - nodejs
     - supertest
-    - test driven
-    - e2e
-
-
-categories:
-    - Asp.NET Core
-    - Amazon Web Services
-    - Docker
-    - Side Projects
+    - aws
+    - side project
 
 slug: aspnet-core-1-image-server
 keywords: []

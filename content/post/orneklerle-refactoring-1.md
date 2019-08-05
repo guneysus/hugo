@@ -6,9 +6,7 @@ draft: false
 
 description: ASP.Net Core ViewComponent refactor ediyoruz.
 summary: Örnek bir ASP.Net Core ViewComponent'i refactor ediyoruz.
-tags: ["asp.net core"]
-
-categories: ["Clean Coding", "Refactoring"]
+tags: ["clean-coding", "refactoring"]
 
 slug: orneklerle-refactoring-I
 keywords: []
@@ -17,7 +15,6 @@ taxonomies: []
 weight: 0
 
 ---
-
 
 ## Refaktör Etmek Nedir?
 
