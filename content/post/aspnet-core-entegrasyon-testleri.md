@@ -1,14 +1,14 @@
 ---
 
-title: "Aspnet Core Entegrasyon Testleri"
+title: "ASP.Net Core Entegrasyon Testleri"
 date: 2019-07-28T02:43:44+03:00
 draft: true
 
 description: 
 summary: 
-tags: []
-
-categories:
+tags:
+    - aspnet core
+    - test driven
 
 slug: 
 keywords: []
@@ -17,4 +17,3 @@ taxonomies: []
 weight: 0
 
 ---
-

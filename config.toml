@@ -7,6 +7,11 @@ theme = "guneysu-blog"
 # theme = "paperbackcustom"
 
 
+defaultContentLanguage = "tr"
+enableEmoji = true
+# Set the unicode character used for the "return" link in page footnotes.
+footnotereturnlinkcontents = "↩"
+
 pygmentsCodeFencesGuessSyntax = true
 pygmentsStyle = "bw"
 pygmentsUseClasses = true
@@ -48,7 +53,6 @@ Title = "/home/asguneysu"
     weight = 1
 
 [taxonomies]
-    category = "categories"  
     tag = "tags"
 
 [permalinks]
@@ -56,11 +60,29 @@ Title = "/home/asguneysu"
     page = "/:slug/"
 
 [[menu.main]]
-    name = "Tags"
+    name = "tags"
     url = "/tags"
     weight = -120
 
-[[menu.main]]
-    name = "Categories"
-    url = "/categories"
-    weight = -130
+# MARKDOWN
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+    plainIDAnchors = true
+    # See https://github.com/gohugoio/hugo/issues/2424
+    hrefTargetBlank = true
+    angledQuotes = false
+    latexDashes = true
+    fractions = true
+    extensions =  ["tables", ""]
+    titleblock = true
+
+[imaging]
+# See https://github.com/disintegration/imaging
+# CatmullRom is a sharp bicubic filter which should fit the docs site well with its many screenshots.
+# Note that you can also set this per image processing.
+resampleFilter = "CatmullRom"
+
+# Default JPEG quality setting. Default is 75.
+quality = 75
+
+anchor = "smart"
