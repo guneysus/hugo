@@ -38,8 +38,8 @@
     {{ range $index, $tag := .Params.tags }}
     {{ if gt $index 0 }}
     {{ end }}
-    </i> <a class="article-tag source-sans-pro link dim gray f5 fw1  " 
-          href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-tag"></i> {{ $tag }}</a>
+    </i> <a class="article-tag source-sans-pro link dim gray f5 fw1 lh-comfort" 
+          href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hashtag"></i> {{ $tag }}</a>
     {{ end }}
   </span>
   {{ end }}  
