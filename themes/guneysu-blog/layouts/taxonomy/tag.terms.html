@@ -20,7 +20,7 @@
         {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
         {{ $spread := sub $max $min }}
         {{ $fontStep := div $fontSpread $spread }}    
-        <ul class="tag-cloud-item lh-copy ">
+        <ul class="tag-cloud-item lh-comfort source-sans-pro">
             {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
                 {{ $currentTagCount := len $taxonomy.Pages }}
                 {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
