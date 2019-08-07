@@ -20,7 +20,7 @@ before_install:
 #   - themes/skeleton/node_modules
   
 script:
-  - hugo
+  - hugo --minify --debug
 
 notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
