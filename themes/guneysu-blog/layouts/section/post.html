@@ -11,8 +11,8 @@
       {{ partial "header.html" . }}
 
           {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
-          <article class="article pv3" >
-            <div class="f2 source source-sans-pro fw5">{{ .Key }}</div>
+          <article class="article pv3 ph2" >
+            <div class="f3 source source-sans-pro fw5">{{ .Key }}</div>
             <ul class="list p0">
               {{ range .Pages -}}
               <li>
