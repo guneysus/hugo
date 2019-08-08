@@ -6,27 +6,25 @@
   <body>
     <div class="container">
 
+        <section class="mw7 center ">
+
       {{ partial "header.html" . }}
 
-      <article>
-
-        {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
-        <section>
-          <h2>{{ .Key }}</h2>
-
-          <ol>
-            {{ range .Pages -}}
-            <li>
-              {{ .Render "list-item" }}
-            </li>
-            {{ end }}
-          </ol>
-        </section>
-        
-        {{ end }}
-
-      </article>
-      {{ partial "nav.html" . }}
+          {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
+          <article class="article pv3" >
+            <div class="f2 source source-sans-pro fw5">{{ .Key }}</div>
+            <ul class="list p0">
+              {{ range .Pages -}}
+              <li>
+                {{ .Render "list-item" }}
+              </li>
+              {{ end }}
+            </ul>
+          </article>
+          
+          {{ end }}
+  
+      </section>
 
       {{ partial "footer.html" . }}
 
