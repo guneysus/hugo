@@ -143,9 +143,9 @@ docker-compose up --renew-anon-volumes --build
 
 <!-- ----------------- -->
 
-[imagesharp]:   http://example.com/  "Optional Title Here"
+[imagesharp]:   https://github.com/SixLabors/ImageSharp  "SixLabors/ImageSharp"
 
-[supertest]:    http://example.com/  "Optional Title Here"
+[supertest]:    https://github.com/visionmedia/supertest  "visionmedia/supertest"
 [src]:          https://github.com/guneysus/dotnetcore-imageserver/tree/master/src/ImageServer
 [src-test]:    https://github.com/guneysus/dotnetcore-imageserver/tree/master/tests
 [makefile]:    https://github.com/guneysus/dotnetcore-imageserver/blob/master/Makefile
