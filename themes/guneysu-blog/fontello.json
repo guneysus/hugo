@@ -71,6 +71,12 @@
       "css": "tags",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "5408be43f7c42bccee419c6be53fdef5",
+      "css": "doc-text",
+      "code": 61686,
+      "src": "fontawesome"
     }
   ]
 }

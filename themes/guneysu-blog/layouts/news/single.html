@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
+
+  <body class="body">
+    <div class="container">
+
+      <section class="mw7 center">
+          {{ partial "header.html" . }}
+
+        <article class="pa3 pa5-ns pv4 ph3 ph0-l b--black-10">
+
+
+          <h1 class="f2 f2-m f2-l source-sans-pro mt0 lh-title">{{ .Title }} </h1>
+          
+          <div class="article-content f4 f6-m lh-comfort tj libre-baskerville measure-wide">
+            {{ .Content }}
+          </div>
+
+          <!-- <ul class="article-taxonomy">
+              {{ if .Params.categories }}            
+              <hr>
+              <li>
+                <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+            
+              {{ if .Params.tags }}
+              <li>
+                {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
+              </li>
+              {{ end }}
+          </ul> -->
+
+        </article>
+      </section>
+
+      <section class="mw7 center span">
+        {{ partial "footer.html" . }}
+      </section>
+      
+    </div>
+  </body>
+</html>
