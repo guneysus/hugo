@@ -1,29 +1,36 @@
-<article class="article-list-item mt2 mb4 pv4">
+<article class="article-list-item mt2 mb4 pv2">
   <div class="article-content">
     <div class="flex flex-column flex-row-ns">
 
       <div class="w-100 w-70-ns order-2 order-1-ns pr3">
-        <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro">
+        <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro mb1">
           <!-- {{ .Title }} -->
           <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
         </h1>
-        <p class="f3 lh-comfort tj source-sans-pro ">
+
+        <div class="article-publish-date source-sans-pro black-30">
+          <time>{{ .Date.Format "January 02, 2006" }}</time>
+        </div>
+    
+        <p class="f3 lh-comfort tj source-sans-pro mt3">
           {{ .Summary }}
         </p>
         
-        <div class="article-tags pb3 tj">
+        <div class="article-tags pb2 tj">
             {{ if .Params.tags }}
-              <span class="w-100">
+              <span class="">
                 {{ range $index, $tag := .Params.tags }}
                 {{ if gt $index 0 }}
                 {{ end }}
-                </i><a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-comfort" href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
+                </i>
+                <a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-wide ba br3 bg-near-white pv1 ph2" 
+                href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
                 {{ end }}</span>
               {{ end }}  
             </div>        
       </div>
 
-      <div class="order-1 order-2-ns w-100 w-30-ns pv1">
+      <div class="order-1 order-2-ns w-100 w-30-ns">
       {{ if .Params.Thumb }} 
         <div class="article-thumbnail-img-container h-100 bl b--light-gray">
         <img
@@ -46,10 +53,6 @@
     <!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
 
 
-
-    <div class="article-publish-date source-sans-pro black-30">
-      <time>{{ .Date.Format "January 02, 2006" }}</time>
-    </div>
 
   </div>
 </article>    
