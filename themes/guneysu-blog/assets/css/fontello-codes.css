@@ -1,7 +1,8 @@
 
 .icon-home:before { content: '\e800'; } /* '' */
 .icon-tag:before { content: '\e801'; } /* '' */
-.icon-tags:before { content: '\e802'; } /* '' */
+.icon-hash:before { content: '\e802'; } /* '' */
+.icon-tags:before { content: '\e803'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-rss:before { content: '\f09e'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
