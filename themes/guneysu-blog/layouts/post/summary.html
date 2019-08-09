@@ -1,50 +1,55 @@
-<div class="flex flex-column flex-row-ns">
-  <div class="w-100 w-70-ns order-2 order-1-ns pr3-ns">
-    <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro mt0">
-      <!-- {{ .Title }} -->
-      <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
-    </h1>
-    <p class="f4 lh-comfort tj source-sans-pro">
-      {{ .Summary }}
-    </p>
+<article class="article-list-item mt2 mb4 pv4">
+  <div class="article-content">
+    <div class="flex flex-column flex-row-ns">
 
-  
-    
-  </div>
-  <div class="order-1 order-2-ns w-100 w-30-ns mb4 mb0-ns pl3-ns">    
-  {{ if .Params.Thumb }} 
-    <div class="article-thumbnail-img-container h-100 bl b--light-gray ma0 pa0 pl2 pr2">
-    <img
-      data-src="{{ .Params.Thumb }}"
-      src="/static/placeholder.png"
-      class="article-thumbnail-img dtc w-100 lazy v-mid pl2"
-      {{ if .Params.ThumbAlt }} 
-        alt="{{ .Params.ThumbAlt }} "
-      {{ end }}      
-      />
+      <div class="w-100 w-70-ns order-2 order-1-ns pr3">
+        <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro">
+          <!-- {{ .Title }} -->
+          <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
+        </h1>
+        <p class="f3 lh-comfort tj source-sans-pro ">
+          {{ .Summary }}
+        </p>
+        
+        <div class="article-tags pb3 tj">
+            {{ if .Params.tags }}
+              <span class="w-100">
+                {{ range $index, $tag := .Params.tags }}
+                {{ if gt $index 0 }}
+                {{ end }}
+                </i><a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-comfort" href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
+                {{ end }}</span>
+              {{ end }}  
+            </div>        
+      </div>
+
+      <div class="order-1 order-2-ns w-100 w-30-ns pv1">
+      {{ if .Params.Thumb }} 
+        <div class="article-thumbnail-img-container h-100 bl b--light-gray">
+        <img
+          data-src="{{ .Params.Thumb }}"
+          src="/static/placeholder.png"
+          class="article-thumbnail-img w-100 lazy v-mid pl2"
+          {{ if .Params.ThumbAlt }} 
+            alt="{{ .Params.ThumbAlt }} "
+          {{ end }}      
+          />
+        </div>
+
+      {{ else }}
+        <div class="h-100 b--light-gray"></div>
+      {{ end }} 
+      </div>
+
     </div>
 
-  {{ else }}
-    <div class="h-100 bl b--light-gray"></div>
-  {{ end }} 
-  </div>  
-</div>
+    <!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
 
-<!-- <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p> -->
 
-<div class="article-tags ma0 pa0 mb3">
-{{ if .Params.tags }}
-  <span>
-    {{ range $index, $tag := .Params.tags }}
-    {{ if gt $index 0 }}
-    {{ end }}
-    </i> <a class="article-tag source-sans-pro link dim gray f5 fw1 lh-comfort" 
-          href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hashtag"></i> {{ $tag }}</a>
-    {{ end }}
-  </span>
-  {{ end }}  
-</div>
 
-<div class="article-publish-date source-sans-pro silver pt0 mb2">
-  <time>{{ .Date.Format "January 02, 2006" }}</time>
-</div>
+    <div class="article-publish-date source-sans-pro black-30">
+      <time>{{ .Date.Format "January 02, 2006" }}</time>
+    </div>
+
+  </div>
+</article>    

@@ -1,54 +1,48 @@
-<section class="mw7 center ph2 span mv3">
-  <footer class="site-footer">
+  <footer class="site-footer mb5">
     <div class="">
-      <nav class="site-nav f3 bg-light-yellow p0 pv3 ba b--black-10">
+      <nav class="site-nav f3 bg-washed-yellow br2 ba b--black-10 p0 pv3 ph3">
 
-        <a href="{{ .Site.BaseURL }}" 
-        class="link dim black">
+        <a href="{{ .Site.BaseURL }}" class="link dim mid-gray pull-right">
           <i class="icon icon-home"> </i>
         </a>
 
-        <a href="{{ .Site.BaseURL }}tags" 
-        class="link dim black">
+<span class="black-30">|</span>
+
+        <a href="{{ .Site.BaseURL }}tags" class="link dim mid-gray">
           <i class="icon icon-tags"> </i>
         </a>        
 
-        <a href="{{ .Site.BaseURL }}post/" 
-          class="link dim black">
+        <a href="{{ .Site.BaseURL }}post/" class="link dim mid-gray">
           <i class="icon icon-newspaper"> </i>
         </a>
 
-        <a
-          href="https://stackoverflow.com/users/1766716/guneysus"
-          class="link dim black icon-social-tumblr">
-          <i class="icon icon-stackoverflow"> </i>
-          </a>
+<span class="black-30">|</span>
+        <a href="https://stackoverflow.com/users/1766716/guneysus" class="link dim mid-gray icon-social-tumblr">
+          <i class="icon icon-stackoverflow"> </i></a>
         
-        <a
-          href="https://www.linkedin.com/in/guneysu"
-          class="link dim black icon-social-linkedin">
+        <a href="https://www.linkedin.com/in/guneysu" class="link dim mid-gray icon-social-linkedin">
           <i class="icon icon-linkedin"> </i> 
-          </a>
+        </a>
 
-        <a href="http://github.com/guneysus" class="link dim black">
+        <a href="http://github.com/guneysus" class="link dim mid-gray">
           <i class="icon icon-github-circled"></i>
         </a>
 
-        <a href="https://guneysu.tumblr.com/" class="link dim black">
-          <i class="icon icon-tumblr"> </i> 
-
-          </a>
-
-          <a href="{{ $.RSSLink }}" 
-          class="link dim black">
-          <i class="icon icon-rss"> </i>
-          
+        <a href="https://guneysu.tumblr.com/" class="link dim mid-gray">
+          <i class="icon icon-tumblr"> </i>
         </a>
+
+<span class="black-30">|</span>
+
+          <a href="{{ $.RSSLink }}" class="link dim mid-gray">
+            <i class="icon icon-rss"> </i>
+          </a>
                   
         <!-- <span class="owner">{{ now.Year }} {{ .Site.Params.Author }} </span> -->
       </nav>
 
-      <pre class="tr f7 ttu mt3 gray">last updated {{ .Hugo.BuildDate }}</pre>
+      {{ if  .Hugo.BuildDate}}
+        <pre class="tr f7 ttu mt3 gray">last updated {{ .Hugo.BuildDate }}</pre>
+      {{ end }}
     </div>
   </footer>
-</section>

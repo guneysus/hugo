@@ -9,15 +9,13 @@
             {{ partial "header.html" . }}
             <main class="content" role="main">
 
-              <div class="list">
-                <a class="link dim black" href="javascript:void(0)">
-                    <h2 class="f2 source-sans-pro mt0 lh-title mt2">{{ .Title }}</h2>
-                </a>
-                
+              <div class="article-list pt3 pb5">
+                <h2 class="f2 source-sans-pro mt0 lh-title mt2">{{ .Title }}</h2>
+
+                <!-- <a class="link dim black" href="javascript:void(0)"></a> -->
                 
                 {{ range (.Paginator 9999999).Pages }}
-                {{ partial "list-item.html" . }}
-            
+                  {{ partial "list-item.html" . }}
                 {{ end }}
                 </div>
             
@@ -27,7 +25,10 @@
           
         </section>
   
+      <section class="mw7 center">
         {{ partial "footer.html" . }}
+      </section>
+
       </div>
     </body>
   </html>
