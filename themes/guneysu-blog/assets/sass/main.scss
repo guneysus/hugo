@@ -1,84 +1,109 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Code:400&display=swap&subset=latin-ext');
-
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Code:400&display=swap&subset=latin-ext");
 
 .article-content p a {
-    color: currentColor;
-    text-decoration-style: dotted;
-    opacity: 1;
+  color: currentColor;
+  text-decoration-style: dotted;
+  opacity: 1;
 }
 
 .article-tag {
-    font-family: 'Source Sans Pro', sans-serif;
-    white-space: pre;
+  font-family: "Source Sans Pro", sans-serif;
+  white-space: pre;
 }
 
 body div.container {
-    padding-bottom: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 /* https://tachyons.io tree shaking */
 
 .libre-baskerville {
-    font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .roboto {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .noto-sans {
-    font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .source-sans-pro {
-    font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .lh-comfort {
-    line-height: 1.75;
+  line-height: 1.75;
 }
 
 .code,
 code {
-    font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
 }
 
-
-     
-i.icon
-{
+i.icon {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
- 
+
   /* You can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+
+i.icon:before,
+i.icon:before {
+    margin: 0 0.2em 0 0;
+}
+
+.xdim {
+  opacity: 1;
+}
+
+.xdim,
+.xdim:focus,
+.xdim:hover {
+//   transition: opacity 0.15s ease-in;
+    transition: color 0.15s ease-in;
+}
+
+.xdim:focus,
+.xdim:hover {
+//   opacity: 0.5;
+//   opacity: 0.5;
+//   color: adjust-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
+    color: #111;
+}
+
+.xdim:active {
+//   opacity: 0.8;
+//   transition: opacity 0.15s ease-out;
+    // color: adjust-hue($color: #000000, $degrees: 1);
+    color: #111;
 }
