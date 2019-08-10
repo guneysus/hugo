@@ -38,7 +38,7 @@
 
 <span class="black-30">|</span>
 
-          <a href="{{ $.RSSLink }}" class="link dim mid-gray">
+          <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="link dim mid-gray">
             <i class="icon icon-rss"> </i>
           </a>
                   

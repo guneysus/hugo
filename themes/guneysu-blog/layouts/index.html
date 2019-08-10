@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  
-  <body>
-    <div class="container">
 
-      <section class="mw7 center">
+{{ partial "head.html" . }}  
 
-      {{ partial "header.html" . }}
+<body>
+  <div class="container">
 
+    <section class="mw7 center">
+    {{ partial "header.html" . }}
 
-        {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
-            {{ .Render "summary" }}
-        {{ end }}
-      </section>
+    {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
+      {{ .Render "summary" }}
+      {{ end }}
+    </section>
 
-      <section>
-        <!-- {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
-        <article class="article">
-          {{ .Render "list-item-expanded" }}
-        </article>
-        {{ end }} -->
-      </section>
+    <section>
+      <!-- {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
+      <article class="article">
+        {{ .Render "list-item-expanded" }}
+      </article>
+      {{ end }} -->
+    </section>
     
-  <section class="mw7 center span">
-      {{ partial "footer.html" . }}
-  </section>
-
+    <section class="mw7 center span">
+        {{ partial "footer.html" . }}
+    </section>
 
     </div>
   </body>
 
-  
+
 <script>
     var lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazy"
