@@ -9,11 +9,12 @@
         <section class="mw7 center ">
 
       {{ partial "header.html" . }}
+          <h1 class="f2 f2-m f2-l source-sans-pro ph1 lh-title">{{ .Title }} </h1>
 
           {{ range (where .Data.Pages "Type" "news").GroupByDate "2006" -}}
           <article class="article pv3 ph2" >
-            <div class="f3 source source-sans-pro fw5">{{ .Key }}</div>
-            <ul class="list p0">
+            <div class="f3 source source-sans-pro fw6">{{ .Key }}</div>
+            <ul class="list pl0">
               {{ range .Pages -}}
               <li>
                 {{ .Render "list-item" }}
