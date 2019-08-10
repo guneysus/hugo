@@ -13,14 +13,18 @@
 
 
           <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
-          
+
           <div class="article-publish-date source-sans-pro black-50">
-            <time>{{ .Date.Format "2006, January 02" }}</time>
-          </div>
+            <time>{{ .Date.Format "2006, January" }}</time>
+          </div>          
+          
 
           <div class="article-content f4 f6-m lh-comfort tj libre-baskerville measure-wide">
             {{ .Content }}
           </div>
+
+
+
 
           <!-- <ul class="article-taxonomy">
               {{ if .Params.categories }}            

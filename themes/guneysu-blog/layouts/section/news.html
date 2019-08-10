@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+    <div class="container">
+
+        <section class="mw7 center ">
+
+      {{ partial "header.html" . }}
+
+          {{ range (where .Data.Pages "Type" "news").GroupByDate "2006" -}}
+          <article class="article pv3 ph2" >
+            <div class="f3 source source-sans-pro fw5">{{ .Key }}</div>
+            <ul class="list p0">
+              {{ range .Pages -}}
+              <li>
+                {{ .Render "list-item" }}
+              </li>
+              {{ end }}
+            </ul>
+          </article>
+          
+          {{ end }}
+  
+      </section>
+
+  <section class="mw7 center span">
+    {{ partial "footer.html" . }}
+  </section>
+  
+    </div>
+
+
+  </body>
+</html>

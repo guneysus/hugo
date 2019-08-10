@@ -39,7 +39,6 @@ body div.container {
   line-height: 1.75;
 }
 
-
 .lh-wide {
   line-height: 2.25;
 }
@@ -81,10 +80,9 @@ i.icon {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-
 i.icon:before,
 i.icon:before {
-    margin: 0 0.2em 0 0;
+  margin: 0 0.2em 0 0;
 }
 
 .xdim {
@@ -94,21 +92,21 @@ i.icon:before {
 .xdim,
 .xdim:focus,
 .xdim:hover {
-//   transition: opacity 0.15s ease-in;
-    transition: color 0.15s ease-in;
+  //   transition: opacity 0.15s ease-in;
+  transition: color 0.15s ease-in;
 }
 
 .xdim:focus,
 .xdim:hover {
-//   opacity: 0.5;
-//   opacity: 0.5;
-//   color: adjust-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
-    color: #111;
+  //   opacity: 0.5;
+  //   opacity: 0.5;
+  //   color: adjust-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
+  color: #111;
 }
 
 .xdim:active {
-//   opacity: 0.8;
-//   transition: opacity 0.15s ease-out;
-    // color: adjust-hue($color: #000000, $degrees: 1);
-    color: #111;
+  //   opacity: 0.8;
+  //   transition: opacity 0.15s ease-out;
+  // color: adjust-hue($color: #000000, $degrees: 1);
+  color: #111;
 }

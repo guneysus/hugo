@@ -71,6 +71,12 @@
       "css": "tags",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "1189604bf305b6b03a74685ce60e6632",
+      "css": "doc-text",
+      "code": 59397,
+      "src": "entypo"
     }
   ]
 }
