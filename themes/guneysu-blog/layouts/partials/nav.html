@@ -6,7 +6,7 @@
   
   <a href="{{ .Site.BaseURL }}" class="icon-home"></a>
   <a href="{{ .Site.BaseURL }}post/" class="icon-list"></a>
-  <a href="{{ $.RSSLink }}" class="icon-feed"></a>
+  <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="icon-feed"></a>
 
   {{ if eq .Site.Params.SocialLinks true -}}
 

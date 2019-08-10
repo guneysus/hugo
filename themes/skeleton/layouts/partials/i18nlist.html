@@ -1,8 +1,0 @@
-{{ if .IsTranslated }}
-{{ range .Translations }}
-    <span>
-        {{ $widget := (printf "%s%s" "langs/" $.Lang ) }}
-        <a href="{{ .Permalink }}">{{ partial $widget . }}</a>
-    </span>
-    {{ end}}
-{{ end }}
