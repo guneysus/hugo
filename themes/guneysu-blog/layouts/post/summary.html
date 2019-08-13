@@ -32,7 +32,8 @@
                 {{ if gt $index 0 }}
                 {{ end }}
                 </i>
-                <a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-wide br3 bg-near-white pv1 ph2" 
+                <a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-wide br3 bg-near-white pv1 ph2"
+                aria-label="Go to {{ $tag}} tag"
                 href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
                 {{ end }}</span>
               {{ end }}  

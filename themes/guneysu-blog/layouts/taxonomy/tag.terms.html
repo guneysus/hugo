@@ -28,7 +28,9 @@
                 {{ $weight := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
                 {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weight) ) }}
                 <li>
-                  <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}" class="link dim black" >{{ $name }} ({{$currentTagCount}})</a>
+                  <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}" 
+                  aria-label="Go to {{ $name }} tag"
+                    class="link dim black" >{{ $name }} ({{$currentTagCount}})</a>
                 </li>
             {{ end }}
         </ul>
