@@ -10,6 +10,7 @@
 
 .article-tag {
   font-family: "Source Sans Pro", sans-serif;
+  font-display: auto;
   white-space: pre;
 }
 
@@ -21,18 +22,22 @@ body div.container {
 
 .libre-baskerville {
   font-family: "Libre Baskerville", serif;
+  font-display: auto;
 }
 
 .roboto {
   font-family: "Roboto", sans-serif;
+  font-display: auto;
 }
 
 .noto-sans {
   font-family: "Noto Sans", sans-serif;
+  font-display: auto;
 }
 
 .source-sans-pro {
   font-family: "Source Sans Pro", sans-serif;
+  font-display: auto;
 }
 
 .lh-comfort {
@@ -46,11 +51,13 @@ body div.container {
 .code,
 code {
   font-family: "Fira Code", monospace;
+  font-display: auto;
 }
 
 i.icon {
   font-family: "fontello";
   font-style: normal;
+  font-display: auto;
   font-weight: normal;
   speak: none;
 
