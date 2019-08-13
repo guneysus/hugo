@@ -17,6 +17,8 @@ publishDate: 2018-08-09T21:53:08+03:00
 taxonomies: []
 weight: 0
 
+state: "is-featured"
+
 ---
 
 Bilge Adam Kurumsalda yaklaşık altı ay önce başlayan ve devam eden dönüşümün önemli adımlarından

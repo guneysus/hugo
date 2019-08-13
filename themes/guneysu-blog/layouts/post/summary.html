@@ -1,4 +1,4 @@
-<article class="article-list-item mt2 mb4 pv2">
+<article class="article-list-item mt2 mb4 pv2"></article>
   <div class="article-content">
     <div class="flex flex-column flex-row-ns">
 
@@ -8,10 +8,14 @@
           <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
         </h1>
 
-        <div class="article-publish-date source-sans-pro black-30">
-          <time>{{ .Date.Format "Jan 02, 2006" }}</time>
+        <div class="article-publish-date source-sans-pro black-40 lh-copy relative right-0 top-0 tr">
+          <time>{{ .Date.Format "Jan 02, 2006" }}  <i class="icon icon-calendar"></i></time>
         </div>
-    
+
+        <div class="article-info source-sans-pro black-30 lh-copy relative right-0 top-0 tr" data-words-count="{{ countwords .Content }}" data-minutes-read="{{ (div (countwords .Content) (300)) }}">
+          {{ (div (countwords .Content) (300)) }} minutes <i class="icon icon-hourglass-2"></i> 
+        </div>
+
         <p class="f3 lh-comfort tj source-sans-pro mt3">
           {{ .Summary }}
         </p>
