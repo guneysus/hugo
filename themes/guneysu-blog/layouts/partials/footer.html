@@ -50,3 +50,16 @@
       {{ end }}
     </div>
   </footer>
+
+  
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+{{ $fontello := resources.Get "css/fontello.css" | toCSS $options | minify | fingerprint }}
+{{ $codeTheme := resources.Get "css/pygments/autumn.css" | toCSS | minify | fingerprint }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $fontello.Permalink }}">  
+<link rel="stylesheet" href="{{ $codeTheme.Permalink }}">
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
