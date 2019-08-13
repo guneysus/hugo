@@ -2,43 +2,43 @@
     <div class="">
       <nav class="site-nav f4 bg-washed-yellow br2 ba b--black-10 p0 pv3 ph3 mt6">
 
-        <a href="{{ .Site.BaseURL }}" class="link dim mid-gray pv2">
+        <a href="{{ .Site.BaseURL }}" class="link dim mid-gray pv2" aria-label="Go to home">
           <i class="icon icon-home"> </i>
         </a>
 
 <span class="black-30">|</span>
 
-        <a href="{{ .Site.BaseURL }}tags" class="link dim mid-gray">
+        <a href="{{ .Site.BaseURL }}tags" class="link dim mid-gray" aria-label="Go to Tags">
           <i class="icon icon-tags"> </i>
         </a>        
 
-        <a href="{{ .Site.BaseURL }}news/" class="link dim mid-gray">
+        <a href="{{ .Site.BaseURL }}news/" class="link dim mid-gray" aria-label="Go to News">
           <i class="icon icon-newspaper"> </i>
         </a>
 
-        <a href="{{ .Site.BaseURL }}post/" class="link dim mid-gray">
+        <a href="{{ .Site.BaseURL }}post/" class="link dim mid-gray" aria-label="Go to Posts">
           <i class="icon icon-doc-text"> </i>
         </a>
 
 <span class="black-30">|</span>
-        <a href="https://stackoverflow.com/users/1766716/guneysus" class="link dim mid-gray icon-social-tumblr">
+        <a href="https://stackoverflow.com/users/1766716/guneysus" class="link dim mid-gray icon-social-tumblr" aria-label="Go to my stackoverflow profile page">
           <i class="icon icon-stackoverflow"> </i></a>
         
-        <a href="https://www.linkedin.com/in/guneysu" class="link dim mid-gray icon-social-linkedin">
+        <a href="https://www.linkedin.com/in/guneysu" class="link dim mid-gray icon-social-linkedin" aria-label="Go to my Linkedin profile page">
           <i class="icon icon-linkedin"> </i> 
         </a>
 
-        <a href="http://github.com/guneysus" class="link dim mid-gray">
+        <a href="http://github.com/guneysus" class="link dim mid-gray" aria-label="Go to my Github profile page">
           <i class="icon icon-github-circled"></i>
         </a>
 
-        <a href="https://guneysu.tumblr.com/" class="link dim mid-gray">
+        <!-- <a href="https://guneysu.tumblr.com/" class="link dim mid-gray">
           <i class="icon icon-tumblr"> </i>
-        </a>
+        </a> -->
 
 <span class="black-30">|</span>
 
-          <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="link dim mid-gray">
+          <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="link dim mid-gray" aria-label="Subscribe via RSS">
             <i class="icon icon-rss"> </i>
           </a>
                   

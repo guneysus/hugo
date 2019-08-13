@@ -122,3 +122,8 @@ i.icon:before {
 .is-featured {
   background-color: #FF9900;
 }
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before  {
+  font-display: auto;
+}
