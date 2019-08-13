@@ -8,14 +8,19 @@
           <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
         </h1>
 
-        <div class="article-publish-date source-sans-pro black-40 lh-copy relative right-0 top-0 tr">
-          <time>{{ .Date.Format "Jan 02, 2006" }}  <i class="icon icon-calendar"></i></time>
-        </div>
+        <div class="article-info source-sans-pro black-60 pv2">
 
-        <div class="article-info source-sans-pro black-30 lh-copy relative right-0 top-0 tr" data-words-count="{{ countwords .Content }}" data-minutes-read="{{ (div (countwords .Content) (300)) }}">
-          {{ (div (countwords .Content) (300)) }} minutes <i class="icon icon-hourglass-2"></i> 
-        </div>
+            <span class="fl relative left-0">
+                <time class="relative left-0">{{ .Date.Format "Jan 02, 2006" }}  <i class="icon icon-calendar"></i></time>
+            </span>
 
+            <span class="fr relative right-0" data-words-count="{{ countwords .Content }}" data-minutes-read="{{ (div (countwords .Content) (300)) }}">
+                    {{ (div (countwords .Content) (300)) }} minutes <i class="icon icon-hourglass-2"></i> 
+            </span>
+
+            <div class="cf"></div>
+        </div>
+        
         <p class="f3 lh-comfort tj source-sans-pro mt3">
           {{ .Summary }}
         </p>
@@ -27,7 +32,7 @@
                 {{ if gt $index 0 }}
                 {{ end }}
                 </i>
-                <a class="article-tag source-sans-pro link xdim black-20 f5 fw1 lh-wide br3 bg-near-white pv1 ph2" 
+                <a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-wide br3 bg-near-white pv1 ph2" 
                 href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
                 {{ end }}</span>
               {{ end }}  
