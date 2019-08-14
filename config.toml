@@ -1,14 +1,9 @@
-
 baseURL = "/"
 languageCode = "en-us"
-# title = "Ahmed Şeref Güneysu"
-# theme = "skeleton"
 theme = "guneysu-blog"
-# theme = "paperbackcustom"
-
-
 defaultContentLanguage = "tr"
 enableEmoji = true
+
 # Set the unicode character used for the "return" link in page footnotes.
 footnotereturnlinkcontents = "↩"
 
@@ -19,18 +14,19 @@ newContentEditor = "code-insiders"
 pygmentsCodeFences = true
 
 preserveTaxonomyNames = true
-# rssLimit = 10
-# paginate = 10
+rssLimit = 30
+paginate = 10
 
 DefaultContentLanguage = "tr"
 disableLiveReload = false
 
-Title = "/home/asguneysu"
-
 [Params]
-    Description = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
+    Description = "Amazon Web Service, .NET, ASP.NET MVC Related posts, articles and ideas"
     AuthorName = "Ahmed Şeref GÜNEYSU"
-    Tagline = "Hello, world!"
+    Tagline = "⠛⠥⠝⠑⠽⠎⠥⠎ /home/asguneysu"
+    Title = "/home/asguneysu"
+    Author = "Ahmed Şeref Güneysu"
+
 
     HomepagePosts = 1
 
@@ -59,10 +55,30 @@ Title = "/home/asguneysu"
     post = "/post/:slug/"
     page = "/:slug/"
 
-[[menu.main]]
-    name = "tags"
-    url = "/tags"
-    weight = -120
+[menu]
+    [[menu.main]]
+        name = "tags"
+        title = "Tags"
+        url = "/tags/"
+        weight = 0
+
+    [[menu.main]]
+        name = "posts"
+        title = "Posts"
+        url = "/post/"
+        weight = 0
+
+    [[menu.main]]
+        name = "news"
+        title = "News"
+        url = "/news/"
+        weight = 0
+
+    [[menu.main]]
+        name = "home"
+        title = "Homepage"
+        url = "/"
+        weight = 0
 
 # MARKDOWN
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
