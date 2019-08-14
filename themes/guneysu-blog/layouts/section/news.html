@@ -14,7 +14,7 @@
 
           {{ range (where .Data.Pages "Type" "news").GroupByDate "2006" -}}
           <article class="article pv3 ph2" >
-            <div class="f3 source source-sans-pro fw6">{{ .Key }}</div>
+            <!-- <div class="f3 source source-sans-pro fw6">{{ .Key }}</div> -->
             <ul class="list pl0">
               {{ range .Pages -}}
               <li>
