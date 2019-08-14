@@ -10,6 +10,7 @@
 
 .article-tag {
   font-family: "Source Sans Pro", sans-serif;
+  font-display: auto;
   white-space: pre;
 }
 
@@ -21,18 +22,22 @@ body div.container {
 
 .libre-baskerville {
   font-family: "Libre Baskerville", serif;
+  font-display: auto;
 }
 
 .roboto {
   font-family: "Roboto", sans-serif;
+  font-display: auto;
 }
 
 .noto-sans {
   font-family: "Noto Sans", sans-serif;
+  font-display: auto;
 }
 
 .source-sans-pro {
   font-family: "Source Sans Pro", sans-serif;
+  font-display: auto;
 }
 
 .lh-comfort {
@@ -40,17 +45,19 @@ body div.container {
 }
 
 .lh-wide {
-  line-height: 2.25;
+  line-height: 1.90;
 }
 
 .code,
 code {
   font-family: "Fira Code", monospace;
+  font-display: auto;
 }
 
 i.icon {
   font-family: "fontello";
   font-style: normal;
+  font-display: auto;
   font-weight: normal;
   speak: none;
 
@@ -109,4 +116,14 @@ i.icon:before {
   //   transition: opacity 0.15s ease-out;
   // color: adjust-hue($color: #000000, $degrees: 1);
   color: #111;
+}
+
+
+.is-featured {
+  
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before  {
+  font-display: auto;
 }
