@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
   <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
+  <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
   <body class="body">
     <div class="container">
@@ -17,7 +18,7 @@
             <time>{{ .Date.Format "2006, January 02" }}</time>
           </div>
 
-          <div class="article-content f4 f6-m lh-comfort tj libre-baskerville measure-wide">
+          <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
             {{ .Content }}
           </div>
 

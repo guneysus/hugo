@@ -1,9 +1,9 @@
-<article class="article-list-item mt2 mb4 pv2"></article>
+<article class="article-list-item mt2 mb4 pv3 {{ .Params.State }}"></article>
   <div class="article-content">
     <div class="flex flex-column flex-row-ns">
 
       <div class="w-100 w-70-ns order-2 order-1-ns pr3">
-        <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro mb1">
+        <h1 class="f2 lh-title source-sans-pro mb1">
           <!-- {{ .Title }} -->
           <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
         </h1>
@@ -11,7 +11,7 @@
         <div class="article-info source-sans-pro black-60 pv2">
 
             <span class="fl relative left-0">
-                <time class="relative left-0">{{ .Date.Format "Jan 02, 2006" }}  <i class="icon icon-calendar"></i></time>
+                <i class="icon icon-calendar"></i> <time class="relative left-0">{{ .Date.Format "Jan 02, 2006" }}</time>
             </span>
 
             <span class="fr relative right-0" data-words-count="{{ countwords .Content }}" data-minutes-read="{{ (div (countwords .Content) (300)) }}">
@@ -21,13 +21,13 @@
             <div class="cf"></div>
         </div>
         
-        <p class="f3 lh-comfort tj source-sans-pro mt3">
+        <p class="f4 lh-comfort source-sans-pro mt3">
           {{ .Summary }}
         </p>
         
-        <div class="article-tags pb2 tj">
+        <div class="article-tags pb2">
             {{ if .Params.tags }}
-              <span class="">
+              <span style="line-height: 2.2;">
                 {{ range $index, $tag := .Params.tags }}
                 {{ if gt $index 0 }}
                 {{ end }}

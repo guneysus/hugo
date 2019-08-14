@@ -28,7 +28,7 @@ Benden önce sertifika alanlar olduğu gibi sonrası da gelecek. Sizlere kısaca
 ve sınav tecrübemi aktarmaya çalışarak, sertifika almaya teşvik etmeyi ve hazırlananlara yol göstermeyi
 düşünüyorum.
 
-# Sınav Hakkında
+## Sınav Hakkında
 
 Sınavın adı AWS Solutions Architect - Associate, kodu `SAA-C01`. AWS bu sınavı Şubat 2018 tarihinde
 yayınlamış. Önceki sınavın detaylı olduğu ve Solution Architect için uygun olmadığın söyleniyor.
@@ -38,7 +38,7 @@ olduğunu düşünüyorum.
 Ayrıca sınavın eski sınava göre zor olmadığı söyleniyor. Belli kavramları, hizmetler arasındaki
 farkları oturttuğunuzda çok da zorlanacağınızı zannetmiyorum.
 
-# Nasıl Çalıştım
+## Nasıl Çalıştım
 
 A Cloud Guru'nun  Udemy üzerindeki eğitim setini satın alarak başladık. Başladık diyorum, şirkette
 bu işe gönüllü kişilerle başladık. İlk zamanlar mesaiden günde yarım saat, sonra bir buçuk ay ise günde
@@ -49,7 +49,7 @@ bir buçuk saat şirketin bize sağladığı özel saatlerde sınava hep beraber
 
 Her iki kurs da verdiğiniz paraya kuruşuna kadar değer.
 
-# Müfredat
+## Müfredat
 
 - S3, Glacier, DynamoDB, DynamoDB DAX, RDS, EBS, Redshift, Elastic cache.
 
@@ -82,4 +82,4 @@ SQS ve kullanım alanları. SQS FIFO performans limitleri.
 
 - Route53
 
-Route53 multi region high availabilty, Route53 healt checks.
+Route53 multi region high availabilty, Route53 health checks.
