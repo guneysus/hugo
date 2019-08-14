@@ -1,22 +1,22 @@
 <article class="article-list-item mt2 mb4 pv2">
-  <div class="article-content">
+  <div class="article-content">  
     <div class="flex flex-column flex-row-ns">
 
       <div class="w-100 w-70-ns order-2 order-1-ns pr3">
-        <h1 class="f3 f2-l f2-m f2-ns lh-title source-sans-pro mb1">
+        <h1 class="f3 lh-title source-sans-pro mb1">
           <!-- {{ .Title }} -->
-          <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
+          <a href="{{ .Permalink }}" class="link dim black" aria-label="Go to {{ .Title }} news">{{ .Title }}</a>
         </h1>
 
         <div class="article-publish-date source-sans-pro black-30">
           <time>{{ .Date.Format "January 02, 2006" }}</time>
         </div>
     
-        <p class="f3 lh-comfort tj source-sans-pro mt3">
+        <p class="f3 lh-comfort source-sans-pro mt3">
           {{ .Summary }}
         </p>
         
-        <div class="article-tags pb2 tj">
+        <div class="article-tags pb2">
             {{ if .Params.tags }}
               <span class="">
                 {{ range $index, $tag := .Params.tags }}

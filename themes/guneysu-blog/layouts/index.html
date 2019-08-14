@@ -3,8 +3,10 @@
 
 {{ partial "head.html" . }}  
 
+<meta name="Description" content="{{ .Site.Params.Description }} ">
+<title>{{ .Site.Params.Title }} | {{ .Site.Params.AuthorName }} </title>
 <body>
-  <div class="container">
+  <div class="container pa2">
 
     <section class="mw7 center">
     {{ partial "header.html" . }}

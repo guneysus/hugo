@@ -77,6 +77,24 @@
       "css": "doc-text",
       "code": 59397,
       "src": "entypo"
+    },
+    {
+      "uid": "531bc468eecbb8867d822f1c11f1e039",
+      "css": "calendar",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "598a5f2bcf3521d1615de8e1881ccd17",
+      "css": "clock",
+      "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f70af5dd0ecd154b007d980cd011a7f7",
+      "css": "hourglass-2",
+      "code": 62034,
+      "src": "fontawesome"
     }
   ]
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
+  <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
   <body class="body">
     <div class="container">
@@ -19,14 +19,14 @@
           </div>          
           
 
-          <div class="article-content f4 f6-m lh-comfort tj libre-baskerville measure-wide">
+          <div class="article-content f4 f6-m lh-comfort libre-baskerville measure-wide">
             {{ .Content }}
           </div>
 
 
 
 
-          <!-- <ul class="article-taxonomy">
+          <ul class="article-taxonomy">
               {{ if .Params.categories }}            
               <hr>
               <li>
@@ -39,7 +39,7 @@
                 {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
               </li>
               {{ end }}
-          </ul> -->
+          </ul>
 
         </article>
       </section>
