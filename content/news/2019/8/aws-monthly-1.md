@@ -5,12 +5,12 @@ date: 2019-08-10T02:18:38+03:00
 publishdate: 2019-08-10
 draft: false
 tags:
-  - aws:amplify
+  - aws-amplify
   - graphql
-  - aws:appsync
-  - aws:cognito
-  - aws:dynamodb
-  - aws:lambda
+  - aws-appsync
+  - aws-cognito
+  - aws-dynamodb
+  - aws-lambda
 ---
 
 
