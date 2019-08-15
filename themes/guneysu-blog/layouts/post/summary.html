@@ -43,14 +43,51 @@
       <div class="order-1 order-2-ns w-100 w-30-ns">
       {{ if .Params.Thumb }} 
         <div class="article-thumbnail-img-container h-100 bl b--light-gray">
-        <img
-          data-src="{{ .Params.Thumb }}"
-          src="/static/placeholder.png"
-          class="article-thumbnail-img w-100 lazy v-mid pl2"
-          {{ if .Params.ThumbAlt }} 
-            alt="{{ .Params.ThumbAlt }} "
-          {{ end }}      
+
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                
+        <source 
+            media="(min-width: 980px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and (min-resolution: 120dpi)" 
+            sizes="220px" 
+            srcset="/img/220px/__IMAGE-220px-q45.png" 440w="">
+                    
+        <source 
+            media="(min-width: 980px)" 
+            sizes="220px" 
+            srcset="/img/220px/__IMAGE-220px-q85.png 220w">
+                    
+        <source 
+            media="(min-width: 740px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and (min-resolution: 120dpi)" 
+            sizes="160px" 
+            srcset="/img/220px/__IMAGE-160px-q45.png" 320w="">
+                    
+        <source 
+            media="(min-width: 740px)" 
+            sizes="160px" 
+            srcset="/img/220px/__IMAGE-160px-q85.png 160w">
+                    
+        <source 
+            media="(min-width: 0px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and (min-resolution: 120dpi)" 
+            sizes="127px" 
+            srcset="/img/127px/__IMAGE-127px-q45.png" 254w="">
+                    
+        <source 
+            media="(min-width: 0px)" 
+            sizes="127px" 
+            srcset="/img/__IMAGE-127px-q85.png 127w">
+        <!--[if IE 9]></video><![endif]-->
+
+          <img
+            data-src="{{ .Params.Thumb }}"
+            src="/static/placeholder.png"
+            loading="lazy"
+            class="article-thumbnail-img w-100 v-mid pl2"
+            {{ if .Params.ThumbAlt }} 
+              alt="{{ .Params.ThumbAlt }} "
+            {{ end }}      
           />
+        </picture>
         </div>
 
       {{ else }}

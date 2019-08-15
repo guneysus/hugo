@@ -6,7 +6,7 @@
 <meta name="Description" content="{{ .Site.Params.Description }} ">
 <title>{{ .Site.Params.Title }} | {{ .Site.Params.AuthorName }} </title>
 <body>
-  <div class="container pa2">
+  <div class="container">
 
     <section class="mw7 center">
     {{ partial "header.html" . }}
@@ -34,7 +34,7 @@
 
 <script>
     var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy"
+        elements_selector: "[loading=lazy]"
         // ... more custom settings?
     });      
 </script>
