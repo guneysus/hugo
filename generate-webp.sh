@@ -28,14 +28,25 @@ function process-image () {
 
 	# magick $fullpath -quality ${quality} -resize x${height} "${folder}/${filename_without_ext}-${height}px-q${quality}.jpg"
 	
+	png_fullpath="${folder}/${filename_without_ext}-${height}px-q${quality}.png"
+	webp_fullpath="${folder}/${filename_without_ext}-${height}px-q${quality}.webp"
+
 	magick $fullpath \
-			-depth 8 \
-			-quality ${quality} \
-			-resize x${height} \
-			-define png:compression-filter=5 \
-			-define png:compression-strategy=1 \
-			-define png:compression-level=9 \
-			"${folder}/${filename_without_ext}-${height}px-q${quality}.png"
+		-depth 8 \
+		-quality ${quality} \
+		-resize x${height} \
+		-define png:compression-filter=5 \
+		-define png:compression-strategy=1 \
+		-define png:compression-level=9 \
+		$png_fullpath
+	
+  	width=$(identify -format %w $png_fullpath)
+	
+	convert -background '#0008' -fill white -gravity center -size ${width}x30 \
+          caption:"${width} x ${height}" \
+          $png_fullpath +swap -gravity south -composite  $png_fullpath
+
+	return 0
 
 	magick $fullpath \
 			-depth 8 \
@@ -44,7 +55,7 @@ function process-image () {
 			-define png:compression-filter=5 \
 			-define png:compression-strategy=1 \
 			-define png:compression-level=9 \
-			"${folder}/${filename_without_ext}-${height}px-q${quality}.webp"			
+			$webp_fullpath		
 
 	# echo $path
 	# echo $filename
