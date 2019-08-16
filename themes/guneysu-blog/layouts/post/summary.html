@@ -44,43 +44,55 @@
       {{ if .Params.Thumb }} 
         <div class="article-thumbnail-img-container h-100 bl b--light-gray">
 
-            <picture>
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
                 
         <source 
             media="(min-width: 980px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and (min-resolution: 120dpi)" 
-            sizes="220px" 
-            srcset="/img/220px/__IMAGE-220px-q45.png" 440w="">
-                    
-        <source 
-            media="(min-width: 980px)" 
-            sizes="220px" 
-            srcset="/img/220px/__IMAGE-220px-q85.png 220w">
-                    
+            sizes="220px"
+            type="image/png"
+            srcset="/static/220px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb)  }}-220px-q45.png" 440w="">
+                  
         <source 
             media="(min-width: 740px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and (min-resolution: 120dpi)" 
-            sizes="160px" 
-            srcset="/img/220px/__IMAGE-160px-q45.png" 320w="">
+            sizes="160px"
+            type="image/png"
+            srcset="/static/160px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb) }}-160px-q45.png" 320w="">
                     
         <source 
             media="(min-width: 740px)" 
-            sizes="160px" 
-            srcset="/img/220px/__IMAGE-160px-q85.png 160w">
+            sizes="160px"
+            type="image/png"
+            srcset="/static/160px/{{ strings.TrimSuffix ".png"  (path.Base .Params.Thumb) }}-160px-q85.png 160w">
                     
         <source 
             media="(min-width: 0px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and (min-resolution: 120dpi)" 
-            sizes="127px" 
-            srcset="/img/127px/__IMAGE-127px-q45.png" 254w="">
+            sizes="127px"
+            type="image/png"
+            srcset="/static/127px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb) }}-127px-q45.png" 254w="">
                     
         <source 
             media="(min-width: 0px)" 
-            sizes="127px" 
-            srcset="/img/__IMAGE-127px-q85.png 127w">
-        <!--[if IE 9]></video><![endif]-->
+            sizes="127px"
+            type="image/png"
+            srcset="/static/127px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb)  }}-127px-q85.png 127w">
+            
+        <!-- [if IE 9]></video><![endif] -->
+          
+          <!-- <source srcset="{{ strings.TrimSuffix ".png" .Params.Thumb  }}.webp" type="image/webp">
+          <source srcset="{{ .Params.Thumb }}"> -->
 
           <img
             data-src="{{ .Params.Thumb }}"
-            src="/static/placeholder.png"
+            src="data:image/jpeg;base64,/9j/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAx
+            NDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+            MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAA
+            AAAAAAAAAAAAAAL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABoV//xAAUEAEA
+            AAAAAAAAAAAAAAAAAAAA/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDAQE/
+            AX//xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAECAQE/AX//xAAUEAEAAAAAAAAAAAAAAAAAAAAA
+            /9oACAEBAAY/An//xAAVEAEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAQABPyGP/9oADAMBAAIAAwAA
+            ABD/AP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Qf//EABQRAQAAAAAAAAAAAAAAAAAA
+            AAD/2gAIAQIBAT8Qf//EABcQAQADAAAAAAAAAAAAAAAAAAEAETH/2gAIAQEAAT8QTWz/2Q=="
             loading="lazy"
             class="article-thumbnail-img w-100 v-mid pl2"
             {{ if .Params.ThumbAlt }} 
