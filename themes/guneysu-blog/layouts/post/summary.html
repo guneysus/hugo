@@ -45,37 +45,10 @@
         <div class="article-thumbnail-img-container h-100 bl b--light-gray">
 
         <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                
+          <!--[if IE 9]><video style="display: none;"><![endif]-->   
         <source 
-            media="(min-width: 980px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and (min-resolution: 120dpi)" 
-            sizes="220px"
-            type="image/png"
-            srcset="/static/220px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb)  }}-220px-q45.png" 440w="">
-                  
-        <source 
-            media="(min-width: 740px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and (min-resolution: 120dpi)" 
-            sizes="160px"
-            type="image/png"
-            srcset="/static/160px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb) }}-160px-q45.png" 320w="">
-                    
-        <source 
-            media="(min-width: 740px)" 
-            sizes="160px"
-            type="image/png"
-            srcset="/static/160px/{{ strings.TrimSuffix ".png"  (path.Base .Params.Thumb) }}-160px-q85.png 160w">
-                    
-        <source 
-            media="(min-width: 0px) and (-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and (min-resolution: 120dpi)" 
-            sizes="127px"
-            type="image/png"
-            srcset="/static/127px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb) }}-127px-q45.png" 254w="">
-                    
-        <source 
-            media="(min-width: 0px)" 
-            sizes="127px"
-            type="image/png"
-            srcset="/static/127px/{{ strings.TrimSuffix ".png" (path.Base .Params.Thumb)  }}-127px-q85.png 127w">
+            type="image/webp"
+            srcset="{{ strings.TrimSuffix ".png" .Params.Thumb  }}.webp">
             
         <!-- [if IE 9]></video><![endif] -->
           
