@@ -1,0 +1,1 @@
+docker run --rm -v ${PWD}/content/static:/data -v ${PWD}/generate-webp.sh:/data/generate-webp.sh -it guneysu/imagemagick:latest sh -c "cd data && bash generate-webp.sh"

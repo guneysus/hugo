@@ -21,7 +21,7 @@
             <div class="cf"></div>
         </div>
         
-        <p class="f4 lh-comfort source-sans-pro mt3">
+        <p class="article-short-description f4 lh-comfort source-sans-pro mt3">
           {{ .Summary }}
         </p>
         
@@ -43,14 +43,36 @@
       <div class="order-1 order-2-ns w-100 w-30-ns">
       {{ if .Params.Thumb }} 
         <div class="article-thumbnail-img-container h-100 bl b--light-gray">
-        <img
-          data-src="{{ .Params.Thumb }}"
-          src="/static/placeholder.png"
-          class="article-thumbnail-img w-100 lazy v-mid pl2"
-          {{ if .Params.ThumbAlt }} 
-            alt="{{ .Params.ThumbAlt }} "
-          {{ end }}      
+
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->   
+        <source 
+            type="image/webp"
+            srcset="{{ strings.TrimSuffix ".png" .Params.Thumb  }}.webp">
+            
+        <!-- [if IE 9]></video><![endif] -->
+          
+          <!-- <source srcset="{{ strings.TrimSuffix ".png" .Params.Thumb  }}.webp" type="image/webp">
+          <source srcset="{{ .Params.Thumb }}"> -->
+
+          <img
+            data-src="{{ .Params.Thumb }}"
+            src="data:image/jpeg;base64,/9j/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAx
+            NDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+            MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAA
+            AAAAAAAAAAAAAAL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABoV//xAAUEAEA
+            AAAAAAAAAAAAAAAAAAAA/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDAQE/
+            AX//xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAECAQE/AX//xAAUEAEAAAAAAAAAAAAAAAAAAAAA
+            /9oACAEBAAY/An//xAAVEAEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAQABPyGP/9oADAMBAAIAAwAA
+            ABD/AP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Qf//EABQRAQAAAAAAAAAAAAAAAAAA
+            AAD/2gAIAQIBAT8Qf//EABcQAQADAAAAAAAAAAAAAAAAAAEAETH/2gAIAQEAAT8QTWz/2Q=="
+            loading="lazy"
+            class="article-thumbnail-img w-100 v-mid pl2"
+            {{ if .Params.ThumbAlt }} 
+              alt="{{ .Params.ThumbAlt }} "
+            {{ end }}      
           />
+        </picture>
         </div>
 
       {{ else }}
