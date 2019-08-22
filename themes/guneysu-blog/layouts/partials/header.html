@@ -7,19 +7,23 @@
   </h2>
 </header>
 
-<!-- sidebar start -->
-<nav class="tc mw7 mt4 roboto fr bt bb w-100 b--black-10">
-  <div class="db dtc-l v-mid w-100">
-    {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-        {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
-          {{ $active := $.Scratch.Get "active" }}
-            <a class="{{ if $active }}active fw7 {{end}} f6 f5-l link bg-animate black-80 hover-bg-light-red dib pa3 ph4-l" href="{{ .URL }}">
-              {{ .Pre }}
-                <span>{{ .Name }}</span>
-              </a>
-        </li>
-      {{ end }}
-  </div>
-</nav>
+
+  <!-- sidebar start -->
+  <nav class="tc mw7 mt4 roboto fr bt bb w-100 b--black-10">
+    <div class="db dtc-l v-mid w-100 center">
+      {{ $currentPage := . }}
+        {{ range sort .Site.Menus.main "Weight" }}
+          {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
+            {{ $active := $.Scratch.Get "active" }}
+              <a class="{{ if $active }}active fw7 {{end}} f6 f5-l link bg-animate black-80 hover-bg-light-red dib pa3 ph3-l" href="{{ .URL }}">
+                <span>
+                  {{ .Pre }}
+                  {{ .Title }}
+                  {{ .Post }}
+                </span>
+                </a>
+          </li>
+        {{ end }}
+    </div>
+  </nav>
 <div class="cf"></div>

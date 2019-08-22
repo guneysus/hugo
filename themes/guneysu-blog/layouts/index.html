@@ -9,7 +9,10 @@
   <div class="container">
 
     <section class="mw7 center">
-    {{ partial "header.html" . }}
+        {{ partial "header.html" . }}
+    </section>
+
+    <section class="mw7 center">
 
     {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
       {{ .Render "summary" }}
