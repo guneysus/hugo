@@ -27,19 +27,8 @@ disableLiveReload = false
     Title = "/home/asguneysu"
     Author = "Ahmed Şeref Güneysu"
 
-
-    HomepagePosts = 1
-
-    SocialLinks = true
-
-    GithubUsername = "guneysus"
-    LinkedinUserName = "guneysu"
-    # TumblrUserName = "guneysu"
-
     HighLightTheme = "github"
     PygmentsTheme = "bw"
-
-
 
 [languages]
 [languages.en]
@@ -57,28 +46,43 @@ disableLiveReload = false
 
 [menu]
     [[menu.main]]
-        name = "tags"
-        title = "Tags"
-        url = "/tags/"
+        name = "home"
+        title = "home"
+        url = "/"
         weight = 0
+        pre = '<i class="icon icon-home"> </i>'
 
     [[menu.main]]
-        name = "posts"
-        title = "Posts"
+        name = "posts-tr"
+        title = "posts"
         url = "/post/"
-        weight = 0
+        weight = 1
+        pre = '<i class="icon icon-doc-text"> </i>'
+        post = "[tr]"
+
+    [[menu.main]]
+        name = "post-en"
+        title = "posts"
+        url = "/en/post/"
+        weight = 2
+        pre = '<i class="icon icon-doc-text"> </i>'
+        post = "[en]"
 
     [[menu.main]]
         name = "news"
-        title = "News"
+        title = "news"
         url = "/news/"
-        weight = 0
+        weight = 3
+        pre = '<i class="icon icon-newspaper"> </i>'
 
     [[menu.main]]
-        name = "home"
-        title = "Homepage"
-        url = "/"
-        weight = 0
+        name = "tags"
+        title = "tags"
+        url = "/tags/"
+        weight = 4
+        pre = "<i class='icon icon-tags'> </i>"
+
+
 
 # MARKDOWN
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
