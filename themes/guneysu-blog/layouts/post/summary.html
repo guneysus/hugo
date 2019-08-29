@@ -1,9 +1,9 @@
 <article class="article-list-item mt2 mb4 pv3 {{ .Params.State }}"></article>
-  <div class="article-content">
+  <div class="article-content bb b--light-gray">
     <div class="flex flex-column flex-row-ns">
 
-      <div class="w-100 w-70-ns order-2 order-1-ns pr3">
-        <h1 class="f2 lh-title source-sans-pro mb1">
+      <div class="w-100 w-70-ns order-2 order-1-ns pr3 pb5">
+        <h1 class="f2 lh-title source-sans-pro mb1 mt0">
           <!-- {{ .Title }} -->
           <a href="{{ .Permalink }}" class="link dim black">{{ .Title }}</a>
         </h1>
@@ -32,7 +32,7 @@
                 {{ if gt $index 0 }}
                 {{ end }}
                 </i>
-                <a class="article-tag source-sans-pro link xdim black-30 f5 fw1 lh-wide br3 bg-near-white pv1 ph2"
+                <a class="article-tag source-sans-pro link xdim black-40 f5 fw1 lh-wide br3 bg-near-white pv1 ph2"
                 aria-label="Go to {{ $tag}} tag"
                 href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
                 {{ end }}</span>
@@ -42,7 +42,7 @@
 
       <div class="order-1 order-2-ns w-100 w-30-ns">
       {{ if .Params.Thumb }} 
-        <div class="article-thumbnail-img-container h-100 bl b--light-gray">
+        <div class="article-thumbnail-img-container h-100 --bl --b--light-gray">
 
         <picture>
           <!--[if IE 9]><video style="display: none;"><![endif]-->   
