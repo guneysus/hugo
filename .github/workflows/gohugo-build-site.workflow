@@ -1,5 +1,5 @@
 workflow "Build" {
-  on = "push"
+  on = "commit"
   resolves = ["Build Hugo"]
 }
 
