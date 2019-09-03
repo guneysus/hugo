@@ -15,7 +15,7 @@
         {{ range sort .Site.Menus.main "Weight" }}
           {{ $.Scratch.Set "active" ($.IsMenuCurrent "main" .) }}
             {{ $active := $.Scratch.Get "active" }}
-              <a class="{{ if $active }}active fw7 {{end}} f6 f5-l link bg-animate black-80 hover-bg-light-red dib pa3 ph3-l" href="{{ .URL }}">
+              <a class="{{ if $active }}active fw7 {{end}} f6 f5-l link bg-animate black-50 hover-black --hover-bg-washed-yellow dib pa3 ph3-l" href="{{ .URL }}">
                 <span>
                   {{ .Pre }}
                   {{ .Title }}

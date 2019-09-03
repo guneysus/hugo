@@ -12,6 +12,8 @@
   font-family: "Source Sans Pro", sans-serif;
   font-display: auto;
   white-space: pre;
+  
+
 }
 
 .article-short-description {
@@ -133,4 +135,17 @@ i.icon:before {
 
 [class^="icon-"]:before, [class*=" icon-"]:before  {
   font-display: auto;
+}
+
+.section.home-page-posts {
+  background-color: rgba($color: rgb(221, 221, 231), $alpha: 0.25);
+}
+
+
+.hover-m0:hover {
+  margin: 0;
+}
+
+.hover-m0:focus {
+  margin: 0;
 }
