@@ -1,5 +1,5 @@
 <article class="article-list-item mt2 mb4 pv3 {{ .Params.State }}"></article>
-  <div class="article-content bb b--light-gray">
+  <div class="article-content b--light-gray">
     <div class="flex flex-column flex-row-ns">
 
       <div class="w-100 w-70-ns order-2 order-1-ns pr3 pb5">
@@ -31,8 +31,18 @@
                 {{ range $index, $tag := .Params.tags }}
                 {{ if gt $index 0 }}
                 {{ end }}
-                </i>
-                <a class="article-tag source-sans-pro link xdim black-40 f5 fw1 lh-wide br3 bg-near-white pv1 ph2"
+                
+                <a class="article-tag 
+                    source-sans-pro 
+                    link xdim f5 fw2 
+                    lh-wide black-80
+                    bl bt b--black-20
+                    br3 br--top br--left na1
+                    pv1 ph2 mh0
+                    bg-animate hover-bg-washed-yellow
+                    hover-bg
+                    animate hover-m0
+                    "
                 aria-label="Go to {{ $tag}} tag"
                 href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="icon icon-hash"></i>{{ $tag }}</a>
                 {{ end }}</span>
@@ -40,11 +50,11 @@
             </div>        
       </div>
 
-      <div class="order-1 order-2-ns w-100 w-30-ns">
+      <div class="order-1 order-2-ns mw-100 w-100 w-30-ns mw-30-ns">
       {{ if .Params.Thumb }} 
-        <div class="article-thumbnail-img-container h-100 --bl --b--light-gray">
+        <div class="article-thumbnail-img-container h-100">
 
-        <picture>
+        <picture class="">
           <!--[if IE 9]><video style="display: none;"><![endif]-->   
         <source 
             type="image/webp"
