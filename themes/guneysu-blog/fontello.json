@@ -91,9 +91,27 @@
       "src": "fontawesome"
     },
     {
+      "uid": "3a26448b711645ba1abfc86c1a6e2f30",
+      "css": "coffee",
+      "code": 61684,
+      "src": "fontawesome"
+    },
+    {
       "uid": "f70af5dd0ecd154b007d980cd011a7f7",
       "css": "hourglass-2",
       "code": 62034,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9daa1fdf0838118518a7e22715e83abc",
+      "css": "file-pdf",
+      "code": 61889,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9755f76110ae4d12ac5f9466c9152031",
+      "css": "book",
+      "code": 59399,
       "src": "fontawesome"
     }
   ]
