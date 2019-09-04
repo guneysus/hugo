@@ -13,15 +13,40 @@
         <article class="pa3 pa5-ns pv4 ph3 ph0-l b--black-10">
           
           <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
-          
+
+
           <div class="article-publish-date source-sans-pro black-50">
             <time>{{ .Date.Format "2006, January 02" }}</time>
           </div>
+
 
           <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
             {{ .Content }}
           </div>
 
+          <div class="resources bt b--black-20 mt3">
+
+              <h2 class="pl3 source-sans-pro mt1 mb0 pa0 lh-comfort">Resources</h2>
+
+              <ul class="list code lh-comfort mt0 ">
+                <li class="">
+                    {{ with .Resources.ByType "pdf" }}
+                    {{ range . }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-pdf"> </i> {{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </li>
+    
+                <li class="">
+                    {{ with .Resources.ByType "epub" }}
+                    {{ range . }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </li>                    
+              </ul>
+    
+          </div>          
           <!-- <ul class="article-taxonomy">
               {{ if .Params.categories }}            
               <hr>
