@@ -23,6 +23,10 @@
           <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
             {{ .Content }}
           </div>
+          
+
+
+          {{ if .Resources }}
 
           <div class="resources bt b--black-20 mt3">
 
@@ -46,7 +50,9 @@
                 </li>                    
               </ul>
     
-          </div>          
+          </div>
+          {{ end }}
+
           <!-- <ul class="article-taxonomy">
               {{ if .Params.categories }}            
               <hr>
