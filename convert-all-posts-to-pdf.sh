@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source helpers.sh
+set -ex
 
 
 function _pdf_name () {
@@ -9,12 +10,9 @@ function _pdf_name () {
 }
 
 for post in `ls -1 content/post/*/*.md`;
-do
-	_pdf_name $post
-	# echo $(basename $(filename-to-ext $(dirname $post) pdf))
-	# filename-without-ext $post
-	# markdown-meta $post > $(filename-to-ext $post yml)
-	# markdown-to-pdf $post
-	rm $(filename-to-ext $post yml) || true
-	
+do	
+	markdown-meta $post > $(filename-to-ext $post yml)
+	markdown-to-pdf $post $(_pdf_name $post) || true
+	# rm $(filename-to-ext $post yml) || true
+	break
 done
