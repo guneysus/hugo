@@ -1,18 +1,21 @@
 #!/bin/bash
-
-source helpers.sh
 set -ex
 
+source helpers.sh
 
-function _pdf_name () {
-	pdfname=$(basename $(filename-to-ext $(dirname $post) pdf))
+function pdf-name () {
+	pdfname="$(basename $(filename-to-ext $(dirname $1) pdf))"
 	echo "$(dirname $1)/$pdfname"
 }
 
 for post in `ls -1 content/post/*/*.md`;
 do	
-	markdown-meta $post > $(filename-to-ext $post yml)
-	markdown-to-pdf $post $(_pdf_name $post) || true
-	# rm $(filename-to-ext $post yml) || true
-	break
+	metafile=$(filename-to-ext $post yml)
+	markdown-meta $post > $metafile
+	pdf=$(pdf-name $post)
+	
+	markdown-body $post | pandoc -f markdown_mmd -t latex --metadata-file=$metafile --toc --highlight-style=tango --strip-comments -s -o $pdf
+	
 done
+
+

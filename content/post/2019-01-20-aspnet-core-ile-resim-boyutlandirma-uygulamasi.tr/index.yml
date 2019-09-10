@@ -1,0 +1,29 @@
+---
+
+title: "ASP.Net Core İle Resim Boyutlandırma Uygulaması"
+date: 2019-01-20T20:23:00+03:00
+draft: false
+
+description: Aspnet Core, ImageSharp kullanarak restful standartlara uymaya çalışarak bir API geliştirip, nodejs ile bu API'yi Docker ile test edeceğiz.
+summary:	ImageSharp ile temel bir resim boyutlandırma web API uygulamasının, Docker ile çalıştırıp nodejs supertest ile test edeceğiz.
+
+thumb: /static/ASP.NET-Core-Logo_2colors_RGB_bitmap_MEDIUM.png
+thumbAlt: aspnet core image server
+
+tags: 
+    - test driven
+    - e2e testing
+    - aspnet core
+    - docker
+    - nodejs
+    - supertest
+    - aws
+    - side project
+
+slug: aspnet-core-1-image-server
+keywords: []
+publishDate: 2019-01-20T20:23:00+03:00
+taxonomies: []
+weight: 0
+
+---
