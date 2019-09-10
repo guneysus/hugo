@@ -46,12 +46,6 @@ Docker ile paketleyeğiz. Ve bence en önemlisi uygulamamızın özelliklerini H
 
 ---
 
-## Uygulama
-
-Kodları anlatmayacağız. [Burada][src] yazılmışı var 😒
-
----
-
 ## Uygulamanın Özellikleri
 
 - Tekli ve çoklu resim yükleme
@@ -141,8 +135,15 @@ docker-compose up --renew-anon-volumes --build
 ```
 
 
-<!-- ----------------- -->
+---
 
+## Kodlar
+
+[Kodlar Burada][src]
+
+
+<!-- ----------------- -->
+	
 [imagesharp]:   https://github.com/SixLabors/ImageSharp  "SixLabors/ImageSharp"
 
 [supertest]:    https://github.com/visionmedia/supertest  "visionmedia/supertest"
