@@ -2,3 +2,4 @@ public/
 
 # VIM backup files
 *.swp
+tex2pdf.*/
