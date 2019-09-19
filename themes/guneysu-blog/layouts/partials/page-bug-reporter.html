@@ -1,0 +1,41 @@
+<a 
+    class="link dim light-red f3 fixed left-1 bottom-1"
+    title="report an issue on page"
+    href="javascript:Bug.report()">
+    <i class="icon icon-bug"></i>
+</a>
+
+<script>
+
+  window.Bug = (function() {
+    var _getCurrentPage = function () {
+        return window.location.href;
+    };
+
+    var _getPathName = function () {
+        return window.location.pathname;
+    };
+
+    var _getTitle = function () {
+        var title = `Issue on page: ${_getPathName()}`;
+        return encodeURIComponent(title);
+    };
+
+    var _getBody = function () {
+        var body = `There is a :bug: ${_getCurrentPage()}`;
+        return encodeURIComponent(body);
+    };
+
+    var _getLink = function() {
+      return `https:\/\/github.com/guneysus/blog/issues/new?title=${_getTitle()}&body=${_getBody()}`;
+    };
+
+    var _report = function () {
+        window.open(_getLink(), "_blank");
+    };
+
+    return {
+        report: _report
+    };
+  })();
+</script>
