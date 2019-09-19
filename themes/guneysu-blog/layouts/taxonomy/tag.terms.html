@@ -4,11 +4,13 @@
   <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
   <body class="body">
-    <div class="container">
+    
+    {{ partial "page-bug-reporter.html" . }}
 
+    <div class="container">
       <section class="mw7 center">
           {{ partial "header.html" . }}
-<main class="content">
+        <main class="content">
 
       <div class="tag-cloud">
         <h2 class="tag-cloud-title">{{ i18n "tags" }}</h2>
