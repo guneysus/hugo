@@ -16,18 +16,23 @@
 
         <article class="pa3 pa5-ns pv4 ph3 ph0-l b--black-10">
           
-          <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
-
-
-          <div class="article-publish-date source-sans-pro black-50">
-            <time>{{ .Date.Format "2006, January 02" }}</time>
+          <div>
+            <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
+            <div class="source-sans-pro ">by  {{ .GitInfo.AuthorName }}</div>
           </div>
 
+
+          <div class="article-publish-date source-sans-pro black-50 mt3 bb pb1 b--black-10">
+            <time>{{ .Date.Format "2006, January 02" }}</time><br>
+            <time>Last updated: {{ .GitInfo.AuthorDate.Format "2006, January 02" }}</time>
+          </div>
+
+          
 
           <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
             {{ .Content }}
           </div>
-          
+
 
 
           {{ if .Resources }}
@@ -57,6 +62,28 @@
           </div>
           {{ end }}
 
+          {{ with .GitInfo }}
+
+          <div class="gitinfo source-sans-pro pl3 mt3">
+            <!-- <h3 class="mt1 mb0 pa0">info</h3> -->
+<!-- <pre class>
+  Author  : {{ .AuthorName }}
+  Email   : {{ .AuthorEmail }}
+  Hash    : {{ .AbbreviatedHash }}
+  Date    : {{ .AuthorDate }}
+  Subject : {{ .Subject }}
+</pre> -->
+
+        <a 
+          target="_blank"
+          class="link black bg-animate hover-bg-light-yellow"
+          href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}#new_commit_comment_field">
+          <i class="icon icon-comment"></i> write a review
+        </a>
+
+        </div>
+        {{ end }}
+
           <!-- <ul class="article-taxonomy">
               {{ if .Params.categories }}            
               <hr>
@@ -71,7 +98,6 @@
               </li>
               {{ end }}
           </ul> -->
-
         </article>
       </section>
 
