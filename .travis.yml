@@ -20,13 +20,13 @@ before_install:
 #   - themes/skeleton/node_modules
   
 script:
-  - hugo --minify --debug
+  - hugo --enableGitInfo --minify --debug
 
 notifications:
   slack: guneysu:g4dUCQCfxQ4tHZziwDMOlU7k
 
 before_deploy:
-  - hugo
+  - hugo --enableGitInfo
   - tar caf public.tar.gz public/
   - git config --local user.name "$GITHUB_NAME"
   - git config --local user.email "$GITHUB_EMAIL"
