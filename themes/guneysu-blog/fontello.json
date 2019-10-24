@@ -119,6 +119,18 @@
       "css": "bug",
       "code": 61832,
       "src": "fontawesome"
+    },
+    {
+      "uid": "e7cb72a17f3b21e3576f35c3f0a7639b",
+      "css": "git",
+      "code": 61907,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "85528017f1e6053b2253785c31047f44",
+      "css": "comment",
+      "code": 59400,
+      "src": "fontawesome"
     }
   ]
 }
