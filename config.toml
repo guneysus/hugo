@@ -76,6 +76,13 @@ disableLiveReload = false
         pre = '<i class="icon icon-newspaper"> </i>'
 
     [[menu.main]]
+        name = "snippet"
+        title = "snippets"
+        url = "/snippet/"
+        weight = 3
+        pre = '<i class="icon icon-newspaper"> </i>'
+
+    [[menu.main]]
         name = "tags"
         title = "tags"
         url = "/tags/"

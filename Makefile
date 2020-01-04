@@ -10,6 +10,6 @@ clean:
 	rm tex2pdf.-* -rf || true
 
 serve:
-	hugo server --enableGitInfo
+	hugo server --enableGitInfo -v --debug -D
 
 .PHONY: default pdf clean serve
