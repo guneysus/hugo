@@ -109,3 +109,5 @@ cat vedat-milor.txt | sed 's/Vedat/Ahmed/g' | grep Ahmed
 cat vedat-milor.txt | sed 's/Vedat/Ahmed/g' > ahmed-milor.txt
 
 ```
+
+--
