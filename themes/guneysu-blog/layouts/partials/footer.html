@@ -45,8 +45,8 @@
         <!-- <span class="owner">{{ now.Year }} {{ .Site.Params.Author }} </span> -->
       </nav>
 
-      {{ if  .Hugo.BuildDate}}
-        <pre class="tr f7 ttu mt3 gray">last updated {{ .Hugo.BuildDate }}</pre>
+      {{ if  hugo.BuildDate}}
+        <pre class="tr f7 ttu mt3 gray">last updated {{ hugo.BuildDate }}</pre>
       {{ end }}
     </div>
   </footer>
