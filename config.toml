@@ -76,6 +76,13 @@ disableLiveReload = false
         pre = '<i class="icon icon-newspaper"> </i>'
 
     [[menu.main]]
+        name = "snippet"
+        title = "snippets"
+        url = "/snippet/"
+        weight = 3
+        pre = '<i class="icon icon-newspaper"> </i>'
+
+    [[menu.main]]
         name = "tags"
         title = "tags"
         url = "/tags/"
@@ -135,3 +142,17 @@ URL = "s3://blog.guneysu.xyz.s3-website.eu-central-1.amazonaws.com"
 
 # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
 # cloudFrontDistributionID = <ID>
+
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
