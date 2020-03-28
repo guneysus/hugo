@@ -153,3 +153,27 @@ i.icon:before {
 .hover-m0:focus {
   margin: 0;
 }
+
+.footnote-ref {
+
+}
+
+sup.footnote-ref, sub.footnote-ref {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.7em;
+  color: gray;
+  padding: 0.1em 0.4em;
+  margin: 0 0.15em;
+  border: 1px dotted gray;
+  font-family: "Fira Code", monospace;
+}
+  
+sub {
+  top: 0.4em;
+}
+
+blockquote {
+  border-left: 0.5em solid #ddd;
+  padding: 0.1rem 1.25rem 0.1rem 1.25rem;
+}

@@ -1,3 +1,8 @@
+---
+draft: true
+title: Linux 101
+---
+
 # UYGULAMALAR
 
 ## uygulama kurmak

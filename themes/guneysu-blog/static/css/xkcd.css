@@ -1,0 +1,44 @@
+/*
+http://xkcdgraphs.com/
+/* Artfully masterminded by Kevin Xu <kevin@imkevinxu.com>
+*/
+
+@font-face {
+    font-family: "xkcd";
+    src: url('/font/Humor-Sans-1.0.ttf');
+}
+
+
+#plot, .xkcd {
+    font-family: 'xkcd';
+}
+
+#plot {
+    font-family: 'xkcd';
+    width: 700px;
+    margin: 70px auto;
+    text-align: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+text.title {
+    font-size: 20px;
+}
+
+path {
+    fill: none;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+path.axis {
+    stroke: black;
+}
+
+path.bgline {
+    stroke: white;
+    stroke-width: 6px;
+}

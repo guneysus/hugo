@@ -1,5 +1,6 @@
 ---
 draft: true
+title: Powershell Tip and Tricks
 ---
 
 
@@ -19,4 +20,21 @@ $env:EDITOR='code'
 Edit (ack --csharp "<dynamic>" -l | Out-GridView -PassThru) # select all files from the grid
 
 # all selected files will be opened in VSCode
+```
+
+```powershell
+Get-ChildItem  -File -Recurse *.sql | Sort-Object -Property Length -Descending | Out-GridView
+
+```
+
+## no deploy on saturdays
+
+```powershell
+if ([Int](Get-Date).DayOfWeek -eq 6) {
+    throw "No deploy on Saturdays!";  
+}
+
+if ((Get-Date).DayOfWeek -eq 'Saturday') {
+    throw "No deploy on Saturdays!";  
+}
 ```

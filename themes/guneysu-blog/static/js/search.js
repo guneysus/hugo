@@ -21,15 +21,15 @@ const updateResults = function (results) {
     });
 }
 
-const resultFactory = function(item) {
+const resultFactory = function (item) {
     var li = document.createElement('li');
     var a = document.createElement('a');
     let br = document.createElement('br');
     let span = document.createElement('span');
-    span.innerText = item.description;
+    span.innerHTML = item._highlightResult.description.value;
 
     var title = document.createElement('strong');
-    title.innerText =  item.title;
+    title.innerHTML = item._highlightResult.title.value;
 
     a.href = item.url;
     a.appendChild(title);
@@ -39,26 +39,34 @@ const resultFactory = function(item) {
     return li;
 }
 
-function debounce (fn, delay) {
+function debounce(fn, delay) {
     var timeoutID = null
     return function () {
-      clearTimeout(timeoutID)
-      var args = arguments
-      var that = this
-      timeoutID = setTimeout(function () {
-        fn.apply(that, args)
-      }, delay)
+        clearTimeout(timeoutID)
+        var args = arguments
+        var that = this
+        timeoutID = setTimeout(function () {
+            fn.apply(that, args)
+        }, delay)
     }
-  }
+}
 
 const onSearch = function (evt) {
     var query = evt.target.value;
+    const settings = {
+                attributesToHighlight: [
+                  'title',
+                  'url',
+                  'description'
+                ]
+              };
+        
 
-    index.search(query).then(function (response) {
+    index.search(query, settings).then(function (response) {
         var posts = response.hits.filter(x => x.kind == 'page');
 
         var results = posts.map(item => {
-            var li =  resultFactory(item);
+            var li = resultFactory(item);
             return li;
         });
         updateResults(results);
@@ -69,17 +77,17 @@ const onSearchDebounce = debounce(onSearch, 75);
 
 document.querySelector("input[type=search]").addEventListener('keypress', onSearchDebounce);
 
-document.querySelector("input[type=search]").addEventListener('focus', function(){
+document.querySelector("input[type=search]").addEventListener('focus', function () {
     document.querySelector('.results').style.display = "";
 });
 
-document.querySelector("input[type=search]").addEventListener('blur', function(){
+document.querySelector("input[type=search]").addEventListener('blur', function () {
     // document.querySelector('.results').style.borderWidth = "0px";        
-    setTimeout(function(){
+    setTimeout(function () {
         document.querySelector('.results').style.display = "none";
     }, 200);
-});    
+});
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.results').style.display = "none";
 });
