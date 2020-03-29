@@ -127,7 +127,7 @@ bütün köylülerin aynı anda su kullanmaları sıra dışı bir durum olacağ
 
 ## Sonuç
 
-Bu yazımızda "Streaming" yöntemini örnekler ve hikaye üzerinden anlatmaya çalıştık. Bir sonraki yazımda:
+Bu yazımızda "Streaming" yöntemini örnekler ve hikaye üzerinden anlatmaya çalıştık. Bir sonraki yazılarımızda
 
 - ASP.Net Core ile JSON ve File Streaming
 - SQL Server üzerinden Streaming ile veri çekmek
@@ -135,7 +135,7 @@ Bu yazımızda "Streaming" yöntemini örnekler ve hikaye üzerinden anlatmaya �
 - Bunların son kullanıcıya yansıması
 - Performans etkileri
 
-üzerine yazmaya çalışacağım.
+konularından bahsedeceğiz.
 
 ## Dipnotlar
 
