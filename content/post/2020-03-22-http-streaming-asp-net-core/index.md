@@ -86,13 +86,9 @@ Peki sıranın en önündeki kişi **bir tanker** suyu almak isterse ne olacak?
 Mümkünse sıradaki kişi sayısı kadar küçük hortumu tankerimizin ana hortumuna bağlayarak sıradaki bütün kişilerin bekleme sürelerini dengeleyerek bütün köy halkını memnun edebiliriz.
 {{% /notice %}}
 
-Bu şekilde: Büyük varillerle gelen kişilere de aynı kapasitede debi sağlanmış oldu.
+Böylece büyük varillerle gelen kişilere de aynı kapasitede debi sağlanmış  ve kaynak dengesizliğinin önüne önemli ölçüde geçilmiş oldu.
 
-Kaynak dengesizliğinin önüne önemli ölçüde geçtik.
-
-Ayrıca su ihtiyacı fazla kişiler daha fazla bekleyeceği için kaynak adaletsizliğinin önüne önemli ölçüde geçildi.
-
-Buradaki önemli nokta:
+Buradaki önemli noktalar:
 
 1. Tankerin kapasitesi
 2. Ana hortuma bağlayabileceğimiz küçük hortum adeti.
