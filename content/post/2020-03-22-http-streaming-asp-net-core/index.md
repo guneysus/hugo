@@ -8,6 +8,12 @@ tags:
     - http
     - streaming
     - cloud
+
+thumb: /static/http-streaming-versus-non-streaming.png
+thumbAlt: /static/http-streaming-versus-non-streaming.png
+
+
+summary: HTTP Streaming yöntemi ve Scalability arasındaki ilişkisini, metaforla anlamaya çalışalım.
 ---
 
 <link rel="stylesheet" href="/css/xkcd.css">
