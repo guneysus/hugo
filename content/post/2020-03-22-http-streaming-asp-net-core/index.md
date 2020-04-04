@@ -20,7 +20,7 @@ summary: HTTP Streaming yöntemi ve Scalability arasındaki ilişkisini, metafor
 
 ## Giriş
 
-Günümüzde AVM ve restoranlarda nasıl ki müşteriler yemeğinin bir an önce gelmesini istiyor ve bu çoğu zaman restoran tercihinde önemli rol oynayabiliyorsa, günümüz web dünyasında da durum bundan farklı değil. Bu sebeple sunucu kaynaklarımızı dengeli ve efektik kullanmanın önemi geçen gün artmakta.
+Günümüzde AVM ve restoranlarda nasıl ki müşteriler yemeğinin bir an önce gelmesini istiyor ve bu çoğu zaman restoran tercihinde önemli rol oynayabiliyorsa, günümüz web dünyasında da durum bundan farklı değil. Bu sebeple sunucu kaynaklarımızı dengeli ve efektik kullanmanın önemi her geçen gün artmakta.
 
 Sunucu maliyetlerimizi düşük tutmaya çalışırken bir yandan son kullanıcıya daha hızlı ve kaliteli hizmet vermek öncelikli hedeflerimizden olmalı.
 
@@ -52,7 +52,10 @@ Türkçe'ye ifade edecek olursak:
 
 ## Su Metaforu
 
-Köyün yakınındaki bir su pınarı var ve köye su lazım. İki yolumuz var
+
+Köyün yakınındaki bir su pınarı var ve köye su lazım. 
+
+İki yolumuz var:
 
 1. Tankerle su getirmek ve köy halkının bidonlarını tankerin ana hortumu ile doldurmalarını sağlamak,
 2. Tankerin ana hortumuna çok sayıda hortum bağlayarak aynı anda olabildiğince fazla sayıda kişiye su sağlamak.
@@ -134,7 +137,7 @@ Streaming senaryosunda ise bir yandan disk veya networkten okurken, diğer yanda
 
 ## Sonuç
 
-Bu yazımızda "Streaming" yöntemini üzerinden anlatmaya çalıştım. Sonraki yazılarımızda uygulamalı olarak bu konulara değinmeye çalışacağım.
+Bu yazımızda "Streaming" yöntemini bir metafor üzerinden anlatmaya çalıştım. Sonraki yazılarımda, Asp.NET Core ve C# ile uygulamalı olarak bu konulara değinmeye çalışacağım.
 
 
 - ASP.Net Core ile JSON ve File Streaming
@@ -145,7 +148,8 @@ Bu yazımızda "Streaming" yöntemini üzerinden anlatmaya çalıştım. Sonraki
 
 konularından bahsedeceğiz.
 
-## Dipnotlar
+
+## Referanslar
 
 [^streaming]: https://en.wikipedia.org/wiki/Streaming
 [^scalability]: https://en.wikipedia.org/wiki/Scalability
