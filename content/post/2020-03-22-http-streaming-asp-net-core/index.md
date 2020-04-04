@@ -28,7 +28,7 @@ HTTP Streaming yöntemi, dolaylı yoldan sunucu maliyetini azaltırken, son kull
 
 Türkçe olarak:
 
-> *Bir sistemin artan yükün altından kaynak ekleyerek kalkma becerisidir. Ekonomik bağlamda ise yatırım karşılığında gelirin artabilmesidir.*
+> Bir sistemin artan yükün altından kaynak ekleyerek kalkma becerisidir. Ekonomik bağlamda ise yatırım karşılığında gelirin artabilmesidir.
 
 İdeal şartlarda bir birim kaynak artırımı ile ek bir birim daha iş yapılması beklenir. [^thermal-efficiency]
 
@@ -134,22 +134,19 @@ Streaming senaryosunda ise bir yandan disk veya networkten okurken, diğer yanda
 
 Bu yazımızda "Streaming" yöntemini üzerinden anlatmaya çalıştım. Sonraki yazılarımızda uygulamalı olarak bu konulara değinmeye çalışacağım.
 
+
 - ASP.Net Core ile JSON ve File Streaming
 - SQL Server üzerinden Streaming ile veri çekmek
 - HTTP Client ile streaming download
 - Son kullanıcıya yansıması
 - Performans etkileri
 
-üzerine yazmaya çalışacağım.
+konularından bahsedeceğiz.
 
 ## Dipnotlar
 
 [^streaming]: https://en.wikipedia.org/wiki/Streaming
-[^fallacies-of-distribute-computing-I]: https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
-[^fallacies-of-distribute-computing-II]: https://dzone.com/articles/understanding-the-8-fallacies-of-distributed-syste
 [^scalability]: https://en.wikipedia.org/wiki/Scalability
 [^thermal-efficiency]: Bu 1/1 oranının ideal şartlarda bile 1'den düşük olduğu *"[Carno Teoremi](https://en.wikipedia.org/wiki/Carnot's_theorem_(thermodynamics\))"* ve *"Termal Verimlilik"* prensipleri ile tanımlanmıştır. https://en.wikipedia.org/wiki/Thermal_efficiency
 [^stream]: https://www.wordnik.com/words/stream
-[^ttfb]: https://en.wikipedia.org/wiki/Time_to_first_byte
-[^performance-during-pandemic]: https://calibreapp.com/blog/performance-during-pandemic
 [^io]: https://en.wikipedia.org/wiki/Input/output
