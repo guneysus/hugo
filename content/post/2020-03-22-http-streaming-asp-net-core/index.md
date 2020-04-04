@@ -16,7 +16,7 @@ tags:
 
 Günümüzde AVM ve restoranlarda nasıl ki müşteriler yemeğinin bir an önce gelmesini istiyor ve bu çoğu zaman restoran tercihinde önemli rol oynayabiliyorsa, günümüz web dünyasında da durum bundan farklı değil. Bu sebeple sunucu kaynaklarımızı dengeli ve efektik kullanmanın önemi geçen gün artmakta.
 
-Sunuc maliyetlerimizi düşük tutmaya çalışırken bir yandan son kullanıcıya daha hızlı ve kaliteli hizmet vermek öncelikli hedeflerimizden olmalı.
+Sunucu maliyetlerimizi düşük tutmaya çalışırken bir yandan son kullanıcıya daha hızlı ve kaliteli hizmet vermek öncelikli hedeflerimizden olmalı.
 
 > Perfomance is a feature. -- Anonim
 
