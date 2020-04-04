@@ -42,3 +42,8 @@ A tip disclaimer
 {{% notice warning %}}
 A warning disclaimer
 {{% /notice %}}
+
+
+{{% notice danger %}}
+A danger disclaimer
+{{% /notice %}}
