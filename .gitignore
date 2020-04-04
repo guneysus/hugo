@@ -3,3 +3,4 @@ public/
 *.swp
 tex2pdf.*/
 *.deb
+resources/_gen/

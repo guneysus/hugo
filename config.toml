@@ -80,7 +80,7 @@ disableLiveReload = false
         title = "snippets"
         url = "/snippet/"
         weight = 3
-        pre = '<i class="icon icon-newspaper"> </i>'
+        pre = '<i class="icon icon-code"> </i>'
 
     [[menu.main]]
         name = "tags"
@@ -91,17 +91,55 @@ disableLiveReload = false
 
 
 
-# MARKDOWN
-## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
-[blackfriday]
-    plainIDAnchors = true
-    # See https://github.com/gohugoio/hugo/issues/2424
-    hrefTargetBlank = true
+
+[markup]
+  defaultMarkdownHandler = "blackFriday"
+  [markup.blackFriday]
     angledQuotes = false
-    latexDashes = true
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
     fractions = true
-    extensions =  ["tables", ""]
-    titleblock = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [imaging]
 # See https://github.com/disintegration/imaging
@@ -124,7 +162,7 @@ order = [".jpg$", ".gif$"]
 
 [[deployment.targets]]
 # An arbitrary name for this target.
-name = "mydeployment"
+name = "s3"
 # The Go Cloud Development Kit URL to deploy to. Examples:
 # GCS; see https://gocloud.dev/howto/blob/#gcs
 # URL = "gs://<Bucket Name>"
@@ -133,7 +171,8 @@ name = "mydeployment"
 # For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
 # URL = "s3://<Bucket Name>?region=<AWS region>"
 
-URL = "s3://blog.guneysu.xyz.s3-website.eu-central-1.amazonaws.com"
+# URL = "s3://blog.guneysu.xyz.s3-website.eu-central-1.amazonaws.com"
+URL = "s3://blog.guneysu.xyz?region=eu-central-1"
 # Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
 # URL = "azblob://$web"
 
@@ -142,6 +181,22 @@ URL = "s3://blog.guneysu.xyz.s3-website.eu-central-1.amazonaws.com"
 
 # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
 # cloudFrontDistributionID = <ID>
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=2592000, no-transform, public" # 3600 * 24 * 30
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=2592000, no-transform, public" # 3600 * 24 * 30
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
+
 
 
 [outputFormats.Algolia]

@@ -28,11 +28,11 @@ a {
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .main {
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 input {
@@ -79,7 +79,7 @@ box-shadow: inset 0 1px #e5e7ed, 0 1px 0 #fcfcfc; */
 }
 
 .search input:focus+.results {
-    display: block
+    display: block;
 }
 
 .search .results {
@@ -139,11 +139,11 @@ box-shadow: inset 0 1px #e5e7ed, 0 1px 0 #fcfcfc; */
 }
 
 .search .results li:first-child:hover:before, .search .results li:first-child:hover:after {
-    display: none
+    display: none;
 }
 
 .search .results li:last-child {
-    margin-bottom: -1px
+    margin-bottom: -1px;
 }
 
 .search .results a {
@@ -159,9 +159,13 @@ box-shadow: inset 0 1px #e5e7ed, 0 1px 0 #fcfcfc; */
 }
 
 .search .results a span {
-    font-weight: 200
+    font-weight: 200;
 }
 
+.search .results a span em, .search .results a em {
+    background-color: yellow;
+}
+     
 .search .results a:before {
     content: '';
     width: 18px;
@@ -171,6 +175,10 @@ box-shadow: inset 0 1px #e5e7ed, 0 1px 0 #fcfcfc; */
     right: 10px;
     margin-top: -9px;
     /* background: url("https://cssdeck.com/uploads/media/items/7/7BNkBjd.png") 0 0 no-repeat; */
+}
+
+.search .results a:hover em {
+    color: #000;
 }
 
 .search .results a:hover {
@@ -203,5 +211,5 @@ box-shadow: inset 0 1px #e5e7ed, 0 1px 0 #fcfcfc; */
 }
 
 .lt-ie9 .search input {
-    line-height: 26px
+    line-height: 26px;
 }

@@ -1,8 +1,8 @@
-default:
+VERSION := '0.55.2'
+HUGO_SERVER := hugo-$(VERSION) server --enableGitInfo -v --debug
 
-pdf:
-	bash convert-all-posts-to-pdf.sh
-	
+default: serve
+
 clean:
 	git clean -f
 	rm content/post/*/index.pdf || true
@@ -10,6 +10,9 @@ clean:
 	rm tex2pdf.-* -rf || true
 
 serve:
-	hugo server --enableGitInfo -v --debug -D
+	$(HUGO_SERVER)
 
-.PHONY: default pdf clean serve
+deploy:
+	hugo deploy --target=s3 --dryRun --debug
+
+.PHONY: default clean serve
