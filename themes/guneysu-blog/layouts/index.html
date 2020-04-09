@@ -25,7 +25,7 @@
 
     {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
       {{ .Render "summary" }}
-      {{ end }}
+    {{ end }}
     </section>
 
     <section>

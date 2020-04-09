@@ -41,7 +41,7 @@ disableLiveReload = false
     tag = "tags"
 
 [permalinks]
-    post = "/post/:slug/"
+    post = "/post/:year/:month/:slug/"
     page = "/:slug/"
 
 [menu]
@@ -136,10 +136,11 @@ disableLiveReload = false
     noClasses = true
     style = "monokai"
     tabWidth = 4
+
   [markup.tableOfContents]
     endLevel = 3
-    ordered = false
-    startLevel = 2
+    ordered = true
+    startLevel = 0
 
 [imaging]
 # See https://github.com/disintegration/imaging
