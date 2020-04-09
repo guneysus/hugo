@@ -4,6 +4,15 @@
   <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
   <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
+  <script>
+    var toggleTableOfContents = function () {
+      var el = document.querySelector(".toc-container .toc");
+      el.classList.toggle("hide");
+      el.classList.toggle("show");
+      debugger;
+    }
+  </script>
+
   <body class="body">
 
     {{ partial "page-bug-reporter.html" . }}
@@ -31,9 +40,12 @@
          
           <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
             <aside class="toc mt2">
-              <div class="toc-container ba pv2 ph4 ">
-                <h1 class="f2 f2-m f2-l source-sans-pro mb0 mt01 pa0 lh-title">İçindekiler</h1>
-                {{ .TableOfContents }}   
+              <div class="toc-container ba b--silver pv2 pl4 pr2 mt4">
+                <button class="toggle-toc link black bg-animate dim" onclick="toggleTableOfContents()">-</button>                
+                <h1 class="f2 f2-m f2-l fw5 source-sans-pro mb1 mt1 pa0 lh-title">İçindekiler</h1>
+                <div class="toc show">
+                  {{ .TableOfContents }}   
+                </div>
               </div>           
             </aside>
                         
@@ -73,24 +85,22 @@
 
   {{ $filepath := ( replace .Page.File.Path "\\" "/" ) }}
       
-  {{- with .GitInfo }} 
-
+{{- with .GitInfo }} 
 <div class="commit-info ba b--light-silver mt5 mb1" >
 
   <div class="commit-top-pane bg-washed-blue">
-    <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}"><p class="commit-title link dim black b m0 pl2 fw5 dark-gray roboto">{{ .Subject }}</p>   </a>
+    <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">
+      <p class="commit-title link dim black b m0 pl3 fw5 dark-gray roboto">{{ .Subject }}</p>
+    </a>
   </div>
 
-  <div class="commit-bottom-pane pt2 pb2">
-    <div class="commit-detail">
-      
+  <div class="commit-bottom-pane pt2 pb3 pl2">
+    <div class="commit-detail">  
       <a class="avatar" href="/guneysus">
         <img height="32" width="32" src="https://avatars0.githubusercontent.com/u/949232?s=60&amp;u=3ab7c10f22efe3c41880c4e517ef55d02e55dfe6&amp;v=4" class="">
       </a>
     </div> 
-      
-
-
+    
     <div class="commit-meta">
       <span class="commit-author">{{ .AuthorName }}</span> <span class="commit-date">
         <a class="link dim" href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">committed</a>

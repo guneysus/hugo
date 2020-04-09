@@ -41,7 +41,8 @@ disableLiveReload = false
     tag = "tags"
 
 [permalinks]
-    post = "/post/:year/:month/:slug/"
+    # post = "/post/:year/:month/:slug/" # TODO
+    post = "/post/:slug/"
     page = "/:slug/"
 
 [menu]
