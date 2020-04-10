@@ -83,14 +83,14 @@
 
   <div class="gitinfo source-sans-pro mt3">
 
-  {{ $filepath := ( replace .Page.File.Path "\\" "/" ) }}
+{{ $filepath := ( replace .Page.File.Path "\\" "/" ) }}
       
 {{- with .GitInfo }} 
 <div class="commit-info ba b--light-silver mt5 mb1" >
 
   <div class="commit-top-pane bg-washed-blue">
     <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">
-      <p class="commit-title link dim black b m0 pl3 fw5 dark-gray roboto">{{ .Subject }}</p>
+      <p class="commit-title link dim black b m0 pl1 fw5 dark-gray roboto">{{ .Subject }}</p>
     </a>
   </div>
 
@@ -106,25 +106,37 @@
         <a class="link dim" href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">committed</a>
         at {{ .AuthorDate.Format "January 2, 2006 Monday" }}</span>      
 
-        <a href="https://github.com/guneysus/blog/commits/{{ .AbbreviatedHash }}/content/{{ $filepath }}.diff" target="_blank">Diff</a>     
+        <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}/content/{{ $filepath }}" target="_blank">Diff</a>     
     </div>
+
+  <div class="commit-actions ml0 pl2 mt2 pt2 mr7 bt b--light-gray">
+    <a 
+    target="_blank"
+    class="link black bg-animate dim ph1"
+    href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}#new_commit_comment_field">
+    <i class="icon icon-comment"></i> write a review
+  </a>
+  
+  <a 
+  class="link black bg-animate dim ph1"
+  href="https://github.com/guneysus/blog/commits/{{ .AbbreviatedHash }}/content/{{ $filepath }}" 
+  target="_blank"><i class="icon icon-history"></i>History</a>
+  
+  <a 
+  class="link black bg-animate dim ph1"
+  href="https://github.com/guneysus/blog/commits/master/content/{{ $filepath }}.atom">
+  <i class="icon icon-rss"></i>Subscribe</a>    
+  </div>    
   </div>
 </div>
 
-<a 
-  target="_blank"
-  class="link black bg-animate dim ph2"
-  href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}#new_commit_comment_field">
-  <i class="icon icon-comment"></i> write a review
-</a>
 
-<a 
-class="link black bg-animate dim ph2"
-href="https://github.com/guneysus/blog/commits/{{ .AbbreviatedHash }}/content/{{ $filepath }}" 
-target="_blank"><i class="icon icon-history"></i>History</a>           
 
 </div>
-        {{ end }}
+
+
+
+{{ end }}
         </article>
       </section>
 
