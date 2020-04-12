@@ -1,0 +1,187 @@
+input[type="search"][name="search"] {
+}
+
+input[type="search"][name="search"]:focus {
+  outline: none;
+  border-style: solid;
+  background-color: #fffceb;
+}
+
+/* * Copyright (c) 2012 Thibaut Courouble
+* Licensed under the MIT License
+================================================== 
+fetched from: https://codepen.io/airpwn/pen/ckCJd
+
+*/
+
+.search {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+
+  a {
+    color: #1e7ad3;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  input {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #555860;
+
+    &:focus {
+      outline: none;
+      border-color: #66b1ee;
+      -webkit-box-shadow: 0 0 2px rgba(85, 168, 236, 0.9);
+      -moz-box-shadow: 0 0 2px rgba(85, 168, 236, 0.9);
+      -ms-box-shadow: 0 0 2px rgba(85, 168, 236, 0.9);
+      -o-box-shadow: 0 0 2px rgba(85, 168, 236, 0.9);
+      box-shadow: 0 0 2px rgba(85, 168, 236, 0.9);
+    }
+
+    &:focus + .results {
+      display: block;
+    }
+  }
+
+  .results {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cbcfe2 #c8cee7 #c4c7d7;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+
+    li {
+      display: block;
+    }
+
+    li:first-child {
+      margin-top: -1px;
+    }
+
+    li:first-child:before,
+    li:first-child:after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px outset transparent;
+    }
+
+    li:first-child:before {
+      top: -11px;
+    }
+
+    li:first-child:after {
+      top: -10px;
+    }
+
+    li:first-child:hover:before,
+    li:first-child:hover:after {
+      display: none;
+    }
+
+    li:last-child {
+      margin-bottom: -1px;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      margin: 0 -1px;
+      padding: 6px 40px 6px 10px;
+      color: #808394;
+      font-weight: 500;
+      text-shadow: 0 1px #fff;
+      border-radius: 3px;
+
+
+
+
+      &:before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -9px;
+        /* background: url("https://cssdeck.com/uploads/media/items/7/7BNkBjd.png") 0 0 no-repeat; */
+      }
+  
+      &:hover em {
+        color: #000;
+      }
+  
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+        border-color: #2380dd #2179d5 #1a60aa;
+        background-color: #338cdf;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #59aaf4),
+          color-stop(100%, #338cdf)
+        );
+        background-image: -webkit-linear-gradient(top, #59aaf4, #338cdf);
+        background-image: -moz-linear-gradient(top, #59aaf4, #338cdf);
+        background-image: -ms-linear-gradient(top, #59aaf4, #338cdf);
+        background-image: -o-linear-gradient(top, #59aaf4, #338cdf);
+        background-image: linear-gradient(top, #59aaf4, #338cdf);
+        -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.08);
+        -ms-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.08);
+        -o-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.08);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.08);
+      }
+            
+      span {
+        font-weight: 200;
+      }  
+      
+
+      span em,
+      em {
+        background-color: yellow;
+      }      
+    }
+
+  }
+}
+
+.main {
+  margin-top: 50px;
+}
+
+:-moz-placeholder {
+  color: #a7aabc;
+  font-weight: 200;
+}
+
+::-webkit-input-placeholder {
+  color: #a7aabc;
+  font-weight: 200;
+}
+
+.lt-ie9 .search input {
+  line-height: 26px;
+}

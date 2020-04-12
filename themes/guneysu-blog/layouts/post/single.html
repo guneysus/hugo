@@ -4,6 +4,15 @@
   <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
   <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
+  <script>
+    var toggleTableOfContents = function () {
+      var el = document.querySelector(".toc-container .toc");
+      el.classList.toggle("hide");
+      el.classList.toggle("show");
+      debugger;
+    }
+  </script>
+
   <body class="body">
 
     {{ partial "page-bug-reporter.html" . }}
@@ -12,10 +21,11 @@
 
 
       <section class="mw7 center">
-          {{ partial "header.html" . }}
+        {{ partial "header.html" . }}
+
 
         <article class="pa3 pa5-ns pv4 ph3 ph0-l b--black-10">
-          
+
           <div>
             <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
             {{ with .GitInfo }} {{ with .AuthorName }} <div class="source-sans-pro ">by  {{ . }}</div> {{ end }} {{ end }}
@@ -27,14 +37,22 @@
             {{ with .GitInfo }} <time>Last updated: {{ .AuthorDate.Format "2006, January 02" }}</time> {{ end }}
           </div>
 
-          
-
+         
           <div class="article-content f4 f6-m lh-wide libre-baskerville measure-wide">
+            <aside class="toc mt2">
+              <div class="toc-container br2 ba b--black-20 pv2 pl4 pr2 mt4">
+                <button class="toggle-toc link black bg-animate dim" onclick="toggleTableOfContents()">-</button>                
+                <h1 class="f2 f2-m f2-l fw5 source-sans-pro mb1 mt1 pa0 lh-title">İçindekiler</h1>
+                <div class="toc show">
+                  {{ .TableOfContents }}   
+                </div>
+              </div>           
+            </aside>
+                        
             {{ .Content }}
           </div>
 
-
-
+        
           {{ if .Resources }}
 
           <div class="resources bt b--black-20 mt3">
@@ -62,42 +80,63 @@
           </div>
           {{ end }}
 
-          {{ with .GitInfo }}
 
-          <div class="gitinfo source-sans-pro pl3 mt3">
-            <!-- <h3 class="mt1 mb0 pa0">info</h3> -->
-<!-- <pre class>
-  Author  : {{ .AuthorName }}
-  Email   : {{ .AuthorEmail }}
-  Hash    : {{ .AbbreviatedHash }}
-  Date    : {{ .AuthorDate }}
-  Subject : {{ .Subject }}
-</pre> -->
+  <div class="gitinfo source-sans-pro mt3">
 
-        <a 
-          target="_blank"
-          class="link black bg-animate hover-bg-light-yellow"
-          href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}#new_commit_comment_field">
-          <i class="icon icon-comment"></i> write a review
-        </a>
+{{ $filepath := ( replace .Page.File.Path "\\" "/" ) }}
+      
+{{- with .GitInfo }} 
+<div class="commit-info ba b--light-silver mt5 mb1" >
 
-        </div>
-        {{ end }}
+  <div class="commit-top-pane bg-washed-blue">
+    <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">
+      <p class="commit-title link dim black b m0 pl1 fw5 dark-gray roboto">{{ .Subject }}</p>
+    </a>
+  </div>
 
-          <!-- <ul class="article-taxonomy">
-              {{ if .Params.categories }}            
-              <hr>
-              <li>
-                <i class="fa fa-category"></i>{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}{{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-              </li>
-              {{ end }}
-            
-              {{ if .Params.tags }}
-              <li>
-                {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}"><i class="fa fa-tags"></i> {{ . }}</a>{{ end }}
-              </li>
-              {{ end }}
-          </ul> -->
+  <div class="commit-bottom-pane pt2 pb3 pl2">
+    <div class="commit-detail">  
+      <a class="avatar" href="/guneysus">
+        <img height="32" width="32" src="https://avatars0.githubusercontent.com/u/949232?s=60&amp;u=3ab7c10f22efe3c41880c4e517ef55d02e55dfe6&amp;v=4" class="">
+      </a>
+    </div> 
+    
+    <div class="commit-meta">
+      <span class="commit-author">{{ .AuthorName }}</span> <span class="commit-date">
+        <a class="link dim" href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}">committed</a>
+        at {{ .AuthorDate.Format "January 2, 2006 Monday" }}</span>      
+
+        <a href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}/content/{{ $filepath }}" target="_blank">Diff</a>     
+    </div>
+
+  <div class="commit-actions ml0 pl2 mt2 pt2 mr7 bt b--light-gray">
+    <a 
+    target="_blank"
+    class="link black bg-animate dim ph1"
+    href="https://github.com/guneysus/blog/commit/{{ .AbbreviatedHash }}#new_commit_comment_field">
+    <i class="icon icon-comment"></i> write a review
+  </a>
+  
+  <a 
+  class="link black bg-animate dim ph1"
+  href="https://github.com/guneysus/blog/commits/{{ .AbbreviatedHash }}/content/{{ $filepath }}" 
+  target="_blank"><i class="icon icon-history"></i>History</a>
+  
+  <a 
+  class="link black bg-animate dim ph1"
+  href="https://github.com/guneysus/blog/commits/master/content/{{ $filepath }}.atom">
+  <i class="icon icon-rss"></i>Subscribe</a>    
+  </div>    
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+{{ end }}
         </article>
       </section>
 

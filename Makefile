@@ -10,7 +10,7 @@ clean:
 	rm tex2pdf.-* -rf || true
 
 serve:
-	$(HUGO_SERVER)
+	$(HUGO_SERVER) -D
 
 deploy:
 	hugo deploy --target=s3 --dryRun --debug

@@ -38,7 +38,7 @@ Türkçe olarak:
 
 İdeal şartlarda bir birim kaynak artırımı ile ek bir birim daha iş yapılması beklenir. [^thermal-efficiency]
 
-## HTTP Streaming [^streaming]
+## HTTP Streaming
 
 Giriş bölümünde *"Eşdeğer bir kaynakla daha fazla kullanıcıya hizmet vermek"* ifadesini kullandık.
 
@@ -48,7 +48,7 @@ Giriş bölümünde *"Eşdeğer bir kaynakla daha fazla kullanıcıya hizmet ver
 
 Türkçe'ye ifade edecek olursak:
 
-> *Sabit bir su akışı*
+> *Sabit bir su akışı* [^streaming] 
 
 ## Su Metaforu
 
