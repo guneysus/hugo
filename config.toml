@@ -69,29 +69,6 @@ disableLiveReload = false
         pre = '<i class="icon icon-doc-text"> </i>'
         post = "[en]"
 
-    [[menu.main]]
-        name = "news"
-        title = "news"
-        url = "/news/"
-        weight = 3
-        pre = '<i class="icon icon-newspaper"> </i>'
-
-    [[menu.main]]
-        name = "snippet"
-        title = "snippets"
-        url = "/snippet/"
-        weight = 3
-        pre = '<i class="icon icon-code"> </i>'
-
-    [[menu.main]]
-        name = "tags"
-        title = "tags"
-        url = "/tags/"
-        weight = 4
-        pre = "<i class='icon icon-tags'> </i>"
-
-
-
 
 [markup]
   defaultMarkdownHandler = "blackFriday"
@@ -150,7 +127,7 @@ disableLiveReload = false
 resampleFilter = "CatmullRom"
 
 # Default JPEG quality setting. Default is 75.
-quality = 75
+quality = 85
 
 anchor = "smart"
 

@@ -12,14 +12,6 @@
           <i class="icon icon-tags"> </i>
         </a>        
 
-        <a href="{{ .Site.BaseURL }}news/" class="link dim mid-gray pv2 ph1" aria-label="Go to News">
-          <i class="icon icon-newspaper"> </i>
-        </a>
-
-        <a href="{{ .Site.BaseURL }}snippet/" class="link dim mid-gray pv2 ph1" aria-label="Go to Snippets">
-          <i class="icon icon-code"> </i>
-        </a>	        
-
         <a href="{{ .Site.BaseURL }}post/" class="link dim mid-gray pv2 ph1" aria-label="Go to Posts">
           <i class="icon icon-doc-text"> </i>
         </a>
@@ -41,7 +33,7 @@
         </a> -->
 
 <span class="black-30">|</span>
-
+          {{/*  TODO POST PAGES GIVES WRONG RSS  */}}
           <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" class="link dim mid-gray pv2 ph1" aria-label="Subscribe via RSS">
             <i class="icon icon-rss"> </i>
           </a>
