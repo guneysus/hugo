@@ -66,15 +66,34 @@
                       <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-pdf"> </i> {{ .Title }}</a>
                     {{ end }}
                   {{ end }}
+
+
                 </li>
     
                 <li class="">
-                    {{ with .Resources.ByType "epub" }}
+                    {{ with .Resources.Match "**.epub" }}
                     {{ range . }}
                       <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
                     {{ end }}
                   {{ end }}
-                </li>                    
+                </li>
+
+                <li class="">
+                    {{ with .Resources.Match "**.txt" }}
+                    {{ range . }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </li>
+
+                 <li class="">
+                    {{ with .Resources.Match "**.ascii" }}
+                    {{ range . }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </li> 
+                   
               </ul>
     
           </div>

@@ -13,5 +13,6 @@ slug: statik-bir-hugo-web-sitesini-aws-s3-uzerine-travisci-ile-yayinlamak
 keywords: []
 publishDate: 2018-03-24T20:12:05+03:00
 weight: 0
+home: true
 
 ---

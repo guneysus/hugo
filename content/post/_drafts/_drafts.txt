@@ -1,0 +1,20 @@
+-   CyberChef
+-   G Suite HAR Analyzer
+-   KeyCDN Speed Test
+-   Rigor HAR Diff
+-   Chrome HTTP Archive Viewer
+
+CyberChef
+
+A simple, intuitive web app for analysing and decoding data without
+having to deal with complex tools or programming languages. CyberChef
+encourages both technical and non-technical people to explore data
+formats, encryption and compression.
+
+G Suite HAR Analyzer
+
+KeyCDN Speed Test
+
+Rigor HAR Diff
+
+Chrome HTTP Archive Viewer
