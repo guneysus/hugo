@@ -330,3 +330,11 @@ button.toggle-toc {
     }
   }
 }
+
+
+.highlight pre {
+  white-space: pre-wrap;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  line-height: 1.25em;
+  border: 3px dotted lightgrey;
+}
