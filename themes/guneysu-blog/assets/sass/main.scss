@@ -1,6 +1,6 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
 
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:500|Source+Sans+Pro:300,700|Fira+Code:400,500&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:500|Source+Sans+Pro:300,700|Fira+Mono:400,500,700&display=swap&subset=latin-ext");
 
 @import "search.scss";
 
@@ -58,12 +58,12 @@ body div.container {
 }
 
 .fira {
-  font-family: "Fira Code", monospace;
+  font-family: "Fira Mono", monospace;
 }
 
 .code,
 code {
-  font-family: "Fira Code", monospace;
+  font-family: "Fira Mono", monospace;
   font-display: auto;
 }
 
@@ -164,7 +164,7 @@ article {
     padding: 0.1em 0.4em;
     margin: 0 0.15em;
     border: 1px dotted gray;
-    font-family: "Fira Code", monospace;
+    font-family: "Fira Mono", monospace;
   }
 
   p,
@@ -337,4 +337,7 @@ button.toggle-toc {
   padding: 0.5em 0.5em 0.5em 0.5em;
   line-height: 1.25em;
   border: 3px dotted lightgrey;
+  /* these two values do the same thing */
+  font-feature-settings: "liga" 1;
+  font-feature-settings: "liga1" on;  
 }
