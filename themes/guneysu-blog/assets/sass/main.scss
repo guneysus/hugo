@@ -283,7 +283,17 @@ nav#TableOfContents {
   }
 }
 
+button.toggle-toc.collapsed {
+  &::after {
+    content: '+';
+  }
+}
+
 button.toggle-toc {
+  &::after {
+    content: '-';
+  }  
+  cursor: pointer;
   background-color: transparent;
   font-family: monospace;
   border: 1px solid gray;
@@ -303,6 +313,7 @@ button.toggle-toc {
   }
 
   &:hover {
+
     // background-color: lightblue;
     top: 3px;
   }
@@ -334,10 +345,47 @@ button.toggle-toc {
 
 .highlight pre {
   white-space: pre-wrap;
+  word-break: break-word;  
   padding: 0.5em 0.5em 0.5em 0.5em;
-  line-height: 1.25em;
+  line-height: 1.2em;
   border: 3px dotted lightgrey;
   /* these two values do the same thing */
   font-feature-settings: "liga" 1;
   font-feature-settings: "liga1" on;  
+}
+
+details {
+  outline:none;
+
+
+   summary {
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+    }
+
+    &:hover {
+    }
+
+    &:active {
+    }
+   }
+}
+
+/*
+credits: https://codepen.io/thomashigginbotham/pen/aYqvqQ?editors=1100
+*/
+summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+details[open] summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  color: transparent;
+}
+details[open] summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
 }
