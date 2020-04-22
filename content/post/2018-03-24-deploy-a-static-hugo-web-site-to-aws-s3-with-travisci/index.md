@@ -17,7 +17,7 @@ home: true
 
 ---
 
-Bu yazımda Hugo ile oluşturulmuş bir web sitesini, CI/CD aracı olan TravisCI ile 
+Bu yazımda Hugo ile oluşturulmuş bir web sitesini, CI/CD aracı olan TravisCI ile
 AWS S3 üzerine yayınlayacağız.
 
 # Neden Hugo
@@ -50,8 +50,6 @@ Hikaye kısmını burada bırakıp sürecimizi üç aşamaya ayıralım:
 1. TravisCI hesabı
 2. AWS hesabı
 
----
-
 ## 1. Develop
 
 [GoHugo > Installing](https://gohugo.io/getting-started/installing/) adresinden
@@ -76,24 +74,10 @@ Yazılarınızı yazarken taslak aşamasından olan yazılarınızı da görmek
 isteyebilirsiniz.
 
 Bunu Hugo'ya belirtmemiz gerekiyor. `Makefile` kullanmayı seviyorum. `make`
-dediğinizde http://127.0.0.1:1313 adresindeki web sunucusuyla sitenizin
+dediğinizde <http://127.0.0.1:1313> adresindeki web sunucusuyla sitenizin
 önizlemesini görebilirsiniz.
 
-```Makefile
-default: develop
-
-DEVELOP := hugo \
-    --watch serve \
-    --destination /tmp/blog_dev \
-    --buildDrafts \
-    --buildFuture \
-    --baseURL=127.0.0.1
-
-develop:
-    $(DEVELOP)
-
-.PHONY: default develop
-```
+{{% attachment lang="Makefile" path="src/Makefile" title="Makefile" name="Makefile" /%}}
 
 Artık Github'da web siteniz için yeni bir repo oluşturabilir ve değişikliklerinizi
 *push* edebilirsiniz.
@@ -108,7 +92,7 @@ Artık Github'da web siteniz için yeni bir repo oluşturabilir ve değişiklikl
 oluşturalım. **_Web sitesi olarak kullanacak ve özel bir alan adı üzerinden yayın yapmayı düşünüyorsanız, `foo.example.com` isminde bucket açmanız gerekiyor._** Bkz.
 [S3 VirtualHosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html)
 
-IAM servisi ile travisci için bir kullanıcı oluşturalım ve oluşturulan _Access Key_ 
+IAM servisi ile travisci için bir kullanıcı oluşturalım ve oluşturulan _Access Key_
 ve _Access Secret_ değerlerini kaydedelim. Kaydetmediğiniz taktirde her ihtiyacınız olduğunda yeni bir _Security Credential_ oluşturmanız gerekecek.
 
 Bucket ve kullanıcımızı oluşturduk. TravisCI üzerinden S3'e dosyalarımızı
@@ -118,32 +102,10 @@ Add Permission > Attach existing policies directly > Create Policy > JSON
 
 yolunu takip ederek
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:GetObjectAcl",
-                "s3:GetObject",
-                "s3:AbortMultipartUpload",
-                "s3:DeleteObject",
-                "s3:PutObjectAcl"
-            ],
-            "Resource": [
-                "arn:aws:s3:::foo.example.com/*"
-            ]
-        }
-    ]
-}
-```
+{{% attachment lang="json" path="src/aws-s3-static-web-site-policy.json" title="AWS S3 Website Policy" name="aws-s3-static-web-site-policy.json" /%}}
 
 gerekli izinleri veriyoruz.
 
----
 
 ### Deploy & Run
 
@@ -152,57 +114,34 @@ TravisCI ile Hugo web sitemizi derleyip, S3 üzerine yayınlayabiliriz.
 
 Öncelikle reponun ana dizinine `.travis.yml` adında bir dosya eklememiz gerekiyor.
 
-{{< highlight yaml "linenos=table,hl_lines=,linenostart=1" >}}
-sudo: required
-dist: trusty
-
-before_install:
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
-
-script:
-    - hugo --theme=paperback
-
-deploy:
-    provider: s3
-    on: master
-    skip_cleanup: true
-    access_key_id: $S3_KEY
-    secret_access_key: $S3_SECRET
-    bucket: $S3_BUCKET
-    region: $S3_REGION
-    acl: public-read
-    local_dir: public
-{{< / highlight >}}
-
+{{% attachment lang="yaml" path="src/travis.yml" title="TravisCI Config" name=".travis.yml" /%}}
 
 Yirmi satırdan az bir konfigürasyon dosyası ile sitemizi yayınlayabiliyoruz.
 
-
 İlk beş satırda hugonun kurulumunu yapıyoruz.
 
-{{< highlight yaml "linenos=table,hl_lines=,linenostart=1" >}}
+```yml
 sudo: required
 dist: trusty
 
 before_install:
     - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb && sudo dpkg -i hugo_0.37.1_Linux-64bit.deb
 
-{{< / highlight >}}
+```
 
 Hugonun `public` dizini altına `paperback` dizini altına web sitemizi oluşturmasını
 sağlıyoruz. Temayı buradan vermek zorunda değilsiniz. `config.toml` dosyanızda
 `theme = "paperback"` ile temayı tanımlayıp `hugo` komutunu parametresiz çalıştırmanız
 yeterli.
 
-{{< highlight yaml "linenos=table,hl_lines=,linenostart=7" >}}
+```yml
 script:
     - hugo --theme=paperback
-{{< / highlight >}}
-
+```
 
 Bu satırları tek tek açıklayalım.
 
-{{< highlight yaml "linenos=table,hl_lines=,linenostart=10" >}}
+```yml
 deploy:
     provider: s3
     on: master
@@ -213,7 +152,7 @@ deploy:
     region: $S3_REGION
     acl: public-read
     local_dir: public
-{{< / highlight >}}
+```
 
 satır 12, sadece master branch için deployement yapılacağını bildiriyor.
 Başka ifadeyle `develop` üzerinden derleme tetiği verdiğinizde bu kısım

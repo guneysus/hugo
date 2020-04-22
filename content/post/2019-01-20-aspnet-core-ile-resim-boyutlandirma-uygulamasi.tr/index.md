@@ -28,12 +28,11 @@ weight: 0
 
 ---
 
+
 ## Giriş
 
 Bu yazımda [ImageSharp][imagesharp] ile basit bir resim boyutlandırma uygulamasını nasıl yazıp geliştirdiğimden bahsedeceğim. Uygulamamızın ön yüzü olmayacak, API olarak çalışacak.
 Docker ile paketleyeğiz. Ve bence en önemlisi uygulamamızın özelliklerini HTTP istekleriyle test etmeye yarayan nodejs [supertest][supertest] ile test edeceğiz.
-
----
 
 ## Tasarım Prensipleri
 
@@ -43,8 +42,6 @@ Docker ile paketleyeğiz. Ve bence en önemlisi uygulamamızın özelliklerini H
 - Olabildiğince basit ve kullanılabilir halde temel özelliklerden oluşan bir uygulama geliştireceğiz.
 - Uygulamayı Docker ile derleyip ayağa kaldıracağız.
 - Sadece temel fonksiyonları "yeteri" kadar test edeceğiz.
-
----
 
 ## Uygulamanın Özellikleri
 
@@ -57,73 +54,31 @@ Bu kadar.
 
 Bu adrese dosyamızı gönderiyoruz.
 
-```http
+```
 POST /api/upload
 ```
 
-
 Buradan alıyoruz. Yükseklik *0* olduğunda resmin orijinali döndürülür.
 
-```http
+```
 GET /image/h{height}/{name}
 ```
 
----
-
 ## Nasıl Test Edeceğiz
 
-Test kodları ise [burada][src-test]. Yazılmışı var. 
+Test kodları ise [burada][src-test]. Yazılmışı var.
 
 Kısa bir örnek verelim:
 
 Aşağıdaki kod, test için gerekli tanımlamaları yaptıktan sonra `'_data/ZY-IMG_0091-635px.jpg'` dosyasını yükler ve dönen sonucun 200 olmasını ve sonucun içinde _jpg_ geçmesini bekler.
 
+{{% attachment lang="js" path="src/tests.js" title="Tests" name="tests.js" /%}}
 
-```js
-var should = require("chai").should(),
-  expect = require("chai").expect,
-  supertest = require("supertest"),
-  API_URL = "http://app:5000",
-  api = supertest(API_URL);
+## Bu testleri de Dockerize edelim
 
-describe("JPEG File Upload", function() {
-  it("single JPEG file upload", function(done) {
-    api
-      .post("/api/upload")
-      .set("Content-Type", "multipart/form-data")
-      .attach("image", "_data/ZY-IMG_0091-635px.jpg")
-      .expect(200)
-      .expect("Content-Type", /text\/plain/)
-      .expect(/jpg/)
-      .end(function(err, res) {
-        if (err) {
-          return done(err);
-        }
-        uploadedfile = res.text;
+{{% attachment lang="Dockerfile" path="src/Dockerfile" title="Dockerfile" name="Dockerfile" /%}}
 
-        done();
-      });
-  });
-});
-```
-
-## Bu testleri de Dockerize edelim:
-
-
-```Dockerfile
-FROM node:8
-WORKDIR /usr/src/app
-COPY package*.json ./
-
-RUN npm install
-COPY . .
-
-CMD [ "node_modules/.bin/mocha", "--timeout", "25000", "--colors", "--reporter", "mocha-jenkins-reporter"]
-```
-
----
-
-## Peki Nasıl Çalıştıracağız?
+## Peki Nasıl Çalıştıracağız
 
 Proje içinde bir [Makefile][makefile] var. İçinde ihtiyacınız olan komutlar hatta gereksiz derece fazlalık komutlar bile mevcut. `make up` demeniz yeterli. Veya docker-compose ile projeyi kolayca ayağa kaldırabilirsiniz.
 
@@ -134,16 +89,12 @@ Biri test, diğer uygulama olmak üzere iki konteyner ayağa kalkacak ve testler
 docker-compose up --renew-anon-volumes --build
 ```
 
-
----
-
 ## Kodlar
 
 [Kodlar Burada][src]
 
-
 <!-- ----------------- -->
-	
+
 [imagesharp]:   https://github.com/SixLabors/ImageSharp  "SixLabors/ImageSharp"
 
 [supertest]:    https://github.com/visionmedia/supertest  "visionmedia/supertest"
