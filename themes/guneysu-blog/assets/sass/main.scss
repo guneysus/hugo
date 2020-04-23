@@ -1,6 +1,6 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
 
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:500|Source+Sans+Pro:300,700|Fira+Mono:400,500,700&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro:300,700|Fira+Mono:400,500,700&display=swap&subset=latin-ext");
 
 @import "search.scss";
 
@@ -31,11 +31,6 @@ body div.container {
 
 .libre-baskerville {
   font-family: "Libre Baskerville", serif;
-  font-display: auto;
-}
-
-.roboto {
-  font-family: "Roboto", sans-serif;
   font-display: auto;
 }
 
