@@ -1,0 +1,19 @@
+# warning this yaml file is the **ONLY** one section of CF template.
+# do not try to use it standalone.
+…
+  HarakiriRule:
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "ScheduledRule"
+      ScheduleExpression: "cron(0/30 * * * ? *)"
+      State: "ENABLED"
+      Targets: 
+        - 
+          Arn: 
+            Fn::GetAtt: 
+              - "HarakiriLambda"
+              - "Arn"
+          Id: "HarakiriLambdaV1"
+          Input: !Sub
+          - "{\"StackName\": \"${Stack}\"}"
+          - { Stack: !Ref "AWS::StackName" } 

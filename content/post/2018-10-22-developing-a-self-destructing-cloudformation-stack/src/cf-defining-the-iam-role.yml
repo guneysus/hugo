@@ -1,0 +1,57 @@
+# warning this yaml file is the **ONLY** one section of CF template.
+# do not try to use it standalone.
+…
+Resources:
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - logs:*
+            Resource: arn:aws:logs:*:*:*
+
+          - Effect: Allow
+            Action:
+              - cloudformation:DeleteStack
+            Resource: "*"
+
+          - Effect: Allow
+            Action: 
+              - iam:DeleteRolePolicy
+              - iam:DeleteRole
+            Resource: "*"
+
+          - Effect: Allow
+            Action: 
+              - lambda:DeleteFunction
+            Resource: "*"
+
+          - Effect: Allow
+            Action:
+              - events:RemoveTargets
+            Resource: "*"
+
+          - Effect: Allow
+            Action:
+              - events:DeleteRule
+            Resource: "*"
+
+          - Effect: Allow
+            Action: 
+              - lambda:RemovePermission
+            Resource: "*"

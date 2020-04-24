@@ -10,3 +10,4 @@
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<script src="/js/main.js"></script>

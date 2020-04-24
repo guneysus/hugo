@@ -1,0 +1,30 @@
+# warning this yaml file is the **ONLY** one section of CF template.
+# do not try to use it standalone.
+…
+  HarakiriLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          import boto3
+          client = boto3.client('cloudformation')
+
+          def handler(event, context):
+            return client.delete_stack(
+                StackName=event.StackName
+            )
+
+      Runtime: python3.6
+  PermissionForEventsToInvokeLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: 
+        Ref: "HarakiriLambda"
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: 
+        Fn::GetAtt: 
+          - "HarakiriRule"
+          - "Arn"  

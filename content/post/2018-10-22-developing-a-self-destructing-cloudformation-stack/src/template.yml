@@ -1,0 +1,124 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Mappings:
+  RegionMap:
+    us-east-1:
+      AMI: "ami-0ff8a91507f77f867"
+
+Parameters: {}
+
+Conditions: {}
+Resources:
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - logs:*
+            # - logs:CreateLogGroup
+            # - logs:CreateLogStream
+            # - logs:PutLogEvents
+            Resource: arn:aws:logs:*:*:*
+          
+          - Effect: Allow
+            Action:
+              - cloudformation:DeleteStack
+            Resource: "*"
+          
+          - Effect: Allow
+            Action: 
+              - iam:DeleteRolePolicy
+              - iam:DeleteRole
+            Resource: "*"
+          
+          - Effect: Allow
+            Action: 
+              - lambda:DeleteFunction
+            Resource: "*"
+          
+          - Effect: Allow
+            Action:
+              - events:RemoveTargets
+            Resource: "*"
+
+          - Effect: Allow
+            Action:
+              - events:DeleteRule
+            Resource: "*"
+
+          - Effect: Allow
+            Action: 
+              - lambda:RemovePermission
+            Resource: "*"
+
+  HarakiriLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          import boto3
+          client = boto3.client('cloudformation')
+
+          def handler(event, context):
+            return client.delete_stack(
+                StackName=event.StackName
+            )
+
+      Runtime: python3.6
+  PermissionForEventsToInvokeLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: 
+        Ref: "HarakiriLambda"
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: 
+        Fn::GetAtt: 
+          - "HarakiriRule"
+          - "Arn"      
+  HarakiriRule:
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "ScheduledRule"
+      ScheduleExpression: "cron(0/30 * * * ? *)"
+      State: "ENABLED"
+      Targets: 
+        - 
+          Arn: 
+            Fn::GetAtt: 
+              - "HarakiriLambda"
+              - "Arn"
+          Id: "HarakiriLambdaV1"
+          Input: !Sub
+          - "{\"StackName\": \"${Stack}\"}"
+          - { Stack: !Ref "AWS::StackName" }          
+Outputs:
+  StackRegion:
+    Value:
+      Ref: "AWS::Region"
+  AccountId:
+    Value:
+      Ref: "AWS::AccountId"
+  StackId:
+    Value:
+      Ref: "AWS::StackId"
+  StackName:
+    Value:
+      Ref: "AWS::StackName"                  

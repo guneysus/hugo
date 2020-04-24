@@ -67,11 +67,17 @@ disableLiveReload = false
         url = "/en/post/"
         weight = 2
         pre = '<i class="icon icon-doc-text"> </i>'
-        post = "[en]"
 
+        post = "[en]"
+    [[menu.main]]
+        name = "contrib"
+        title = "contributions"
+        url = "/contributions/"
+        weight = 3
+        pre = '<i class="icon"> </i>'
 
 [markup]
-  defaultMarkdownHandler = "blackFriday"
+  defaultMarkdownHandler = "goldmark"
   [markup.blackFriday]
     angledQuotes = false
     footnoteAnchorPrefix = ""
@@ -118,7 +124,7 @@ disableLiveReload = false
   [markup.tableOfContents]
     endLevel = 3
     ordered = true
-    startLevel = 0
+    startLevel = 1
 
 [imaging]
 # See https://github.com/disintegration/imaging
