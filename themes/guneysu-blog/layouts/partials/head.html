@@ -10,4 +10,7 @@
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<link href="https://unpkg.com/pattern.css" rel="stylesheet">
+
 <script src="/js/main.js"></script>
