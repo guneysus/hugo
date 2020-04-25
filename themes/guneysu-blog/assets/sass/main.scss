@@ -150,6 +150,11 @@ i.icon:before {
 }
 
 article {
+
+  counter-reset: section;
+  hyphens: manual;  
+  kerning: auto;
+
   sup.footnote-ref,
   sub.footnote-ref {
     vertical-align: baseline;
@@ -160,7 +165,32 @@ article {
     margin: 0 0.15em;
     border: 1px dotted gray;
     font-family: "Fira Mono", monospace;
+
+
+
   }
+
+//   body {
+//     /* Set "section" to 0 */
+   
+//   }
+ 
+ h2 {
+    /* Set "subsection" to 0 */
+   counter-reset: subsection;
+ }
+ 
+ h2::before {
+   /* Increment "section" by 1 */
+   counter-increment: section;
+   content: "" counter(section) ". ";
+ }
+ 
+ h3::before {
+   /* Increment "subsection" by 1 */
+   counter-increment: subsection;
+   content: counter(section) "." counter(subsection) " ";
+ } 
 
   p,
   ul li {
@@ -169,6 +199,7 @@ article {
 
   p {
     text-indent: 1rem;
+    // hyphens: auto;
   }
 
   h2,
@@ -257,18 +288,36 @@ blockquote {
 
 nav#TableOfContents {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  ul:first-child {
-    padding-left: 0;
-
-    list-style: none;
+  ul {
+    counter-reset: sec;
     li {
-      list-style: none;
+      counter-increment: sec;
 
       a {
+        &::before {
+          // content: counter(sec) ".";
+          content: counter(sec) ".";
+        }
+  
+      }
+    }
+  }
+
+  ul:first-child {
+    padding-left: 0;
+    // counter-reset: sec;
+    // list-style: none;
+    li {
+      // list-style: none;
+      
+      a {
         text-decoration: none;
+        // counter-increment: sec;
         color: #111;
 
-
+        &::before {
+          // content: counter(sec) ".";
+        }
         &:hover,
         :focus {
           opacity: .5;
@@ -392,3 +441,5 @@ summary::-webkit-details-marker {
 details[open] summary::-webkit-details-marker {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
 }
+
+
