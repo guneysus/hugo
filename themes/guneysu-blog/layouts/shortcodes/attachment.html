@@ -4,10 +4,10 @@
 {{ $name := (.Get "name") }}
 {{ .Inner }}
 
-<div>
+<div class="">
 
-    <details class="ba pa2 b--light-gray">
-        <summary class="fira mv1 dim">{{ $title }}</summary>
+    <details class="ba bw2 pa2 b--light-gray">
+        <summary class="fira mv1 dim fw7">{{ $title }}</summary>
         <span><a download="{{ $name }}" class="link black bg-animate hover-bg-light-yellow pv3 ph3" href="./{{ $path }}"><i
             class="icon icon-download"> </i> download</a> </span>        
         {{ highlight ($.Page.Resources.GetMatch $path).Content $lang "" }}
