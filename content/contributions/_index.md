@@ -4,15 +4,14 @@ draft: false
 ---
 
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates debitis explicabo ratione eos sunt quo. Totam aperiam voluptas perferendis illum id debitis ex excepturi, atque ad blanditiis expedita corrupti quos?
-
 ## feature
-- https://github.com/gencebay/httplive/pull/16
-  - https://github.com/kimai/kimai/pull/1300
+
+- <https://github.com/gencebay/httplive/pull/16>
+- <https://github.com/kimai/kimai/pull/1300>
 - <https://github.com/kevinpapst/AdminLTEBundle/pull/91>
 - <https://github.com/kevinpapst/kimai2/pull/1160>
 - <https://github.com/dnomak/svg-turkiye-haritasi/pull/1>
-- https://github.com/Bash-it/bash-it/pull/400
+- <https://github.com/Bash-it/bash-it/pull/400>
 - <https://github.com/honza/vim-snippets/pull/495>
 - <https://github.com/honza/vim-snippets/pull/496>
 - <https://github.com/honza/vim-snippets/pull/494>
@@ -28,12 +27,14 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates debitis exp
 - <https://github.com/elisehein/Pageturner/pull/2>
 
 ## documentation
-- https://github.com/bytefish/TinyCsvParser/pull/43
-- https://github.com/enBonnet/Frontend-Tools/pull/15
+
+- <https://github.com/bytefish/TinyCsvParser/pull/43>
+- <https://github.com/enBonnet/Frontend-Tools/pull/15>
 - <https://github.com/quentinsf/pygarmin/pull/1>
 
 ## bug report & questions
-- https://github.com/nickvdyck/webtty/issues/138
+
+- <https://github.com/nickvdyck/webtty/issues/138>
 - <https://github.com/dotnet/aspnetcore/issues/6167>
 - <https://github.com/OctoLinker/OctoLinker/issues/372>
 - <https://github.com/cdnjs/cdnjs/issues/7642>
@@ -52,12 +53,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates debitis exp
 - <https://github.com/emmetio/npp/issues/6>
 - <https://github.com/imathis/octopress/issues/1409>
 - <https://github.com/impress/impress.js/issues/163>
-
-***********************
-
-<https://github.com/ohmyzsh/ohmyzsh/pull/3502>
-<https://github.com/ohmyzsh/ohmyzsh/pull/3503>
-<https://github.com/Bash-it/bash-it/pull/400>
-<https://github.com/quran/quran_android/issues/500>
-<https://github.com/quran/quran_android/issues/499>
-https://github.com/dnomak/svg-turkiye-haritasi/pull/1
+- <https://github.com/ohmyzsh/ohmyzsh/pull/3502>
+- <https://github.com/ohmyzsh/ohmyzsh/pull/3503>
+- <https://github.com/Bash-it/bash-it/pull/400>
+- <https://github.com/quran/quran_android/issues/500>
+- <https://github.com/quran/quran_android/issues/499>
+- <https://github.com/dnomak/svg-turkiye-haritasi/pull/1>
