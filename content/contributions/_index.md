@@ -6,10 +6,12 @@ draft: false
 
 ## feature
 
-- <https://github.com/gencebay/httplive/pull/16>
-- <https://github.com/kimai/kimai/pull/1300>
-- <https://github.com/kevinpapst/AdminLTEBundle/pull/91>
-- <https://github.com/kevinpapst/kimai2/pull/1160>
+**httplive**, [Cross Platform Build and Github Release with TravisCI](https://github.com/gencebay/httplive/pull/16)
+with [Gox](https://github.com/mitchellh/gox)
+
+[**Kimai**](https://github.com/kevinpapst/kimai2/pull/1160) and related project [**AdminLTEBundle**](https://github.com/kevinpapst/AdminLTEBundle/pull/91) Turkish language support.
+
+
 - <https://github.com/dnomak/svg-turkiye-haritasi/pull/1>
 - <https://github.com/Bash-it/bash-it/pull/400>
 - <https://github.com/honza/vim-snippets/pull/495>
@@ -21,16 +23,22 @@ draft: false
 - <https://github.com/ohmyzsh/ohmyzsh/pull/3503>
 - <https://github.com/ohmyzsh/ohmyzsh/pull/3503>
 
+<div class="pattern-diagonal-stripes-sm white pv2" style="background-color: orange;"></div>
+
 ## bugfix
 
 - <https://github.com/toastdriven/restless/pull/88>
 - <https://github.com/elisehein/Pageturner/pull/2>
+
+<div class="pattern-diagonal-stripes-sm white pv2" style="background-color: orange;"></div>
 
 ## documentation
 
 - <https://github.com/bytefish/TinyCsvParser/pull/43>
 - <https://github.com/enBonnet/Frontend-Tools/pull/15>
 - <https://github.com/quentinsf/pygarmin/pull/1>
+
+<div class="pattern-diagonal-stripes-sm white pv2" style="background-color: orange;"></div>
 
 ## bug report & questions
 
