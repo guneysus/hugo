@@ -1,5 +1,5 @@
 ---
-title: "🐱‍👤 GIT Capture the Flag! 🏴"
+title: "GIT Capture the Flag! 🏴"
 date: 2020-04-29T21:42:11+03:00
 draft: false
 slug: "odulsuz-git-ctf-yarismasi"
@@ -8,7 +8,7 @@ tags:
   - ctf
 ---
 
-## 🐱‍👤 Ödülsüz Git CTF Yarışması
+## Ödülsüz Git CTF Yarışması
 
 Merhaba.
 
