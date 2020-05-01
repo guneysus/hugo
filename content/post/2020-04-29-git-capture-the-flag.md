@@ -1,5 +1,5 @@
 ---
-title: "🐱‍👤 GIT Capture the Flag! 🏴"
+title: "GIT Capture the Flag! 🏴"
 date: 2020-04-29T21:42:11+03:00
 draft: false
 slug: "odulsuz-git-ctf-yarismasi"
@@ -9,7 +9,7 @@ tags:
   - ctf
 ---
 
-## 🐱‍👤 Ödülsüz Git CTF Yarışması
+## Ödülsüz Git CTF Yarışması
 
 Merhaba.
 
@@ -22,7 +22,7 @@ Bayrağı 🏴 bulduğunda ne yapman gerektiği aşağıda.
 ## İpucu
 
 - Git'in iç yapısını [^git-internals] ve bilgileri nasıl sakladığını araştırman gerekebilir.
-- **(yeni)** Git note [^git-notes] nesnesi commitleri değiştirmeden commitlere notlar eklemeyi sağlar.
+- **(yeni)** `git notes` [^git-notes] komutu ile commitleri değiştirmeden notlar ekleyebilirsiniz.
 
 ## Cevabı Nasıl Bildireceğim?
 
