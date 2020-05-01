@@ -75,6 +75,12 @@ disableLiveReload = false
         url = "/contributions/"
         weight = 3
         pre = '<i class="icon"> </i>'
+    [[menu.main]]
+        name = "side-projects"
+        title = "side projects"
+        url = "/side-projects/"
+        weight = 3
+        pre = '<i class="icon"> </i>'        
 
 [markup]
   defaultMarkdownHandler = "goldmark"
