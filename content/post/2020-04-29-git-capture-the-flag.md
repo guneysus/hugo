@@ -3,6 +3,7 @@ title: "GIT Capture the Flag! 🏴"
 date: 2020-04-29T21:42:11+03:00
 draft: false
 slug: "odulsuz-git-ctf-yarismasi"
+summary: "**Yeni ipucu eklendi**🧵 "
 tags:
   - git
   - ctf
@@ -21,6 +22,7 @@ Bayrağı 🏴 bulduğunda ne yapman gerektiği aşağıda.
 ## İpucu
 
 - Git'in iç yapısını [^git-internals] ve bilgileri nasıl sakladığını araştırman gerekebilir.
+- **(yeni)** `git notes` [^git-notes] komutu ile commitleri değiştirmeden notlar ekleyebilirsiniz.
 
 ## Cevabı Nasıl Bildireceğim?
 
@@ -38,3 +40,4 @@ Cevabı ve detaylı çözümle alakalı yeni bir yazı da yazacağım.
 [^linkedin]: https://www.linkedin.com/in/guneysu/
 [^issues]: https://github.com/guneysus/git-ctf/issues
 [^pgp-key]: http://hkps.pool.sks-keyservers.net/pks/lookup?op=get&search=0x5FD721A1B723D5FF
+[^git-notes]: https://git-scm.com/docs/git-notes#_description
