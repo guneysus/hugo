@@ -149,6 +149,12 @@
       "css": "download",
       "code": 59401,
       "src": "fontawesome"
+    },
+    {
+      "uid": "e80ae555c1413a4ec18b33fb348b4049",
+      "css": "file-archive",
+      "code": 61894,
+      "src": "fontawesome"
     }
   ]
 }
