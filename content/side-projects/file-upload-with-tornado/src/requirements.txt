@@ -1,5 +1,2 @@
-appdirs==1.4.3
 fs==2.0.4
-pytz==2017.2
-six==1.10.0
 tornado==4.5.1

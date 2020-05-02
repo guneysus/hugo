@@ -38,6 +38,26 @@
             {{ .Content }}
           </div>
 
+          {{ if .Resources }}
+
+          <div class="resources bt b--black-20 mt3">
+
+              <strong class="pl3 f3 source-sans-pro mt1 mb0 pa0 lh-comfort">Sources</strong>
+
+              <ul class="list code lh-comfort mt0 ">    
+                <li class="">
+                    {{ with .Resources.Match "**.zip" }}
+                    {{ range . }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </li>
+                  
+              </ul>
+    
+          </div>
+          {{ end }}          
+
   <div class="gitinfo source-sans-pro mt3">
 
         </article>
