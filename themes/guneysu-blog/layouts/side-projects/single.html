@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
+  <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
+
+  <script src="/js/main.js"></script>
+
+  <body class="body">
+
+    
+
+    {{ partial "page-bug-reporter.html" . }}
+
+    <div class="container">
+
+
+      <section class="mw7 center">
+        {{ partial "header.html" . }}
+
+
+        <article class="pa3 pa5-ns pv4 ph3 ph0-l b--black-10">
+
+          <div>
+            <h1 class="f2 f2-m f2-l source-sans-pro mt0 mb1 lh-title">{{ .Title }} </h1>
+            {{ with .GitInfo }} {{ with .AuthorName }} <div class="source-sans-pro ">by  {{ . }}</div> {{ end }} {{ end }}
+          </div>
+
+
+          <div class="article-publish-date source-sans-pro black-50 mt3 bb pb1 b--black-10">
+            <time>{{ .Date.Format "2006, January 02" }}</time><br>
+            {{ with .GitInfo }} <time>Last updated: {{ .AuthorDate.Format "2006, January 02" }}</time> {{ end }}
+          </div>
+
+         
+          <div class="article-content f4 f6-m lh-wide libre-baskerville">
+                       
+            {{ .Content }}
+          </div>
+
+  <div class="gitinfo source-sans-pro mt3">
+
+        </article>
+      </section>
+
+      <section class="mw7 center span">
+        {{ partial "footer.html" . }}
+      </section>
+      
+    </div>
+  </body>
+</html>
