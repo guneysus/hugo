@@ -4,7 +4,7 @@ build:
 	@docker-compose build
 
 run: build
-	@docker-compose up -d
+	@docker-compose up
 
 test:
 	@http -f POST :8000/upload file@requirements.txt file@requirements.txt

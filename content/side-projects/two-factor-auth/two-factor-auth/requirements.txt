@@ -1,0 +1,4 @@
+Flask==0.11.1
+onetimepass
+qrcode==5.0.1
+Pillow==3.4.1

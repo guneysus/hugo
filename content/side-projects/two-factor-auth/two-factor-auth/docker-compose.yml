@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    command: uwsgi --ini uwsgi.ini
+  
+  builder:
+    volumes:
+      - ./whl:/whl
+    command: pip wheel -r requirements.txt
+    build:
+      dockerfile: builder.Dockerfile
+      context: .
