@@ -42,14 +42,16 @@
 
           <div class="resources bt b--black-20 mt3">
 
+
+            {{ with .Resources.Match "**.zip" }}
+
               <strong class="pl3 f3 source-sans-pro mt1 mb0 pa0 lh-comfort">Sources</strong>
 
               <ul class="list code lh-comfort mt0 ph3">    
-                {{ with .Resources.Match "**.zip" }}
                 {{ range . }}
 
                 <li class="">
-                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i> {{ .Title }}</a>
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a>
                 </li>
                 {{ end }}
 
