@@ -34,7 +34,7 @@
 
          
           <div class="article-content f4 f6-m lh-wide libre-baskerville">
-                       
+                      
             {{ .Content }}
           </div>
 
@@ -44,14 +44,16 @@
 
               <strong class="pl3 f3 source-sans-pro mt1 mb0 pa0 lh-comfort">Sources</strong>
 
-              <ul class="list code lh-comfort mt0 ">    
+              <ul class="list code lh-comfort mt0 ph3">    
+                {{ with .Resources.Match "**.zip" }}
+                {{ range . }}
+
                 <li class="">
-                    {{ with .Resources.Match "**.zip" }}
-                    {{ range . }}
-                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-book"> </i> {{ .Title }}</a>
-                    {{ end }}
-                  {{ end }}
+                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i> {{ .Title }}</a>
                 </li>
+                {{ end }}
+
+                {{ end }}
                   
               </ul>
     
