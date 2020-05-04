@@ -41,26 +41,24 @@
           {{ if .Resources }}
 
           <div class="resources bt b--black-20 mt3">
-
-
-            {{ with .Resources.Match "**.zip" }}
-
-              <strong class="pl3 f3 source-sans-pro mt1 mb0 pa0 lh-comfort">Sources</strong>
-
-              <ul class="list code lh-comfort mt0 ph3">    
-                {{ range . }}
-
-                <li class="">
-                      <a class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a>
-                </li>
-                {{ end }}
-
-                {{ end }}
-                  
+            <strong class="pl3 f3 source-sans-pro mt1 mb0 pa0 lh-comfort">Sources</strong>
+            <ul class="list code lh-comfort mt0 ph3">
+            {{ with .Resources.Match "**.zip" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**Vagrantfile" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**Makefile" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**docker-compose.yml" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**Dockerfile" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.sh" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.py" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.txt" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.ps1" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.cfg" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+            {{ with .Resources.Match "**.conf" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
               </ul>
-    
           </div>
-          {{ end }}          
+          {{ end }}
+          
+       
 
   <div class="gitinfo source-sans-pro mt3">
 

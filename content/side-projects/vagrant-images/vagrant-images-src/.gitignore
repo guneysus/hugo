@@ -1,0 +1,4 @@
+*.box
+.vagrant
+*.log
+*.swp

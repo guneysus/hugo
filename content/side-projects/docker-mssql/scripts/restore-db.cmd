@@ -1,0 +1,1 @@
+sqlcmd -d master -i scripts/restore-db.sql -l 3 -P xVnQB3xg -U sa -S 127.0.0.1

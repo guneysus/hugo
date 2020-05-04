@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  tutum:
+    image: tutum/hello-world
+  proxy:
+    build: .
+    links: 
+      - tutum:origin
+    environment: 
+      - ORIGIN_HOST=origin
+      - ORIGIN_PORT=80
+      - LISTEN=5000
+    ports:
+      - 8000:5000

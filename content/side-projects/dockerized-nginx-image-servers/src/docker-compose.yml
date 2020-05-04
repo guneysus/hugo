@@ -1,0 +1,20 @@
+version: "2.0"
+
+services:
+  backend:
+    build: nginx-advanced-image-server
+    ports:
+      - 8000:80
+    volumes:
+      - ./originals:/var/www/img
+    
+  cache:
+    build: cache
+    ports:
+      - 80:80    
+    depends_on:
+      - backend
+    links:
+      - backend
+    volumes:
+      - /cache

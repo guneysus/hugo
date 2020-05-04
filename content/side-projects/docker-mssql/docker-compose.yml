@@ -1,0 +1,56 @@
+version: "3.7"
+
+# https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-environment-variables?view=sql-server-2017
+
+services:
+  mssql_1:
+    image: mcr.microsoft.com/mssql/server:2017-GA-ubuntu
+    ports:
+      - "14331:1433"
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=xVnQB3xg"
+      - "MSSQL_PID=Developer"
+      - "MSSQL_AGENT_ENABLED=true"
+    volumes: 
+      - type: volume
+        source: data1
+        target: /var/opt/mssql 
+        volume:
+          nocopy: true
+  mssql_2:
+    image: mcr.microsoft.com/mssql/server:2017-GA-ubuntu
+    ports:
+      - "14332:1433"
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=xVnQB3xg"
+      - "MSSQL_PID=Developer"
+      - "MSSQL_AGENT_ENABLED=true"
+    volumes: 
+      - type: volume
+        source: data2
+        target: /var/opt/mssql 
+        volume:
+          nocopy: true                
+  mssql_3:
+    image: mcr.microsoft.com/mssql/server:2017-GA-ubuntu
+    ports:
+      - "14333:1433"
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=xVnQB3xg"
+      - "MSSQL_PID=Developer"
+      - "MSSQL_AGENT_ENABLED=true"
+    volumes: 
+      - type: volume
+        source: data3
+        target: /var/opt/mssql 
+        volume:
+          nocopy: true  
+
+
+volumes:
+  data1:
+  data2:
+  data3:
