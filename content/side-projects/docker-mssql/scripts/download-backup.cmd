@@ -1,0 +1,1 @@
+ docker cp mssql_mssql_1:/var/opt/mssql/data/backups/db.bak backups/

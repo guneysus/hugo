@@ -1,0 +1,84 @@
+{
+  "ReRoutes": [
+    {
+    "DownstreamPathTemplate": "/api/account/register",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5100
+    }],
+    "UpstreamPathTemplate": "/api/account/register",
+    "UpstreamHttpMethod": ["POST"]
+  }
+ 
+  ,{
+    "DownstreamPathTemplate": "/api/account/login",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5100
+    }],
+    "UpstreamPathTemplate": "/api/account/login",
+    "UpstreamHttpMethod": ["POST"]
+  }
+
+  ,{
+    "DownstreamPathTemplate": "/api/account/info",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5100
+    }],
+    "UpstreamPathTemplate": "/api/account/info",
+    "UpstreamHttpMethod": ["GET"]
+  }
+
+  ,{
+    "DownstreamPathTemplate": "/api/project/createproject",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5200
+    }],
+    "UpstreamPathTemplate": "/api/project",
+    "UpstreamHttpMethod": ["POST"]
+  }
+
+  ,{
+    "DownstreamPathTemplate": "/api/project/getproject/{id}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5200
+    }],
+    "UpstreamPathTemplate": "/api/project/{id}",
+    "UpstreamHttpMethod": ["GET"]
+  }
+
+  ,{
+    "DownstreamPathTemplate": "/api/task/gettask/{id}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5300
+    }],
+    "UpstreamPathTemplate": "/api/task/{id}",
+    "UpstreamHttpMethod": ["GET"]
+  }    
+
+  ,{
+    "DownstreamPathTemplate": "/api/task/createtask",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [{
+      "Host": "localhost",
+      "Port": 5300
+    }],
+    "UpstreamPathTemplate": "/api/task",
+    "UpstreamHttpMethod": ["POST"]
+  }
+ 
+],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}

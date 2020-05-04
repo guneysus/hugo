@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  nginx:
+    build: .
+    volumes:
+    # - ./nginx-cache:/var/cache/nginx
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    # - ./mysite.template:/etc/nginx/conf.d/mysite.template
+    ports:
+    - "8080:80"
+    # environment:
+    # - NGINX_HOST=foobar.com
+    # - NGINX_PORT=80

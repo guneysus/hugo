@@ -1,0 +1,66 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    # We do hostmanager configuration later.
+    config.hostmanager.enabled = false
+    
+    config.vm.define "web" do |web|
+        web.vm.box = "opentable/win-2012r2-standard-amd64-nocm"
+        web.vm.communicator = "winrm"
+        web.vm.guest = :windows
+      
+        web.winrm.username = "vagrant"
+        web.winrm.password = "vagrant"
+
+        # Networking
+        web.vm.network "private_network", ip: "10.2.2.12"        
+        web.vm.network :forwarded_port, guest: 5985, host: 5985
+        web.vm.network :forwarded_port, id: "rdp", guest: 3389, host: 3389,  autocorrect: true
+        web.vm.network :forwarded_port, id: "ssh", guest: 22,   host: 10022, autocorrect: true
+
+        # Provisioning
+
+        # Set up a hostname alias
+        web.hostmanager.aliases = ["web.dev"]
+        web.hostmanager.ip_resolver = proc { |m| '10.2.2.12' } # Temporary fix until Hostmanager works again.
+        web.vm.provision :hostmanager
+        
+
+        web.windows.halt_timeout = 15
+        web.vm.boot_timeout = 300
+
+        web.vm.post_up_message = "VM Created"
+    end
+    
+    # config.vm.provision "shell", path: "scripts/install-container-feature.ps1", privileged: true
+    config.vm.provision "shell", path: "scripts/enable-autologon.ps1", privileged: true
+    config.vm.provision "reload"
+    # config.vm.provision "shell", path: "scripts/add-docker-group.ps1", privileged: true
+    # config.vm.provision "shell", path: "scripts/install-docker.ps1", privileged: true
+    config.vm.provision "shell", path: "scripts/install-chocolatey.ps1", privileged: false
+    # config.vm.provision "shell", path: "scripts/install-dockertools.ps1", privileged: false
+    config.vm.provision "reload"
+
+    config.vm.provision "shell", path: "scripts/custom.ps1", privileged: false
+    config.vm.provision "reload"
+
+    #
+    # Global VirtualBox Options
+    config.vm.provider "virtualbox" do |vb|
+        vb.linked_clone = true
+        vb.memory = 5120
+        vb.gui = false
+        vb.name = "WinserverNetCoreDevelopmentEnvironment"
+        vb.customize ["modifyvm", :id, "--vram", "256"]
+    end
+
+    #
+    # Allow configuring of DNS via /etc/hosts
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = true
+    config.hostmanager.include_offline = true
+      
+end
+  
+  
