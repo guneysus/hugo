@@ -5,14 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta name="author" content="{{ .Site.Params.AuthorName }}">{{ partial "title" . }}
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+
+<!-- preload section -->
+<link rel="preload" href="/font/fontello.woff2" as="font" type="font/woff2">
+
+{{/*  <link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bX2SlFPv1weGeLZDtgK_7SodY.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bX2SlFPv1weGeLZDtgIv7SodY.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bX2SlFPv1weGeLZDtgKv7SodY.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bX2SlFPv1weGeLZDtgJf7SodY.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bX2SlFPv1weGeLZDtgKP7SodY.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDto1d3Hk_fUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDto1d3HmvfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDto1d3HkvfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDto1d3HnffUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDto1d3HkPfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHk_fUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHmvfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHkvfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHnffUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHkPfUWZA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/firamono/v8/N0bS2SlFPv1weGeLZDtondvHnvfU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+{{/*  <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBduz8A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+*/}}
+
+
+{{ partial "home-preload" . }}
+
+
+<link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" as="style" crossorigin="anonymous">
+
+
+<link rel="preload" href="https://unpkg.com/pattern.css" as="style" crossorigin="anonymous">
+<link rel="preload" href="{{ $style.Permalink }}" as="style">
+
+<link rel="preload" href="/js/main.js" as="script">
+
 {{ hugo.Generator }} 
 
 <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.png">
 
-{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
-
 <link href="https://unpkg.com/pattern.css" rel="stylesheet">
 
 <script src="/js/main.js"></script>
