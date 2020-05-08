@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
+<html lang="{{ .Site.LanguageCode }}">  
+  <head>
+    {{ partial "head.html" . }}
+    {{ partial "post-preload" . }}
+  </head>
+
   <!-- <link rel="stylesheet" href="/css/pygments/autumn.css" /> -->
   <title>{{ .Title }} | {{ .Site.Params.AuthorName }} </title>
 
@@ -8,7 +12,6 @@
 
   <body class="body">
 
-    
 
     {{ partial "page-bug-reporter.html" . }}
 
