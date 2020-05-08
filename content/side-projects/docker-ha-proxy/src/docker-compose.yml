@@ -1,0 +1,9 @@
+version: "3"
+
+
+services:
+  proxy:
+    build:
+      context: .
+    ports:
+      - 9001:80

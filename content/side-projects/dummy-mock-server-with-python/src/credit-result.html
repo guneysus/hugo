@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <h1>Credit Page</h1>
+
+    <!--
+       
+    -->
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <form
+        id="success-form"
+        class="form"
+        action="http://localhost:58725/GarantiBankCreditResult.aspx?Key=371249C15F1D76ABDFD088DF7D7EF918&TransactionId=1213545654&RDesc=Logout%2BOr%2BTimeout&App=False"
+        method="POST"
+      >
+      
+      {% for k,v in model.items() %}
+        <div class="form-group">
+          <label for="">{{ k }}</label>
+          <input type="text" class="form-control" id={{k}} name={{k}}  value={{ model[k] }}>
+        </div>
+      {% end %}
+      
+      <!-- <textarea ></textarea> -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger">Fail</button>
+        </div>
+    
+      </form>
+      </div>
+
+      <div class="col-md-6">
+        <form
+        id="success-form"
+        class="form"
+        action="http://localhost:58725/GarantiBankCreditResult.aspx?Key=371249C15F1D76ABDFD088DF7D7EF918&TransactionId=1213545654&CardToken=53380099072306901685337222301060&App=False"
+        method="POST"
+      >
+      
+      {% for k,v in model.items() %}
+        <div class="form-group">
+          <label for="">{{ k }}</label>
+          <input type="text" class="form-control" id={{k}} name={{k}}  value={{ model[k] }}>
+        </div>
+      {% end %}
+      
+      <!-- <textarea ></textarea> -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Success</button>
+        </div>
+    
+      </form>
+      </div>      
+    </div>
+
+
+    <div class="row">
+
+    </div>
+
+
+<!-- <hr>
+    <form id="fail-form"
+      action="http://localhost:58725/GarantiBankCreditResult.aspx?Key=371249C15F1D76ABDFD088DF7D7EF918&TransactionId=1213545654&RC=1&RDesc=Logout%2BOr%2BTimeout&App=False"
+      method="POST"
+    >
+
+      <p></p>
+      <button type="submit" class="btn btn-danger">Fail</button>
+    </form>
+
+    <div></div> -->
+  </body>
+</html>

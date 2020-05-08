@@ -1,0 +1,42 @@
+version: "3"
+
+
+services:
+  proxy:
+    build:
+      context: ./haproxy
+    ports:
+      - 9001:80
+      - 8100:81
+      
+    links:
+      - hello_1
+      - hello_2
+      - hello_3
+      - hello_4
+      - hello_5
+
+  hello_1:
+    image: tutum/hello-world
+    ports:
+      - 8001:80
+
+  hello_2:
+    image: tutum/hello-world
+    ports:
+      - 8002:80
+
+  hello_3:
+    image: tutum/hello-world
+    ports:
+      - 8003:80
+
+  hello_4:
+    image: tutum/hello-world
+    ports:
+      - 8004:80
+
+  hello_5:
+    image: tutum/hello-world
+    ports:
+      - 8005:80

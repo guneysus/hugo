@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>task_api_service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../task-api-contracts/task-api-contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="JWT" Version="5.0.0-beta4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />    
+  </ItemGroup>
+
+</Project>

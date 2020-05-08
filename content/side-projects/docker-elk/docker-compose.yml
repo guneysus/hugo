@@ -1,0 +1,22 @@
+version: "3.7"
+
+# https://www.elastic.co/guide/en/beats/metricbeat/current/running-on-docker.html
+
+services:
+  metric:
+    image: docker.elastic.co/beats/metricbeat:6.7.0
+    command: setup -E setup.kibana.host=kibana:5601 -E output.elasticsearch.hosts=["elasticsearch:9200"]
+    depends_on: 
+      - elasticsearch
+      - kibana
+    links:
+      - elasticsearch
+      - kibana
+
+  elasticsearch:
+    image: elasticsearch:6.7.0
+  
+  kibana:
+    image: kibana:6.7.0
+    ports:
+      - 5601:5601
