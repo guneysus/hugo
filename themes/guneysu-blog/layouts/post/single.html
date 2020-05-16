@@ -58,7 +58,9 @@
 
           <div class="resources bt b--black-20 mt3">
 
-              <h2 class="pl3 source-sans-pro mt1 mb0 pa0 lh-comfort">Resources</h2>
+              
+              <h2 id="ref:resources" class="pl3 source-sans-pro mt1 mb0 pa0 lh-comfort">Resources</h2>
+              
 
               <ul class="list code lh-comfort mt0 ">
                 <li class="">
@@ -79,6 +81,9 @@
                   {{ end }}
                 </li>
 
+                {{ with .Resources.Match "**.zip" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+                {{ with .Resources.Match "**.xz" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
+                {{ with .Resources.Match "**.gz" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
                 {{ with .Resources.Match "**.sh" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
                 {{ with .Resources.Match "**.py" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
                 {{ with .Resources.Match "**.txt" }}{{ range . }}<li class=""><a download="{{ .Name }}" class="link black bg-animate hover-bg-light-yellow" href="{{ .RelPermalink }} "><i class="icon icon-file-archive"> </i>{{ .Title }}</a></li>{{ end }}{{ end }}
