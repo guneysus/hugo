@@ -1,9 +1,6 @@
 IL := ilasm /nologo /quiet
 ILDASM := ildasm
 
-%.il: %.exe
-	$(ILDASM) $< /OUT=disasm-$@ /TEXT
-		
 %.dll: %.il
 	$(IL) /debug /dll $< /OUT=$@
 
@@ -15,4 +12,8 @@ clean:
 	rm *.dll
 	rm *.exe
 	
-.PHONY: $(ALL) default clean
+play: play.cs
+	csc play.cs
+	ildasm play.exe
+
+.PHONY: $(ALL) default clean play
