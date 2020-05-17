@@ -2,13 +2,14 @@ IL := ilasm /nologo /quiet
 ILDASM := ildasm
 
 %.il: %.exe
-	$(ILDASM) $< /OUT=$@ /TEXT
+	$(ILDASM) $< /OUT=disasm-$@ /TEXT
 		
 %.dll: %.il
-	$(IL) /debug /dll $<
+	$(IL) /debug /dll $< /OUT=$@
 
 %.exe: %.il
-	$(IL) /debug $<
+	$(IL) /debug /OUT=$@ $<
+	./$@
 	
 clean:
 	rm *.dll
