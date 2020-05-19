@@ -113,6 +113,9 @@ And in some time, you may need a simple functionality in a limited environment.
 In brief:
 
 > Discovering and learning the under the hood" mindset is trademark of a a hacker.
+> 
+> ![hacker logo](img/HackerLogo-small.png)
+
 
 
 
