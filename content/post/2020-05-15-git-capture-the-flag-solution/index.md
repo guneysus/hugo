@@ -8,6 +8,7 @@ tags:
   - git
   - internals
   - ctf
+  - how-stuff-works
 ---
 
 ## Giriş
