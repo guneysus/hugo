@@ -1,4 +1,4 @@
-ILASM 	:= C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe /nologo /quiet /pdb
+ILASM 	:= C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe /nologo /X64 /PE64 /quiet /pdb
  
 DEBUG 	:= $(ILASM) /debug
 RELEASE	:= $(ILASM) 
@@ -27,3 +27,6 @@ help:		## help
 	
 %.b64: %.exe
 	gzip -9 -c $< | base64 > $@
+
+%.hex: %.exe
+	xxd -u $< $@ 
