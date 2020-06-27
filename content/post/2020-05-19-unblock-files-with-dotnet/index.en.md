@@ -1,5 +1,5 @@
 ---
-title: "Unblocking a Files with .NET That Downloaded from Internet"
+title: "Unblocking Files with .NET That Downloaded from Internet"
 date: 2020-05-19T23:29:00+03:00
 draft: false
 slug: "unblocking-files-downloaded-from-internet-or-removing-alternate-data-streams"
