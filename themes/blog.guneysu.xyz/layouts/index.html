@@ -1,5 +1,13 @@
 {{ define "main" }}
-	<main>
+	<main class="container center mw7">
+		
+		{{ if or .Title .Content }}
+		<div>
+			{{ with .Title }}<h1 class="bree-serif fw1 ph3 ph0-l">{{ . }}</h1>{{ end }}
+			{{ with .Content }}<div>{{ . }}</div>{{ end }}
+		</div>
+		{{ end }}
+		
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 		{{ range $paginator.Pages }}
 			{{ .Render "summary" }}
@@ -8,3 +16,4 @@
 	</main>
 {{ partial "sidebar.html" . }}
 {{ end }}
+

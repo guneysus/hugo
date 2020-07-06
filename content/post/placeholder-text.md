@@ -2,6 +2,8 @@
 draft = true
 author = "Hugo Authors"
 title = "Placeholder Text"
+summary = "**Lorem Ipsum**, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Emphasis, aka italics, with *asterisks* or _underscores_."
+
 date = "2019-03-09"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [

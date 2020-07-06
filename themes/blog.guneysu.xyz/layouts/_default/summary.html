@@ -1,18 +1,38 @@
-<article>
-	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	
-	<div class="tags">
-		{{ range .Params.tags }}	
-			<a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-		{{ end }}
-	</div>
+{{/*  <article class="article article-summary">
+	<h1 class="article-summary__title">
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+</h1>
 
-	<div class="summary">
-		{{- .Summary -}}
-		{{- if .Truncated -}}
-			<a href="{{ .Permalink }}">Read more...</a>
-		{{- end -}}
-	</div>
-	
-	<time>{{ .Date.Format "Jan. 2, 2006" }}</time>
+<div class="article-summary__tags">
+	{{ range .Params.tags }}
+	<a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+	{{ end }}
+</div>
+
+<div class="article-summary__content">
+	{{- .Summary -}}
+	{{- if .Truncated -}}
+	<a href="{{ .Permalink }}">Read more...</a>
+	{{- end -}}
+</div>
+
+<time class="article-summary__date">{{ .Date.Format "Jan. 2, 2006" }}</time>
+</article> */}}
+
+<article class="article article-summary bt bb b--black-10">
+	<a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ .Permalink }}">
+		<div class="flex flex-column flex-row-ns">
+			<div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+				<img src="https://via.placeholder.com/300" class="db"
+					alt="Photo of a dimly lit room with a computer interface terminal.">
+			</div>
+			<div class="w-100 w-60-ns pl3-ns">
+				<h1 class="article-summary__title f3 fw2 libre-baskerville mt0 lh-title">{{ .Title }}</h1>
+				<p class="article-summary__content f6 f5-l lh-copy">
+					{{- .Summary -}}					
+				</p>
+				<time class="article-summary__date f6 lh-copy mv0">{{ .Date.Format "January 2, 2006" }}</time>
+			</div>
+		</div>
+	</a>
 </article>

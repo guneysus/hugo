@@ -2,11 +2,13 @@
 draft = true
 author = "Hugo Authors"
 title = "Emoji Support"
+summary = "**Lorem Ipsum**, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Emphasis, aka italics, with *asterisks* or _underscores_."
 date = "2019-03-05"
 description = "Guide to emoji usage in Hugo"
 tags = [
     "emoji",
 ]
+
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways. 

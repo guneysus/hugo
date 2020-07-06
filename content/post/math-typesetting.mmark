@@ -2,6 +2,8 @@
 draft: true
 author: Hugo Authors
 title: Math Typesetting
+summary: "**Lorem Ipsum**, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Emphasis, aka italics, with *asterisks* or _underscores_."
+
 date: 2019-03-08
 description: A brief guide to setup KaTeX
 markup: mmark

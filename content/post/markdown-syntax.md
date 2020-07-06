@@ -2,6 +2,7 @@
 draft = true
 author = "Hugo Authors"
 title = "Markdown Syntax Guide"
+summary = "**Lorem Ipsum**, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Emphasis, aka italics, with *asterisks* or _underscores_."
 date = "2019-03-11"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags = [

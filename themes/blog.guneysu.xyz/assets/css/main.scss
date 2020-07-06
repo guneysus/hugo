@@ -1,0 +1,27 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+.libre-baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+
+article.article.article-summary {
+  .article-summary__title {
+  }
+
+  .article-summary__tags {
+    color: cyan;
+    .tag {
+    }
+  }
+
+  .article-summary__content {
+  }
+
+  .article-summary__date {
+  }
+
+  .article-summary__author {
+  }
+}

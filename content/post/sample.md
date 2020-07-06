@@ -1,9 +1,8 @@
 ---
 draft: true
 title: "sample"
-date: 2020-04-01T19:29:06+03:00
-draft: false
 summary: "**Lorem Ipsum**, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Emphasis, aka italics, with *asterisks* or _underscores_.
+date: 2020-04-01T19:29:06+03:00
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
