@@ -1,0 +1,12 @@
+{{ $path := (.Get 0) }}
+{{ $lang := (.Get 1) }}
+{{ $title := (.Get 2) }}
+{{ .Inner }}
+
+<div class="">
+
+    <details class="ba bw2 mv2 pa1 b--light-gray" >
+        <summary class="fira mv1 dim fw7">{{ $title }}</summary>
+        {{ highlight ($.Page.Resources.GetMatch $path).Content $lang "" }}
+    </details>
+</div>
