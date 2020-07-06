@@ -1,9 +1,6 @@
-# hugo
+# guneysu's blog
 
-blog
-
-
-# Color
+## Colors
 
 ```
 HEX: #567c73
@@ -21,4 +18,3 @@ Tetrad:
 - #7c565f
 - #7c7356
 ```
-
