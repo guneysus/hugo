@@ -1,0 +1,6 @@
+public/
+# VIM backup files
+*.swp
+tex2pdf.*/
+*.deb
+resources/_gen/

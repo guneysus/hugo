@@ -1,0 +1,15 @@
+name = "Guneysu's Blog"
+license = "MIT"
+licenselink = "https://github.com/guneysus/blog/blob/master/themes/blog.guneysu.xyz/LICENSE"
+description = "My blog theme, occasionally being improved"
+homepage = "http://blog.guneysu.xyz"
+tags = ['blog', 'minimal']
+features = [
+	"# TODO"
+]
+min_version = "0.55"
+
+[author]
+  name = "Ahmed Şeref Güneysu"
+  homepage = "https://github.com/guneysus"
+
