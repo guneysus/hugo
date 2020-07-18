@@ -1,0 +1,12 @@
+{{ $path := (.Get 0) }}
+{{ $title := (.Get 1) }}
+{{ .Inner }}
+
+<div class="hxd">
+    <details class="ba bw2 mv2 pa1 b--light-gray" >
+        <summary class="fira mv1 dim fw7">{{ $title }}</summary>
+        <div class="hxd-main ph3">
+            {{ ($.Page.Resources.GetMatch $path).Content }}
+        </div>
+    </details>
+</div>
