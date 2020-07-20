@@ -17,9 +17,9 @@ bir yaklaşımdır.
 Fonksiyonel yaklaşım için en temel gereksinimler:
 
 - Fonksiyonların değişkenler gibi tanımlanabilmesi
-- Fonksiyonların, fonksiyon tipindeki döndürebilmesi
+- Fonksiyonların, fonksiyon döndürebilmesi
 - Fonksiyonların, diğer fonksiyonlara parametre olarak geçilebilmesi
-- Fonksiyonların etkileşime girebilmesi
+- Fonksiyonların birbiri ile etkileşime girebilmesi [^composing] [^currying]
 
 gereklidir.
 
@@ -31,7 +31,13 @@ Fonksiyonları değişken ve parametreler olarak ele alabilmek için delegeleri 
 
 **Örnek:**
 
-`static Console.WriteLine(string value)` konsol fonksiyonumuz için bir delege
+`System.Console` içinde yer alan 
+
+```csharp
+public static void WriteLine (string value);
+``` 
+
+konsol fonksiyonumuz için bir delege
 tanımlayalım ve bu fonksiyonu çağırmak için tanımlayacağımız delegeyi kullanalım.
 
 ```csharp
@@ -104,9 +110,9 @@ kullanımı üzerine olabilir. Daha sonra ise kala iki madde hakkında kısa ve
 öğretici uygulamalar yapmayı planlıyoruz.
 
 - ~~Fonksiyonların değişkenler gibi tanımlanabilmesi~~
-- ~~Fonksiyonların, fonksiyon tipindeki döndürebilmesi~~
+- ~~Fonksiyonların, fonksiyon döndürebilmesi~~
 - Fonksiyonların, diğer fonksiyonlara parametre olarak geçilebilmesi
-- Fonksiyonların etkileşime girebilmesi
+- Fonksiyonların birbiri ile etkileşime girebilmesi
 
 {{% notice info %}}
 **☕**
@@ -115,11 +121,13 @@ kullanımı üzerine olabilir. Daha sonra ise kala iki madde hakkında kısa ve
 `WriterFactory` fonksiyonunu güncelleyin.
 {{% /notice %}}
 
----
-**Referanslar:**
+## Bağlantılar
 
 - [Functional programming (wikipedia)](https://en.wikipedia.org/wiki/Functional_programming)
 - [Using Delegates (C# Programming Guide)
 ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/using-delegates)
 - [Action Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action)
 - [Func\<TResult> Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-1)
+
+[^composing]: https://en.wikipedia.org/wiki/Function_composition
+[^currying]: https://en.wikipedia.org/wiki/Currying
