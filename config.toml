@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "guneysu-blog"
 defaultContentLanguage = "tr"
 enableEmoji = true
+disqusShortname = "blog-frx0jvjmjg"
 
 # Set the unicode character used for the "return" link in page footnotes.
 footnotereturnlinkcontents = "↩"
