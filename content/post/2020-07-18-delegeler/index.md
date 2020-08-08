@@ -7,6 +7,9 @@ summary: "Bu kısa yazıda fonksiyonel programlama paradigmalarını C# ile uygu
 tags:
   - csharp
   - functional-programming
+
+series: "C# Functional Programming"
+order: 0
 ---
 
 ## Fonksiyonel Programlama Nedir
@@ -137,6 +140,6 @@ kullanımı üzerine olabilir. Daha sonra ise kala iki madde hakkında kısa ve
 - [Action Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action)
 - [Func\<TResult> Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-1)
 
-[^composing]: https://en.wikipedia.org/wiki/Function_composition
-[^currying]: https://en.wikipedia.org/wiki/Currying
-[^do-not-use-custom-delegates]: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/events-and-callbacks
+[^composing]: [Function Composition (Wikipedia)](https://en.wikipedia.org/wiki/Function_composition)
+[^currying]: [Currying (Wikipedia)](https://en.wikipedia.org/wiki/Currying)
+[^do-not-use-custom-delegates]: [Events and Callbacks (Microsoft)](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/events-and-callbacks)
