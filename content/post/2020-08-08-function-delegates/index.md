@@ -138,7 +138,12 @@ fonksiyonlarımızı `Action` kullanarak tanımlayacağız.
   Action writeHelloWorld = () => {
     Console.WriteLine("Merhaba 🌍!");
   };
-  
+```  
+
+Aşağıda yeni bir fonksiyon tanımlayarak bunları delegeler ile temsil edebilmek
+için C#'ın bize sağladığı üç farklı yolu görüyorsunuz.
+
+```csharp
   Action<string> writeWelcome1 = (user) => {
     Console.WriteLine($"Hoşgeldiniz {user}.");
   };
@@ -150,17 +155,20 @@ fonksiyonlarımızı `Action` kullanarak tanımlayacağız.
   Action<string> writeWelcome3 = new Action<string>( (user) => {
     Console.WriteLine($"Hoşgeldiniz {user}.");
   });
-  
+```
+
+`writeWelcome1`, `writeWelcome2` ve `writeWelcome3`, `string` tipinde tek
+parametre alan  fonksiyonlarımız temsil ediyor.
+`writeHelloWorld` ise hiçbir parametre almayan fonksiyonumuzu temsil ediyor.
+
+Tanımladığımız fonksiyonları delegeler aracılığıyla çağıralım:
+
+```csharp  
   writeHelloWorld();
   writeWelcome1("Ahmed Şeref");
   writeWelcome2("Ahmed Şeref");
   writeWelcome3("Ahmed Şeref");
 ```
-
-`writeWelcome1`, `writeWelcome2` ve `writeWelcome3`, tanımladığımız ve
-`string` tipinde tek parametre alan  fonksiyonlarımız temsil ediyor.
-`writeHelloWorld` ise hiçbir parametre almayan fonksiyonumuzu temsil eden bir
-delege.
 
 **Çıktısı:**
 
