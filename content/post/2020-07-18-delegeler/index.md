@@ -148,4 +148,3 @@ kullanımı üzerine olabilir. Daha sonra ise kala iki madde hakkında kısa ve
 [^composing]: https://en.wikipedia.org/wiki/Function_composition
 [^currying]: https://en.wikipedia.org/wiki/Currying
 [^do-not-use-custom-delegates]: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/events-and-callbacks
-
