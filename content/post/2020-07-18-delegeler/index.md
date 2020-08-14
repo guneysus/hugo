@@ -6,10 +6,11 @@ slug: "functional-programming-with-csharp-intro-delegates"
 summary: "Bu kısa yazıda fonksiyonel programlama paradigmalarını C# ile uygulayabilmek için `delegate` türlerini tanıyıp kullanacağız"
 tags:
   - csharp
-  - functional-programming
+  - functional-programming  
   
 thumb: /post/functional-programming-with-csharp-intro-delegates/thumbnail.png
-
+series: "C# Functional Programming"
+order: 0
 ---
 
 ## Fonksiyonel Programlama Nedir
@@ -140,6 +141,6 @@ kullanımı üzerine olabilir. Daha sonra ise kala iki madde hakkında kısa ve
 - [Action Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action)
 - [Func\<TResult> Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-1)
 
-[^composing]: https://en.wikipedia.org/wiki/Function_composition
-[^currying]: https://en.wikipedia.org/wiki/Currying
-[^do-not-use-custom-delegates]: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/events-and-callbacks
+[^composing]: [Function Composition (Wikipedia)](https://en.wikipedia.org/wiki/Function_composition)
+[^currying]: [Currying (Wikipedia)](https://en.wikipedia.org/wiki/Currying)
+[^do-not-use-custom-delegates]: [Events and Callbacks (Microsoft)](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/events-and-callbacks)
