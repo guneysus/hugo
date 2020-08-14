@@ -21,7 +21,8 @@
       "
     >
 
-    {{ range first (index .Site.Params "HomepagePosts" | default 10) (where .Data.Pages "Type" "post") }}
+  
+	{{  range first (index site.Params.HomepagePosts | default 10) (where site.RegularPages "Type" "in" site.Params.MainSections ) }}
       {{ .Render "summary" }}
     {{ end }}
     </section>
