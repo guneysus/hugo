@@ -7,6 +7,9 @@ summary: "Bu kısa yazıda fonksiyonel programlama paradigmalarını C# ile uygu
 tags:
   - csharp
   - functional-programming
+  
+thumb: /post/functional-programming-with-csharp-intro-delegates/thumbnail.png
+
 ---
 
 ## Fonksiyonel Programlama Nedir

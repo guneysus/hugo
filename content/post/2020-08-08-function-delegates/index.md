@@ -10,6 +10,9 @@ tags:
   - action-delegate
 series: "C# Functional Programming"
 order: 1
+
+thumb: /post/functional-programming-with-csharp-function-delegates/thumbnail.png
+
 ---
 
 ## Giriş
