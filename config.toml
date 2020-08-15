@@ -4,7 +4,6 @@ theme = "guneysu-blog"
 defaultContentLanguage = "tr"
 enableEmoji = true
 disqusShortname = "blog-frx0jvjmjg"
-
 # Set the unicode character used for the "return" link in page footnotes.
 footnotereturnlinkcontents = "↩"
 
@@ -30,7 +29,9 @@ disableLiveReload = false
 
     HighLightTheme = "github"
     PygmentsTheme = "bw"
-
+	HomepagePosts = 10
+	MainSections = ["post"]
+	
 [languages]
 [languages.en]
     weight = 1
@@ -130,8 +131,6 @@ disableLiveReload = false
 
   [markup.tableOfContents]
     endLevel = 3
-    ordered = true
-    startLevel = 1
 
 [imaging]
 # See https://github.com/disintegration/imaging
