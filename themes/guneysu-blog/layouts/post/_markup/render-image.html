@@ -1,0 +1,14 @@
+<figure class="bt bb b--light-gray pt3 pb1 mh0">
+	<picture class="pl3">
+		<!-- TODO WEBP <source type="image/webp" srcset="{{ .Destination }}"> -->
+		<img data-src="{{ .Destination }}" alt="{{ .Text }}" loading="lazy" class="mw-100 center" 
+		src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAEsAQMAAADXeXeBAAAABGdBTUEAALGPC/xhBQAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAAmSURBVGje7cExAQAAAMKg9U9tCU+gAAAAAAAAAAAAAAAAAACApwE7xAABJ3+eCQAAAABJRU5ErkJggg==">
+	  </picture>
+  
+  {{- with .Title -}}
+	<div class="">
+		<figcaption class="ph3 noto-sans f6 fw1" >{{ . }}</figcaption>
+	</div>
+  {{- end -}}  
+
+</figure>
