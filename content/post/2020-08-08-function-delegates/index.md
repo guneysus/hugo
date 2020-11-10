@@ -7,9 +7,9 @@ summary: "Fonksiyon Delegelerini Tanıyoruz"
 tags:
   - csharp
   - functional-programming
-  - action-delegate
+  - function-delegate
 series: "C# Functional Programming"
-order: 1
+order: 2
 
 thumb: /post/functional-programming-with-csharp-function-delegates/thumbnail.png
 

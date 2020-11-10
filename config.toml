@@ -116,7 +116,7 @@ disableLiveReload = false
       autoHeadingIDType = "github"
     [markup.goldmark.renderer]
       hardWraps = false
-      unsafe = false
+      unsafe = true
       xhtml = false
   [markup.highlight]
     codeFences = true
@@ -127,7 +127,7 @@ disableLiveReload = false
     lineNumbersInTable = true
     noClasses = true
     style = "monokai"
-    tabWidth = 4
+    tabWidth = 2
 
   [markup.tableOfContents]
     endLevel = 3

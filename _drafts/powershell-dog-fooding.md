@@ -307,3 +307,13 @@ delete merged branches
 ```powershell
 git branch --merged master  | % { git branch -d $($_.Trim('+', ' ')) }
 ```
+
+
+```powershell
+ls -Directory | % { git -C $_ remote -v }
+
+ls -Directory | % { echo "$(git -C $_ branch) $_" }
+
+ls -Directory | % { git -C $_ checkout master }
+
+```
