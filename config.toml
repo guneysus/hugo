@@ -116,8 +116,8 @@ disableLiveReload = false
       autoHeadingIDType = "github"
     [markup.goldmark.renderer]
       hardWraps = false
-      unsafe = false
-      xhtml = false
+      unsafe = true
+      xhtml = true
   [markup.highlight]
     codeFences = true
     guessSyntax = false
