@@ -117,7 +117,7 @@ disableLiveReload = false
     [markup.goldmark.renderer]
       hardWraps = false
       unsafe = true
-      xhtml = false
+      xhtml = true
   [markup.highlight]
     codeFences = true
     guessSyntax = false
