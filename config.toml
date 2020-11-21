@@ -127,7 +127,7 @@ disableLiveReload = false
     lineNumbersInTable = true
     noClasses = true
     style = "monokai"
-    tabWidth = 4
+    tabWidth = 2
 
   [markup.tableOfContents]
     endLevel = 3
