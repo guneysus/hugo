@@ -62,7 +62,10 @@ We found the `System.Management.Automation` assembly on Nuget [^nuget]
 And downloaded it for decompiling.
 Upon decompiling with ILSpy, found the `internal` method eventually.
 
-{{% attachment lang="cs" path="src/delete-file-stream-decompiled.cs" title="Unblock File" name="delete-file-stream-decompiled.cs" /%}}
+
+- asdasd
+
+{{% attachment lang="csharp" path="src/delete-file-stream-decompiled.cs" title="Unblock File" name="delete-file-stream-decompiled.cs" /%}}
 
 ## Reimplementing with LinqPad
 
