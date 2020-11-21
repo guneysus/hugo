@@ -4,17 +4,17 @@
 
 var celciusValues = new List<Celcius>() { -40, 0, 100 };
 
-var fahrenheitValues = map (celciusValues, convertCtoF);
+var celciusToFahrenheitValues = map (celciusValues, convertCtoF);
 
-var kelvinValues = map<Celcius, Kelvin> (new List<Celcius>() { -273, 0, 100 }, value => value + 273.0);
+var celciusToKelvinValues = map<Celcius, Kelvin> (new List<Celcius>() { -273, 0, 100 }, value => value + 273.0);
 
-fahrenheitValues.Dump ("Fahrenheit");
+celciusToFahrenheitValues.Dump ("Fahrenheit");
 
-kelvinValues.Dump ("Kelvin");
+celciusToKelvinValues.Dump ("Kelvin");
 
-var fahrenheitToCelcius = map<Fahrenheit, Celcius> (fahrenheitValues, value => (value - 32) / 1.8);
+var fahrenheitToCelciusValues = map<Fahrenheit, Celcius> (celciusToFahrenheitValues, value => (value - 32) / 1.8);
 
-fahrenheitToCelcius.Dump ("Celcius");
+fahrenheitToCelciusValues.Dump ("Celcius");
 
 
 IEnumerable<TResult> map<T, TResult> (IEnumerable<T> values, Func<T, TResult> convertor)
