@@ -3,7 +3,6 @@ title: "C# İle Fonksiyonel Programlama - Map"
 date: 2020-08-29
 draft: false
 slug: "functional-programming-with-csharp-map"
-# description: 
 summary: "Fonksiyonel Programlama ile Map "
 tags:
   - csharp

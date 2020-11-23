@@ -1,6 +1,6 @@
 # VERSION := '0.68.1'
-VERSION := '0.74.3'
-HUGO_SERVER := hugo-$(VERSION) server --enableGitInfo -v --debug -p 1314
+VERSION := '' #'0.74.3'
+HUGO_SERVER := hugo$(VERSION) server --enableGitInfo -v --debug -p 1314
 
 default: serve
 

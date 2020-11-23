@@ -2,6 +2,7 @@
 title: "Redirect Mobile Devices to App Stores"
 date: "2017-06-17"
 draft: false
+summary: "TODO"
 ---
 
 <div class="f6">

@@ -2,6 +2,7 @@
 title: "Docker ASP.Net Builder"
 date: "2017-06-17"
 draft: false
+summary: "TODO"
 ---
 
 ```Dockerfile

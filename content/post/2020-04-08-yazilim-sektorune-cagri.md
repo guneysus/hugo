@@ -2,6 +2,7 @@
 title: "Yazılım Sektörüne Çağrı"
 date: 2020-04-08T10:45:18+03:00
 draft: true
+summary: "TODO"
 ---
 
 Merhaba.
