@@ -2,28 +2,34 @@
   <IncludeUncapsulator>false</IncludeUncapsulator>
 </Query>
 
-var celciusValues = new List<Celcius>() { -40, 0, 100 };
+var celcius = new List<Celcius>() { -40, 0, 100 };
 
-var celciusToFahrenheitValues = map (celciusValues, convertCtoF);
+var fahrenheit = map (celcius, convertCtoF);
 
-var celciusToKelvinValues = map<Celcius, Kelvin> (new List<Celcius>() { -273, 0, 100 }, value => value + 273.0);
+var kelvin = map<Celcius, Kelvin> (celcius, convertCtoK);
 
-celciusToFahrenheitValues.Dump ("Fahrenheit");
+fahrenheit.Dump ("Fahrenheit");
 
-celciusToKelvinValues.Dump ("Kelvin");
+kelvin.Dump ("Kelvin");
 
-var fahrenheitToCelciusValues = map<Fahrenheit, Celcius> (celciusToFahrenheitValues, value => (value - 32) / 1.8);
+var fahrenheitToCelcius = map<Fahrenheit, Celcius> (fahrenheit, convertFtoC);
 
-fahrenheitToCelciusValues.Dump ("Celcius");
+fahrenheitToCelcius.Dump ("Celcius");
 
+/* mapper functions
+  High order of function function which is analogous to Select function of LINQ 
 
+*/
 IEnumerable<TResult> map<T, TResult> (IEnumerable<T> values, Func<T, TResult> convertor)
 {
-  foreach (var value in values)
-    yield return convertor (value);
+foreach (var value in values)
+yield return convertor (value);
 }
 
+/* Pure functions which maps a single inputs to a new output without mutating them */
 Fahrenheit convertCtoF (Celcius value) => value * 1.8 + 32.0;
+Kelvin convertCtoK (Celcius value) => value + 273.0;
+Celcius convertFtoC (Fahrenheit value) => (value - 32) / 1.8;
 
 public class Temperature
 {
