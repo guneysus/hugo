@@ -197,10 +197,15 @@ Siz de bir `code kata` [^code-kata] uygulaması olarak ÖTV ve KDV hesaplayan fo
 
 Örnek bir uygulama içeren LINQPad dosyasını ekte bulabilirsiniz.
 
+
+## Edit
+
+- _2020/12/20_ - İş arkadaşım Zişan, LINQ Pad dosyası örneği yerine dotnet fiddle önerdi. Linki aşağıya bırakıyorum, kaydırarak açabilirsiniz.
+
 ## Bağlantılar
 
 1. <https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause>
 2. <https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.select?view=netcore-3.1>
-
+3. [MAP - dotnet fiddle](https://dotnetfiddle.net/wJqnxs)
 
 [^code-kata]: https://en.wikipedia.org/wiki/Kata_(programming)
