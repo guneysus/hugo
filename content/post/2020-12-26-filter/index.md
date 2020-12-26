@@ -34,6 +34,7 @@ weight: 0
 ### Filter
 
 Filter yöntemini uygulayabilmek için, `boolean` döndüren bir metota ihtiyacımız var. 
+
 Bu metot, bir delege veya expression olabilir. [^fn1]
 
 C# ile `filter` için kullanılacak metodun, listenin elemanları için `true ✅` veya `false ❌` döndürmesi gerekiyor.
@@ -53,6 +54,7 @@ Amacımız, elimizdeki bir şekil listesinden kare olanları seçmek. Elimizdeki
 Elimizdeki veri setini simüle eden bir liste tanımladık.
 
 ![Is Square](img/is-square.png)
+
 Her şekil için çalışacak ve kare olanlar için `true` döndürecek olan  metodumuz.
 
 ![Filter](img/filter-shape.png)
