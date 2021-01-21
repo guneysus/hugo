@@ -1,0 +1,23 @@
+00007FFB30D792C0 <kernelbase.EntryPoint>             | 40:53                    | PUSH RBX                                               |
+00007FFB30D792C2                                     | 48:83EC 20               | SUB RSP,0x20                                           |
+00007FFB30D792C6                                     | 8BDA                     | MOV EBX,EDX                                            |
+00007FFB30D792C8                                     | E8 0F010000              | CALL kernelbase.7FFB30D793DC                           |
+00007FFB30D792CD                                     | 85DB                     | TEST EBX,EBX                                           |
+00007FFB30D792CF                                     | 74 57                    | JE kernelbase.7FFB30D79328                             |
+00007FFB2744BD50 <mscoree._DllMainCRTStartup>        | 48:895C24 08             | MOV QWORD PTR SS:[RSP+0x8],RBX                         |
+00007FFB2744BD94 <mscoree.__CRT_INIT>                | 40:53                    | PUSH RBX                                               |
+00007FFB335406D1                                     | EB 00                    | JMP ntdll.7FFB335406D3                                 |
+00007FFB334BD0B4                                     | 4C:8BC9                  | MOV R9,RCX                                             | rcx:_CorExeMain_Exported
+000000006979CF54 <sysfer.EntryPoint>           | 48:895C24 08           | MOV QWORD PTR SS:[RSP+0x8],RBX     |
+
+00007FFAC6EF08AD                               | B9 03000000            | MOV ECX,0x3                        |
+00007FFAC6EF08B2                               | BA 05000000            | MOV EDX,0x5                        |
+00007FFAC6EF08B7                               | E8 CCFBFFFF            | CALL 0x7FFAC6EF0488                |
+00007FFAC6EF08BC                               | 8945 FC                | MOV DWORD PTR SS:[RBP-0x4],EAX     |
+00007FFAC6EF08BF                               | 8B4D FC                | MOV ECX,DWORD PTR SS:[RBP-0x4]     |
+00007FFAC6EF08C2                               | E8 C91FA25D            | CALL mscorlib.ni.7FFB24912890      |
+00007FFAC6EF08C7                               | 90                     | NOP                                |
+00007FFAC6EF08C8                               | 90                     | NOP                                |
+00007FFAC6EF08C9                               | 48:8D65 00             | LEA RSP,QWORD PTR SS:[RBP]         |
+00007FFAC6EF08CD                               | 5D                     | POP RBP                            |
+00007FFAC6EF08CE                               | C3                     | RET                                |
