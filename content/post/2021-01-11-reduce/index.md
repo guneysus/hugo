@@ -64,6 +64,7 @@ reducer(a,b) -> return a + b;
 <figure class="video_container">
   <video allowfullscreen="false" poster="img/reduce-illustration-1.jpg" width="400px" loop autoplay preload controls>
     <source src="img/reduce-illustration.mp4" type="video/mp4">
-    <source src="iimg/reduce-illustration.webm" type="video/webm">
+    <source src="img/reduce-illustration.mkv" type="video/mkv">
+    <source src="img/reduce-illustration.webm" type="video/webm">
   </video>
 </figure>
