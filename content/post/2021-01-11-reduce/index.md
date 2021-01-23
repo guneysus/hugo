@@ -45,7 +45,7 @@ Aslında `Filter` işlemi de `Reduce` ile tanımlanabilse de genellikle `Reduce`
 
 #### Örnek:
 
-1'den 6'ya kadar olan sayıları toplamak istediğimizi farzedelim.
+1'den 6'ya kadar olan sayıları toplamak için Pseudo kodu yazıp ve fonksiyon akışını modelleyelim.
 
 ```
 [1,2,3,4,5,6]
@@ -60,6 +60,8 @@ reducer(a,b) -> return a + b;
                      ^^
 ```
 
+Burada `1,3,6,10, 15` değerlerinin **ara sonuçlar** olduğuna dikkat edin. Her bir ara sonuç, dizinin bir sonraki elemanıyla `reducer` fonksiyonuna giriyor ve bir sonraki sonucu hesaplıyor.
+
 
 <figure class="video_container">
   <video allowfullscreen="false" poster="img/reduce-illustration-1.jpg" width="400px" loop autoplay preload controls>
@@ -68,3 +70,23 @@ reducer(a,b) -> return a + b;
     <source src="img/reduce-illustration.webm" type="video/webm">
   </video>
 </figure>
+
+
+
+
+## C# ile Reduce
+
+
+<figure class="video_container">
+  <img src="img/reduce.png" alt="Reduce - .NET Fiddle" />
+  <figcaption>
+    <a href="https://dotnetfiddle.net/KREkPx" target="_blank">Reduce - .NET Fiddle</a>
+  </figcaption>
+</figure>
+
+
+
+## Bağlantılar
+
+1. <https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.aggregate?view=net-5.0>
+3. [REDUCE - dotnet fiddle](https://dotnetfiddle.net/KREkPx)
