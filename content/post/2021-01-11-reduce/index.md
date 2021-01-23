@@ -69,8 +69,6 @@ Burada `1,3,6,10, 15` değerlerinin **ara sonuçlar** olduğuna dikkat edin. Her
     <source src="img/reduce-illustration.mkv" type="video/mkv">
     <source src="img/reduce-illustration.webm" type="video/webm">
   </video>
-  <figcaption>Reduce</figcaption> 
-  <!-- TODO HUGO Strips figcaption !? -->
 </figure>
 
 
@@ -78,7 +76,14 @@ Burada `1,3,6,10, 15` değerlerinin **ara sonuçlar** olduğuna dikkat edin. Her
 
 ## C# ile Reduce
 
-![reduce](img/reduce.png)
+
+<figure class="video_container">
+  <img src="img/reduce.png" alt="Reduce - .NET Fiddle" />
+  <figcaption>
+    <a href="https://dotnetfiddle.net/KREkPx" target="_blank">Reduce - .NET Fiddle</a>
+  </figcaption>
+</figure>
+
 
 
 ## Bağlantılar
