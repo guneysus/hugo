@@ -65,33 +65,37 @@ Curried fonksiyonlar kısmî fonksiyonların özel bir türüdür. Dönüştür�
 
 Elimizde farazi bir KDV hesaplama fonksiyonu olsun. 
 
-```csharp
+<!-- ```csharp
 decimal calculateTax(decimal money, decimal taxRate) {
     return money * taxRate;
 }
-```
+``` -->
+![calculateTax](img/1.png)
 
 Bu fonksiyonun imzası aşağıdaki şekilde olur:
 
-```csharp
+<!-- ```csharp
 Func<decimal, decimal, decimal> calculator = calculateTax
 //   money    taxRate  tax
-```
+``` -->
+![calculateTax](img/2.png)
+
 
 Yukarıda, iki parametreli bu fonksiyonun iki dönüşüm geçirerek, iki  adet ara fonksiyonun oluşacağını belirtmiştik. Diğer ifadeyle `25` sonucuna ulaşabilmek için fonksiyonumuz iki `currying` aşamasından geçecek.
 
 
-```csharp
-// <------ İlk fonksiyon ---------->
+<!-- ```csharp
 Func<decimal, Func<decimal, decimal>> curried = curry(calculateTax);
-//            <- İkinci fonksiyon ->
-```
+``` -->
+
+![curried](img/3.png)
 
 `Curried` bir fonksiyonun kullanımı aşağıda şekilde.
-```csharp
-decimal result = curried(500)(0.18);
-```
 
+<!-- ```csharp
+decimal result = curried(500)(0.18);
+``` -->
+![curried](img/4.png)
 
 ## Neden Böyle Bir Kullanıma İhtiyacımız olsun?
 
@@ -103,22 +107,26 @@ decimal result = curried(500)(0.18);
 
 ### `Currying` Olmadan
 
-```csharp
+<!-- ```csharp
 decimal kdv = calculateTax(500.00, 0.18);
 decimal otv = calculateTax(500.00, 0.05);
 decimal trtPayi = calculateTax(500.00, 0.013);
-```
+``` -->
+![without currying](img/5.png)
+
 
 ### `Currying` Kullanarak
 
-```csharp
+<!-- ```csharp
 var curried = curry(taxCalculator);
 Func<decimal, decimal> taxCalculator = curried(500.00);
 
 var kdv = taxCalculatorFor500(0.18);
 var otv = taxCalculatorFor500(0.05);
 var trtPayi = taxCalculatorFor500(0.05);
-```
+``` -->
+
+![curry in action](img/6.png)
 
 Daha fazla kod yazdık, fakat aşağıdaki fonksiyonların tekrar kullanılabilir olduklarına dikkat edin:
 
@@ -131,8 +139,10 @@ Devletimiz, yeni bir vergi çıkardığında tek yapmamız gereken, `taxCalculat
 
 ## İki Parametreli Bir Fonksiyon İçin Jenerik Curry Fonksiyonu
 
-Aşağıdaki kodu language-ext [^language-ext] kütüphanesinden aldım. 10 parametreli bir fonksiyon için `curry` ihtiyacınız olursa 115. satıra bakabilirsiniz.
+Aşağıdaki kodu language-ext [^language-ext] kütüphanesinden aldım. 
+10 parametreli bir fonksiyon için `curry` ihtiyacınız olursa 115. satıra bakabilirsiniz.
 
+<!-- 
 ```csharp
 /// <summary>
 /// Curry the function 'f' provided.
@@ -145,12 +155,13 @@ Aşağıdaki kodu language-ext [^language-ext] kütüphanesinden aldım. 10 para
 [Pure]
 public static Func<T1, Func<T2, R>> curry<T1, T2, R>(Func<T1, T2, R> f) =>
     (T1 a) => (T2 b) => f(a, b);
-```
-
+``` -->
+![curry](img/7.png)
 
 ## Sonuç
 
-Kısmî fonksiyonlar için language-ext kütüphanesinin wiki sayfasını [^partial-functions] okumanızı tavsiye ederim. Tüm `design pattern` için geçerli olduğu gibi, `currying` ve `partial functions` patternlerini uygulayacağınız yerleri iyice düşünmelisiniz.
+Kısmî fonksiyonlar için language-ext kütüphanesinin wiki sayfasını [^partial-functions] okumanızı tavsiye ederim. 
+Tüm `design pattern` için geçerli olduğu gibi, `currying` ve `partial functions` patternlerini uygulayacağınız yerleri iyice düşünmelisiniz.
 
 [^language-ext]: [ Language-Ext](https://github.com/louthy/language-ext/blob/main/LanguageExt.Core/Prelude/Prelude_Curry.cs#L17), Haskell fonksiyonel yöntemlerini C#'a uyarlayan ilginç bir kütüphane. 
 

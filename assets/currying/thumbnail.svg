@@ -17,8 +17,8 @@
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="thumbnail.svg"
    inkscape:export-filename="/home/ahmed/projects/blog.git/content/post/2021-02-20-functional-programming-currying/thumbnail.png"
-   inkscape:export-xdpi="105.68661"
-   inkscape:export-ydpi="105.68661">
+   inkscape:export-xdpi="96.000008"
+   inkscape:export-ydpi="96.000008">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -69,7 +69,10 @@
        style="font-style:normal;font-weight:normal;font-size:16.93333244px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#35a18f;fill-opacity:1;stroke:none;stroke-width:0.26458332;image-rendering:optimizeQuality"
        x="-2.267859"
        y="159.41666"
-       id="text52"><tspan
+       id="text52"
+       inkscape:export-filename="/home/ahmed/projects/blog.git/content/post/2021-02-20-functional-programming-currying/thumbnail.png"
+       inkscape:export-xdpi="105"
+       inkscape:export-ydpi="105"><tspan
          sodipodi:role="line"
          id="tspan50"
          x="-2.267859"
