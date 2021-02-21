@@ -1,5 +1,5 @@
 ---
-title: "C# İle Fonksiyonel Programlama - Currying"
+title: "C# İle Fonksiyonel Programlama - Currying ve Kısmî Fonksiyonlar"
 date: 2021-02-20
 draft: false
 slug: "functional-programming-with-csharp-currying-and-partial-functions"
@@ -148,6 +148,10 @@ public static Func<T1, Func<T2, R>> curry<T1, T2, R>(Func<T1, T2, R> f) =>
 ```
 
 
+## Sonuç
+
+Kısmî fonksiyonlar için language-ext kütüphanesinin wiki sayfasını [^partial-functions] okumanızı tavsiye ederim. Tüm `design pattern` için geçerli olduğu gibi, `currying` ve `partial functions` patternlerini uygulayacağınız yerleri iyice düşünmelisiniz.
+
 [^language-ext]: Haskell fonksiyonel yöntemlerini C#'a uyarlayan ilginç bir kütüphane. [github](https://github.com/louthy/language-ext/blob/main/LanguageExt.Core/Prelude/Prelude_Curry.cs#L17)
 
-[^partial-functs]: https://github.com/louthy/language-ext/wiki/Thinking-Functionally:-Partial-application
+[^partial-functions]: https://github.com/louthy/language-ext/wiki/Thinking-Functionally:-Partial-application
