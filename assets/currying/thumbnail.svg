@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93333 270.93334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="thumbnail.svg"
+   inkscape:export-filename="/home/ahmed/projects/blog.git/content/post/2021-02-20-functional-programming-currying/thumbnail.png"
+   inkscape:export-xdpi="105.68661"
+   inkscape:export-ydpi="105.68661">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="485.53975"
+     inkscape:cy="511.93609"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     units="px"
+     fit-margin-right="-0.1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-26.06665)"
+     style="display:inline;opacity:1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.93333244px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#35a18f;fill-opacity:1;stroke:none;stroke-width:0.26458332;image-rendering:optimizeQuality"
+       x="-2.267859"
+       y="159.41666"
+       id="text52"><tspan
+         sodipodi:role="line"
+         id="tspan50"
+         x="-2.267859"
+         y="159.41666"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.75555611px;line-height:431.55004883;font-family:MathJax_Math;-inkscape-font-specification:'MathJax_Math Bold';letter-spacing:0px;word-spacing:-2.75431275px;baseline-shift:baseline;fill:#35a18f;fill-opacity:1;stroke-width:0.26458332"
+         dx="16.459984 0 0 0 0 0 0 -0.0099999998 0 0 0 0 0 0 0 1.6500001 -1.21">f(x,y)=curry f(x,y)→ x→ y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:184.3500061;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-73.70536"
+       y="61.142841"
+       id="text4559"><tspan
+         sodipodi:role="line"
+         id="tspan4557"
+         x="-73.70536"
+         y="1039.4108"
+         style="stroke-width:0.26458332" /></text>
+  </g>
+</svg>
