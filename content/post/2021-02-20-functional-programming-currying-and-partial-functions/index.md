@@ -152,6 +152,6 @@ public static Func<T1, Func<T2, R>> curry<T1, T2, R>(Func<T1, T2, R> f) =>
 
 Kısmî fonksiyonlar için language-ext kütüphanesinin wiki sayfasını [^partial-functions] okumanızı tavsiye ederim. Tüm `design pattern` için geçerli olduğu gibi, `currying` ve `partial functions` patternlerini uygulayacağınız yerleri iyice düşünmelisiniz.
 
-[^language-ext]: Haskell fonksiyonel yöntemlerini C#'a uyarlayan ilginç bir kütüphane. [github](https://github.com/louthy/language-ext/blob/main/LanguageExt.Core/Prelude/Prelude_Curry.cs#L17)
+[^language-ext]: [ Language-Ext](https://github.com/louthy/language-ext/blob/main/LanguageExt.Core/Prelude/Prelude_Curry.cs#L17), Haskell fonksiyonel yöntemlerini C#'a uyarlayan ilginç bir kütüphane. 
 
-[^partial-functions]: https://github.com/louthy/language-ext/wiki/Thinking-Functionally:-Partial-application
+[^partial-functions]: [Thinking Functionally: Partial application](https://github.com/louthy/language-ext/wiki/Thinking-Functionally:-Partial-application)
